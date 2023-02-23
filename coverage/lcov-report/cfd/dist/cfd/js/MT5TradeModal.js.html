@@ -1,0 +1,655 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for cfd/dist/cfd/js/MT5TradeModal.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">cfd/dist/cfd/js</a> MT5TradeModal.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/49</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/24</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/23</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/48</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+<span class="cstat-no" title="statement not covered" >(function <span class="fstat-no" title="function not covered" >webpackUniversalModuleDefinition(</span>root, factory) {</span>
+<span class="cstat-no" title="statement not covered" >	if(typeof exports === 'object' &amp;&amp; typeof module === 'object')</span>
+<span class="cstat-no" title="statement not covered" >		module.exports = factory(require("@deriv/components"), require("@deriv/shared"), require("@deriv/translations"), require("mobx-react"), require("react"));</span>
+	else <span class="cstat-no" title="statement not covered" >if(typeof define === 'function' &amp;&amp; define.amd)</span>
+<span class="cstat-no" title="statement not covered" >		define(["@deriv/components", "@deriv/shared", "@deriv/translations", "mobx-react", "react"], factory);</span>
+	else <span class="cstat-no" title="statement not covered" >if(typeof exports === 'object')</span>
+<span class="cstat-no" title="statement not covered" >		exports["@deriv/cfd"] = factory(require("@deriv/components"), require("@deriv/shared"), require("@deriv/translations"), require("mobx-react"), require("react"));</span>
+	else
+<span class="cstat-no" title="statement not covered" >		root["@deriv/cfd"] = factory(root["@deriv/components"], root["@deriv/shared"], root["@deriv/translations"], root["mobx-react"], root["react"]);</span>
+})(self, <span class="fstat-no" title="function not covered" >fu</span>nction(__WEBPACK_EXTERNAL_MODULE__deriv_components__, __WEBPACK_EXTERNAL_MODULE__deriv_shared__, __WEBPACK_EXTERNAL_MODULE__deriv_translations__, __WEBPACK_EXTERNAL_MODULE_mobx_react__, __WEBPACK_EXTERNAL_MODULE_react__) {
+<span class="cstat-no" title="statement not covered" >return /******/ (<span class="fstat-no" title="function not covered" >()</span> =&gt; { // webpackBootstrap</span>
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = (<span class="cstat-no" title="statement not covered" >{</span>
+&nbsp;
+/***/ "./src/Components/cfd-account-copy.tsx":
+/*!*********************************************!*\
+  !*** ./src/Components/cfd-account-copy.tsx ***!
+  \*********************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"CFDAccountCopy\": () =&gt; (/* binding */ CFDAccountCopy)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _deriv_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @deriv/components */ \"@deriv/components\");\n/* harmony import */ var _deriv_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_deriv_components__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _deriv_translations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @deriv/translations */ \"@deriv/translations\");\n/* harmony import */ var _deriv_translations__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_deriv_translations__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _deriv_shared__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @deriv/shared */ \"@deriv/shared\");\n/* harmony import */ var _deriv_shared__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_deriv_shared__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\nvar CFDAccountCopy = function CFDAccountCopy(_ref) {\n  var text = _ref.text,\n      className = _ref.className;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: className,\n    \"data-testid\": \"cfd_account_copy_main_div\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Clipboard, {\n    text_copy: text,\n    info_message: (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_3__.isMobile)() ? '' : (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_2__.localize)('copy'),\n    success_message: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_2__.localize)('copied!'),\n    popoverAlignment: (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_3__.isMobile)() ? 'left' : 'bottom'\n  }));\n};\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvQ29tcG9uZW50cy9jZmQtYWNjb3VudC1jb3B5LnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTs7QUFHQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQUE7QUFBQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBSkE7QUFRQSIsInNvdXJjZXMiOlsid2VicGFjazovL0BkZXJpdi9jZmQvLi9zcmMvQ29tcG9uZW50cy9jZmQtYWNjb3VudC1jb3B5LnRzeD9lOTZjIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBDbGlwYm9hcmQgfSBmcm9tICdAZGVyaXYvY29tcG9uZW50cyc7XG5pbXBvcnQgeyBsb2NhbGl6ZSB9IGZyb20gJ0BkZXJpdi90cmFuc2xhdGlvbnMnO1xuaW1wb3J0IHsgaXNNb2JpbGUgfSBmcm9tICdAZGVyaXYvc2hhcmVkJztcbmltcG9ydCB7IFRDRkRBY2NvdW50Q29weSB9IGZyb20gJy4vcHJvcHMudHlwZXMnO1xuXG5jb25zdCBDRkRBY2NvdW50Q29weSA9ICh7IHRleHQsIGNsYXNzTmFtZSB9OiBUQ0ZEQWNjb3VudENvcHkpID0+IHtcbiAgICByZXR1cm4gKFxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT17Y2xhc3NOYW1lfSBkYXRhLXRlc3RpZD0nY2ZkX2FjY291bnRfY29weV9tYWluX2Rpdic+XG4gICAgICAgICAgICA8Q2xpcGJvYXJkXG4gICAgICAgICAgICAgICAgdGV4dF9jb3B5PXt0ZXh0fVxuICAgICAgICAgICAgICAgIGluZm9fbWVzc2FnZT17aXNNb2JpbGUoKSA/ICcnIDogbG9jYWxpemUoJ2NvcHknKX1cbiAgICAgICAgICAgICAgICBzdWNjZXNzX21lc3NhZ2U9e2xvY2FsaXplKCdjb3BpZWQhJyl9XG4gICAgICAgICAgICAgICAgcG9wb3ZlckFsaWdubWVudD17aXNNb2JpbGUoKSA/ICdsZWZ0JyA6ICdib3R0b20nfVxuICAgICAgICAgICAgLz5cbiAgICAgICAgPC9kaXY+XG4gICAgKTtcbn07XG5cbmV4cG9ydCB7IENGREFjY291bnRDb3B5IH07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/Components/cfd-account-copy.tsx\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/Containers/mt5-trade-modal.tsx":
+/*!********************************************!*\
+  !*** ./src/Containers/mt5-trade-modal.tsx ***!
+  \********************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _deriv_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @deriv/components */ \"@deriv/components\");\n/* harmony import */ var _deriv_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_deriv_components__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _Stores_connect__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Stores/connect */ \"./src/Stores/connect.js\");\n/* harmony import */ var _deriv_translations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @deriv/translations */ \"@deriv/translations\");\n/* harmony import */ var _deriv_translations__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_deriv_translations__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _Components_cfd_account_copy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Components/cfd-account-copy */ \"./src/Components/cfd-account-copy.tsx\");\n/* harmony import */ var _deriv_shared__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @deriv/shared */ \"@deriv/shared\");\n/* harmony import */ var _deriv_shared__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_deriv_shared__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _Helpers_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Helpers/constants */ \"./src/Helpers/constants.ts\");\n\n\n\n\n\n\n\n\nvar PasswordBox = function PasswordBox(_ref) {\n  var platform = _ref.platform,\n      onClick = _ref.onClick;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"cfd-trade-modal__password-box\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"cfd-trade-modal__password-text\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Popover, {\n    alignment: \"right\",\n    message: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Use these credentials to log in to your {{platform}} account on the website and mobile apps.', {\n      platform: (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_5__.getCFDPlatformLabel)(platform)\n    }),\n    classNameBubble: \"cfd-trade-modal__password-tooltip\",\n    zIndex: 9999\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n    size: \"xs\"\n  }, \"***************\"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Popover, {\n    className: \"cfd-trade-modal__password-popover\",\n    alignment: \"left\",\n    message: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Change Password'),\n    relative_render: true,\n    zIndex: 9999\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Button, {\n    className: \"cfd-trade-modal__password-action\",\n    transparent: true,\n    onClick: onClick,\n    icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {\n      icon: \"IcEdit\",\n      className: \"da-article__learn-more-icon\",\n      custom_color: \"var(--text-less-prominent)\"\n    })\n  })));\n};\n\nvar SpecBox = function SpecBox(_ref2) {\n  var value = _ref2.value,\n      is_bold = _ref2.is_bold;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    className: \"cfd-trade-modal__spec-box\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n    size: \"xs\",\n    weight: is_bold ? 'bold' : '',\n    className: \"cfd-trade-modal__spec-text\"\n  }, value), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Components_cfd_account_copy__WEBPACK_IMPORTED_MODULE_4__.CFDAccountCopy, {\n    text: value,\n    className: \"cfd-trade-modal__spec-copy\"\n  }));\n};\n\nvar account_icons = {\n  mt5: {\n    synthetic: 'IcMt5SyntheticPlatform',\n    financial: 'IcMt5FinancialPlatform',\n    cfd: 'IcMt5CfdPlatform'\n  }\n};\n\nvar getTitle = function getTitle(market_type, is_eu_user) {\n  if (is_eu_user) (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('MT5 CFDs');\n  return market_type;\n};\n\nvar MT5TradeModal = function MT5TradeModal(_ref3) {\n  var mt5_trade_account = _ref3.mt5_trade_account,\n      disableApp = _ref3.disableApp,\n      enableApp = _ref3.enableApp,\n      is_eu_user = _ref3.is_eu_user,\n      is_open = _ref3.is_open,\n      context = _ref3.context,\n      onPasswordManager = _ref3.onPasswordManager,\n      toggleModal = _ref3.toggleModal;\n\n  var getCompanyShortcode = function getCompanyShortcode() {\n    if (mt5_trade_account.account_type === 'demo' &amp;&amp; mt5_trade_account.market_type === 'financial' &amp;&amp; mt5_trade_account.landing_company_short === 'labuan' || mt5_trade_account.account_type === 'real') {\n      return mt5_trade_account.landing_company_short;\n    }\n\n    return undefined;\n  };\n\n  var getHeadingTitle = function getHeadingTitle() {\n    return (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_5__.getCFDAccountDisplay)({\n      market_type: mt5_trade_account.market_type,\n      sub_account_type: mt5_trade_account.sub_account_type,\n      platform: _deriv_shared__WEBPACK_IMPORTED_MODULE_5__.CFD_PLATFORMS.MT5,\n      is_eu: is_eu_user,\n      shortcode: getCompanyShortcode(),\n      is_mt5_trade_modal: true\n    });\n  };\n\n  var getPageContent = function getPageContent() {\n    var _server_info, _server_info2;\n\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal-container\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {\n      icon: account_icons.mt5[is_eu_user ? 'cfd' : mt5_trade_account.market_type],\n      size: 24\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__desc\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      size: \"xs\",\n      line_height: \"l\",\n      className: \"cfd-trade-modal__desc-heading\"\n    }, getHeadingTitle()), (mt5_trade_account === null || mt5_trade_account === void 0 ? void 0 : mt5_trade_account.display_login) &amp;&amp; /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      color: \"less-prominent\",\n      size: \"xxxs\",\n      line_height: \"xxxs\"\n    }, mt5_trade_account === null || mt5_trade_account === void 0 ? void 0 : mt5_trade_account.display_login)), (mt5_trade_account === null || mt5_trade_account === void 0 ? void 0 : mt5_trade_account.display_balance) &amp;&amp; /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      size: \"xs\",\n      color: \"profit-success\",\n      className: \"cfd-trade-modal__desc-balance\",\n      weight: \"bold\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Money, {\n      amount: mt5_trade_account.display_balance,\n      currency: mt5_trade_account.currency,\n      has_sign: !!mt5_trade_account.balance &amp;&amp; mt5_trade_account.balance &lt; 0,\n      show_currency: true\n    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__login-specs\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__login-specs-item\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      className: \"cfd-trade-modal--paragraph\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Broker')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SpecBox, {\n      value: 'Deriv Limited'\n    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__login-specs-item\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      className: \"cfd-trade-modal--paragraph\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Server')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SpecBox, {\n      value: mt5_trade_account === null || mt5_trade_account === void 0 ? void 0 : (_server_info = mt5_trade_account.server_info) === null || _server_info === void 0 ? void 0 : _server_info.environment\n    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__login-specs-item\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      className: \"cfd-trade-modal--paragraph\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Login ID')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SpecBox, {\n      value: mt5_trade_account === null || mt5_trade_account === void 0 ? void 0 : mt5_trade_account.display_login\n    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__login-specs-item\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      className: \"cfd-trade-modal--paragraph\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Password')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal--paragraph\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(PasswordBox, {\n      platform: \"mt5\",\n      onClick: function onClick() {\n        var account_type = (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_5__.getCFDAccountKey)({\n          market_type: mt5_trade_account.market_type,\n          sub_account_type: mt5_trade_account.sub_account_type,\n          platform: _deriv_shared__WEBPACK_IMPORTED_MODULE_5__.CFD_PLATFORMS.DMT5,\n          shortcode: mt5_trade_account.landing_company_short\n        });\n        onPasswordManager(mt5_trade_account === null || mt5_trade_account === void 0 ? void 0 : mt5_trade_account.login, getTitle(mt5_trade_account.market_type, is_eu_user), mt5_trade_account.account_type, account_type, mt5_trade_account === null || mt5_trade_account === void 0 ? void 0 : mt5_trade_account.server);\n        toggleModal();\n      }\n    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__download-center-app\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__download-center-app--option\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {\n      icon: \"IcMt5Logo\",\n      size: 32\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      className: \"cfd-trade-modal__download-center-app--option-item\",\n      size: \"xs\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('MetaTrader 5 web')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n      className: \"dc-btn cfd-trade-modal__download-center-app--option-link\",\n      type: \"button\",\n      href: (0,_Helpers_constants__WEBPACK_IMPORTED_MODULE_6__.getMT5WebTerminalLink)({\n        category: mt5_trade_account.account_type,\n        loginid: mt5_trade_account.display_login,\n        server_name: mt5_trade_account === null || mt5_trade_account === void 0 ? void 0 : (_server_info2 = mt5_trade_account.server_info) === null || _server_info2 === void 0 ? void 0 : _server_info2.environment\n      }),\n      target: \"_blank\",\n      rel: \"noopener noreferrer\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      size: \"xxs\",\n      weight: \"bold\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Open')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__download-center-app--option\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {\n      icon: \"IcWindowsLogo\",\n      size: 32\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      className: \"cfd-trade-modal__download-center-app--option-item\",\n      size: \"xs\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('MetaTrader 5 Windows app')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n      className: \"dc-btn cfd-trade-modal__download-center-app--option-link\",\n      type: \"button\",\n      href: (0,_Helpers_constants__WEBPACK_IMPORTED_MODULE_6__.getPlatformMt5DownloadLink)('windows'),\n      target: \"_blank\",\n      rel: \"noopener noreferrer\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      size: \"xxs\",\n      weight: \"bold\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Download')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__download-center-app--option\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {\n      icon: \"IcMacosLogo\",\n      size: 32\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      className: \"cfd-trade-modal__download-center-app--option-item\",\n      size: \"xs\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('MetaTrader 5 MacOS app')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n      className: \"dc-btn cfd-trade-modal__download-center-app--option-link\",\n      type: \"button\",\n      href: (0,_Helpers_constants__WEBPACK_IMPORTED_MODULE_6__.getPlatformMt5DownloadLink)('macos'),\n      target: \"_blank\",\n      rel: \"noopener noreferrer\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      size: \"xxs\",\n      weight: \"bold\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Download')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__download-center-app--option\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {\n      icon: \"IcLinuxLogo\",\n      size: 32\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      className: \"cfd-trade-modal__download-center-app--option-item\",\n      size: \"xs\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('MetaTrader 5 Linux app')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n      className: \"dc-btn cfd-trade-modal__download-center-app--option-link\",\n      type: \"button\",\n      href: (0,_Helpers_constants__WEBPACK_IMPORTED_MODULE_6__.getPlatformMt5DownloadLink)('linux'),\n      target: \"_blank\",\n      rel: \"noopener noreferrer\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      size: \"xxs\",\n      weight: \"bold\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Learn more'))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__download-center-options\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__download-center-options--mobile-links\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n      href: (0,_Helpers_constants__WEBPACK_IMPORTED_MODULE_6__.getPlatformMt5DownloadLink)('android'),\n      target: \"_blank\",\n      rel: \"noopener noreferrer\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {\n      icon: \"IcInstallationGoogle\",\n      width: 135,\n      height: 40\n    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n      href: (0,_Helpers_constants__WEBPACK_IMPORTED_MODULE_6__.getPlatformMt5DownloadLink)('huawei'),\n      target: \"_blank\",\n      rel: \"noopener noreferrer\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Icon, {\n      icon: \"IcInstallationHuawei\",\n      width: 135,\n      height: 40\n    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"cfd-trade-modal__download-center-options--qrcode\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n      src: (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_5__.getUrlBase)('/public/images/common/mt5_download.png'),\n      width: 80,\n      height: 80\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Text, {\n      align: \"center\",\n      size: \"xxs\"\n    }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Scan the QR code to download Deriv MT5.')))));\n  };\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Suspense), {\n    fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.UILoader, null)\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.DesktopWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Modal, {\n    disableApp: disableApp,\n    enableApp: enableApp,\n    is_open: is_open,\n    title: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_3__.localize)('Trade'),\n    toggleModal: toggleModal,\n    should_header_stick_body: false,\n    width: \"600px\",\n    height: \"709px\",\n    exit_classname: \"cfd-modal--custom-exit\"\n  }, getPageContent())), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.MobileWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.PageOverlay, {\n    is_open: is_open,\n    portal_id: \"deriv_app\",\n    header: \"Trade\",\n    onClickClose: toggleModal,\n    header_classname: \"cfd-trade-modal__mobile-title\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_deriv_components__WEBPACK_IMPORTED_MODULE_1__.Div100vhContainer, {\n    className: \"cfd-trade-modal__mobile-view-wrapper\",\n    height_offset: \"80px\"\n  }, getPageContent()))));\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_Stores_connect__WEBPACK_IMPORTED_MODULE_2__.connect)(function (_ref4) {\n  var modules = _ref4.modules,\n      ui = _ref4.ui;\n  return {\n    disableApp: ui.disableApp,\n    enableApp: ui.enableApp,\n    mt5_trade_account: modules.cfd.mt5_trade_account\n  };\n})(MT5TradeModal));//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvQ29udGFpbmVycy9tdDUtdHJhZGUtbW9kYWwudHN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7OztBQUFBO0FBQ0E7QUFhQTtBQUVBO0FBRUE7QUFFQTtBQUNBOztBQXdCQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBRUE7QUFDQTtBQUdBO0FBREE7QUFJQTtBQUNBO0FBVEE7QUFXQTtBQUFBO0FBSUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUxBO0FBUUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFIQTtBQUxBO0FBeEJBOztBQXdDQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUdBO0FBQUE7QUFBQTtBQUxBOztBQVNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFIQTtBQURBOztBQVFBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBU0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTs7QUFDQTtBQUNBO0FBTUE7QUFDQTs7QUFDQTtBQUNBOztBQUNBO0FBQUE7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFOQTtBQURBOztBQVNBO0FBQUE7O0FBQUE7QUFDQTtBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUlBO0FBQUE7QUFBQTtBQUFBO0FBTUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBSkE7QUFTQTtBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBRUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBRUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBRUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFKQTtBQU1BO0FBT0E7QUFDQTtBQWpCQTtBQXNCQTtBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUlBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUhBO0FBS0E7QUFDQTtBQVRBO0FBV0E7QUFBQTtBQUFBO0FBS0E7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUlBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFMQTtBQU9BO0FBQUE7QUFBQTtBQUtBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFJQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBTEE7QUFPQTtBQUFBO0FBQUE7QUFLQTtBQUFBO0FBQ0E7QUFBQTtBQUFBO0FBQ0E7QUFBQTtBQUFBO0FBSUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUxBO0FBT0E7QUFBQTtBQUFBO0FBTUE7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBRUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUdBO0FBQUE7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQXBKQTs7QUE0SkE7QUFDQTtBQUFBO0FBR0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBVEE7QUFnQkE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUxBO0FBT0E7QUFBQTtBQUFBO0FBT0E7O0FBRUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFIQTtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vQGRlcml2L2NmZC8uL3NyYy9Db250YWluZXJzL210NS10cmFkZS1tb2RhbC50c3g/NWM2YSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IHtcbiAgICBCdXR0b24sXG4gICAgSWNvbixcbiAgICBEZXNrdG9wV3JhcHBlcixcbiAgICBEaXYxMDB2aENvbnRhaW5lcixcbiAgICBNb2RhbCxcbiAgICBNb2JpbGVXcmFwcGVyLFxuICAgIE1vbmV5LFxuICAgIFBhZ2VPdmVybGF5LFxuICAgIFBvcG92ZXIsXG4gICAgVGV4dCxcbiAgICBVSUxvYWRlcixcbn0gZnJvbSAnQGRlcml2L2NvbXBvbmVudHMnO1xuaW1wb3J0IHsgY29ubmVjdCB9IGZyb20gJy4uL1N0b3Jlcy9jb25uZWN0JztcbmltcG9ydCBSb290U3RvcmUgZnJvbSAnLi4vU3RvcmVzL2luZGV4JztcbmltcG9ydCB7IGxvY2FsaXplIH0gZnJvbSAnQGRlcml2L3RyYW5zbGF0aW9ucyc7XG5pbXBvcnQgeyBEZXRhaWxzT2ZFYWNoTVQ1TG9naW5pZCB9IGZyb20gJ0BkZXJpdi9hcGktdHlwZXMnO1xuaW1wb3J0IHsgQ0ZEQWNjb3VudENvcHkgfSBmcm9tICcuLi9Db21wb25lbnRzL2NmZC1hY2NvdW50LWNvcHknO1xuaW1wb3J0IHsgVEFjY291bnRJY29uVmFsdWVzLCBUUGFzc3dvcmRCb3hQcm9wcywgVFRyYWRpbmdQbGF0Zm9ybUFjY291bnRzIH0gZnJvbSAnLi4vQ29tcG9uZW50cy9wcm9wcy50eXBlcyc7XG5pbXBvcnQgeyBDRkRfUExBVEZPUk1TLCBnZXRDRkRBY2NvdW50RGlzcGxheSwgZ2V0Q0ZEUGxhdGZvcm1MYWJlbCwgZ2V0VXJsQmFzZSwgZ2V0Q0ZEQWNjb3VudEtleSB9IGZyb20gJ0BkZXJpdi9zaGFyZWQnO1xuaW1wb3J0IHsgZ2V0UGxhdGZvcm1NdDVEb3dubG9hZExpbmssIGdldE1UNVdlYlRlcm1pbmFsTGluayB9IGZyb20gJy4uL0hlbHBlcnMvY29uc3RhbnRzJztcblxudHlwZSBUTVQ1VHJhZGVNb2RhbFByb3BzID0ge1xuICAgIG10NV90cmFkZV9hY2NvdW50OiBSZXF1aXJlZDxEZXRhaWxzT2ZFYWNoTVQ1TG9naW5pZD47XG4gICAgZGlzYWJsZUFwcDogKCkgPT4gdm9pZDtcbiAgICBlbmFibGVBcHA6ICgpID0+IHZvaWQ7XG4gICAgaXNfZXVfdXNlcjogYm9vbGVhbjtcbiAgICBpc19vcGVuOiBib29sZWFuO1xuICAgIGNvbnRleHQ6IFJvb3RTdG9yZTtcbiAgICBvblBhc3N3b3JkTWFuYWdlcjogKFxuICAgICAgICBhcmcxOiBzdHJpbmcgfCB1bmRlZmluZWQsXG4gICAgICAgIGFyZzI6IHN0cmluZyxcbiAgICAgICAgYXJnMzogc3RyaW5nLFxuICAgICAgICBhcmc0OiBzdHJpbmcsXG4gICAgICAgIGFyZzU6IHN0cmluZyB8IHVuZGVmaW5lZFxuICAgICkgPT4gdm9pZDtcbiAgICB0b2dnbGVNb2RhbDogKCkgPT4gdm9pZDtcbn07XG5cbmV4cG9ydCB0eXBlIFRTcGVjQm94UHJvcHMgPSB7XG4gICAgdmFsdWU6IHN0cmluZyB8IHVuZGVmaW5lZDtcbiAgICBpc19ib2xkPzogYm9vbGVhbjtcbn07XG5cbmNvbnN0IFBhc3N3b3JkQm94ID0gKHsgcGxhdGZvcm0sIG9uQ2xpY2sgfTogVFBhc3N3b3JkQm94UHJvcHMpID0+IChcbiAgICA8ZGl2IGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19wYXNzd29yZC1ib3gnPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19wYXNzd29yZC10ZXh0Jz5cbiAgICAgICAgICAgIDxQb3BvdmVyXG4gICAgICAgICAgICAgICAgYWxpZ25tZW50PSdyaWdodCdcbiAgICAgICAgICAgICAgICBtZXNzYWdlPXtsb2NhbGl6ZShcbiAgICAgICAgICAgICAgICAgICAgJ1VzZSB0aGVzZSBjcmVkZW50aWFscyB0byBsb2cgaW4gdG8geW91ciB7e3BsYXRmb3JtfX0gYWNjb3VudCBvbiB0aGUgd2Vic2l0ZSBhbmQgbW9iaWxlIGFwcHMuJyxcbiAgICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICAgICAgcGxhdGZvcm06IGdldENGRFBsYXRmb3JtTGFiZWwocGxhdGZvcm0pLFxuICAgICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICBjbGFzc05hbWVCdWJibGU9J2NmZC10cmFkZS1tb2RhbF9fcGFzc3dvcmQtdG9vbHRpcCdcbiAgICAgICAgICAgICAgICB6SW5kZXg9ezk5OTl9XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgPFRleHQgc2l6ZT0neHMnPioqKioqKioqKioqKioqKjwvVGV4dD5cbiAgICAgICAgICAgIDwvUG9wb3Zlcj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIDxQb3BvdmVyXG4gICAgICAgICAgICBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fcGFzc3dvcmQtcG9wb3ZlcidcbiAgICAgICAgICAgIGFsaWdubWVudD0nbGVmdCdcbiAgICAgICAgICAgIG1lc3NhZ2U9e2xvY2FsaXplKCdDaGFuZ2UgUGFzc3dvcmQnKX1cbiAgICAgICAgICAgIHJlbGF0aXZlX3JlbmRlclxuICAgICAgICAgICAgekluZGV4PXs5OTk5fVxuICAgICAgICA+XG4gICAgICAgICAgICA8QnV0dG9uXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWxfX3Bhc3N3b3JkLWFjdGlvbidcbiAgICAgICAgICAgICAgICB0cmFuc3BhcmVudFxuICAgICAgICAgICAgICAgIG9uQ2xpY2s9e29uQ2xpY2t9XG4gICAgICAgICAgICAgICAgaWNvbj17XG4gICAgICAgICAgICAgICAgICAgIDxJY29uXG4gICAgICAgICAgICAgICAgICAgICAgICBpY29uPSdJY0VkaXQnXG4gICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9J2RhLWFydGljbGVfX2xlYXJuLW1vcmUtaWNvbidcbiAgICAgICAgICAgICAgICAgICAgICAgIGN1c3RvbV9jb2xvcj0ndmFyKC0tdGV4dC1sZXNzLXByb21pbmVudCknXG4gICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgLz5cbiAgICAgICAgPC9Qb3BvdmVyPlxuICAgIDwvZGl2PlxuKTtcblxuY29uc3QgU3BlY0JveCA9ICh7IHZhbHVlLCBpc19ib2xkIH06IFRTcGVjQm94UHJvcHMpID0+IChcbiAgICA8ZGl2IGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19zcGVjLWJveCc+XG4gICAgICAgIDxUZXh0IHNpemU9J3hzJyB3ZWlnaHQ9e2lzX2JvbGQgPyAnYm9sZCcgOiAnJ30gY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWxfX3NwZWMtdGV4dCc+XG4gICAgICAgICAgICB7dmFsdWV9XG4gICAgICAgIDwvVGV4dD5cbiAgICAgICAgPENGREFjY291bnRDb3B5IHRleHQ9e3ZhbHVlfSBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fc3BlYy1jb3B5JyAvPlxuICAgIDwvZGl2PlxuKTtcblxuY29uc3QgYWNjb3VudF9pY29uczogeyBba2V5OiBzdHJpbmddOiBUQWNjb3VudEljb25WYWx1ZXMgfSA9IHtcbiAgICBtdDU6IHtcbiAgICAgICAgc3ludGhldGljOiAnSWNNdDVTeW50aGV0aWNQbGF0Zm9ybScsXG4gICAgICAgIGZpbmFuY2lhbDogJ0ljTXQ1RmluYW5jaWFsUGxhdGZvcm0nLFxuICAgICAgICBjZmQ6ICdJY010NUNmZFBsYXRmb3JtJyxcbiAgICB9LFxufTtcblxuY29uc3QgZ2V0VGl0bGUgPSAobWFya2V0X3R5cGU6IHN0cmluZywgaXNfZXVfdXNlcjogYm9vbGVhbikgPT4ge1xuICAgIGlmIChpc19ldV91c2VyKSBsb2NhbGl6ZSgnTVQ1IENGRHMnKTtcbiAgICByZXR1cm4gbWFya2V0X3R5cGU7XG59O1xuXG5jb25zdCBNVDVUcmFkZU1vZGFsID0gKHtcbiAgICBtdDVfdHJhZGVfYWNjb3VudCxcbiAgICBkaXNhYmxlQXBwLFxuICAgIGVuYWJsZUFwcCxcbiAgICBpc19ldV91c2VyLFxuICAgIGlzX29wZW4sXG4gICAgY29udGV4dCxcbiAgICBvblBhc3N3b3JkTWFuYWdlcixcbiAgICB0b2dnbGVNb2RhbCxcbn06IFRNVDVUcmFkZU1vZGFsUHJvcHMpID0+IHtcbiAgICBjb25zdCBnZXRDb21wYW55U2hvcnRjb2RlID0gKCkgPT4ge1xuICAgICAgICBpZiAoXG4gICAgICAgICAgICAobXQ1X3RyYWRlX2FjY291bnQuYWNjb3VudF90eXBlID09PSAnZGVtbycgJiZcbiAgICAgICAgICAgICAgICBtdDVfdHJhZGVfYWNjb3VudC5tYXJrZXRfdHlwZSA9PT0gJ2ZpbmFuY2lhbCcgJiZcbiAgICAgICAgICAgICAgICBtdDVfdHJhZGVfYWNjb3VudC5sYW5kaW5nX2NvbXBhbnlfc2hvcnQgPT09ICdsYWJ1YW4nKSB8fFxuICAgICAgICAgICAgbXQ1X3RyYWRlX2FjY291bnQuYWNjb3VudF90eXBlID09PSAncmVhbCdcbiAgICAgICAgKSB7XG4gICAgICAgICAgICByZXR1cm4gbXQ1X3RyYWRlX2FjY291bnQubGFuZGluZ19jb21wYW55X3Nob3J0O1xuICAgICAgICB9XG4gICAgICAgIHJldHVybiB1bmRlZmluZWQ7XG4gICAgfTtcbiAgICBjb25zdCBnZXRIZWFkaW5nVGl0bGUgPSAoKSA9PlxuICAgICAgICBnZXRDRkRBY2NvdW50RGlzcGxheSh7XG4gICAgICAgICAgICBtYXJrZXRfdHlwZTogbXQ1X3RyYWRlX2FjY291bnQubWFya2V0X3R5cGUsXG4gICAgICAgICAgICBzdWJfYWNjb3VudF90eXBlOiBtdDVfdHJhZGVfYWNjb3VudC5zdWJfYWNjb3VudF90eXBlLFxuICAgICAgICAgICAgcGxhdGZvcm06IENGRF9QTEFURk9STVMuTVQ1LFxuICAgICAgICAgICAgaXNfZXU6IGlzX2V1X3VzZXIsXG4gICAgICAgICAgICBzaG9ydGNvZGU6IGdldENvbXBhbnlTaG9ydGNvZGUoKSxcbiAgICAgICAgICAgIGlzX210NV90cmFkZV9tb2RhbDogdHJ1ZSxcbiAgICAgICAgfSk7XG4gICAgY29uc3QgZ2V0UGFnZUNvbnRlbnQgPSAoKSA9PiAoXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWwtY29udGFpbmVyJz5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWwnPlxuICAgICAgICAgICAgICAgIDxJY29uIGljb249e2FjY291bnRfaWNvbnMubXQ1W2lzX2V1X3VzZXIgPyAnY2ZkJyA6IG10NV90cmFkZV9hY2NvdW50Lm1hcmtldF90eXBlXX0gc2l6ZT17MjR9IC8+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fZGVzYyc+XG4gICAgICAgICAgICAgICAgICAgIDxUZXh0IHNpemU9J3hzJyBsaW5lX2hlaWdodD0nbCcgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWxfX2Rlc2MtaGVhZGluZyc+XG4gICAgICAgICAgICAgICAgICAgICAgICB7Z2V0SGVhZGluZ1RpdGxlKCl9XG4gICAgICAgICAgICAgICAgICAgIDwvVGV4dD5cbiAgICAgICAgICAgICAgICAgICAgeyhtdDVfdHJhZGVfYWNjb3VudCBhcyBUVHJhZGluZ1BsYXRmb3JtQWNjb3VudHMpPy5kaXNwbGF5X2xvZ2luICYmIChcbiAgICAgICAgICAgICAgICAgICAgICAgIDxUZXh0IGNvbG9yPSdsZXNzLXByb21pbmVudCcgc2l6ZT0neHh4cycgbGluZV9oZWlnaHQ9J3h4eHMnPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHsobXQ1X3RyYWRlX2FjY291bnQgYXMgVFRyYWRpbmdQbGF0Zm9ybUFjY291bnRzKT8uZGlzcGxheV9sb2dpbn1cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvVGV4dD5cbiAgICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICB7bXQ1X3RyYWRlX2FjY291bnQ/LmRpc3BsYXlfYmFsYW5jZSAmJiAoXG4gICAgICAgICAgICAgICAgICAgIDxUZXh0IHNpemU9J3hzJyBjb2xvcj0ncHJvZml0LXN1Y2Nlc3MnIGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19kZXNjLWJhbGFuY2UnIHdlaWdodD0nYm9sZCc+XG4gICAgICAgICAgICAgICAgICAgICAgICA8TW9uZXlcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBhbW91bnQ9e210NV90cmFkZV9hY2NvdW50LmRpc3BsYXlfYmFsYW5jZX1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBjdXJyZW5jeT17bXQ1X3RyYWRlX2FjY291bnQuY3VycmVuY3l9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgaGFzX3NpZ249eyEhbXQ1X3RyYWRlX2FjY291bnQuYmFsYW5jZSAmJiBtdDVfdHJhZGVfYWNjb3VudC5iYWxhbmNlIDwgMH1cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzaG93X2N1cnJlbmN5XG4gICAgICAgICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgICAgICA8L1RleHQ+XG4gICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fbG9naW4tc3BlY3MnPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWxfX2xvZ2luLXNwZWNzLWl0ZW0nPlxuICAgICAgICAgICAgICAgICAgICA8VGV4dCBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbC0tcGFyYWdyYXBoJz57bG9jYWxpemUoJ0Jyb2tlcicpfTwvVGV4dD5cbiAgICAgICAgICAgICAgICAgICAgPFNwZWNCb3ggdmFsdWU9eydEZXJpdiBMaW1pdGVkJ30gLz5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19sb2dpbi1zcGVjcy1pdGVtJz5cbiAgICAgICAgICAgICAgICAgICAgPFRleHQgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWwtLXBhcmFncmFwaCc+e2xvY2FsaXplKCdTZXJ2ZXInKX08L1RleHQ+XG4gICAgICAgICAgICAgICAgICAgIDxTcGVjQm94IHZhbHVlPXsobXQ1X3RyYWRlX2FjY291bnQgYXMgRGV0YWlsc09mRWFjaE1UNUxvZ2luaWQpPy5zZXJ2ZXJfaW5mbz8uZW52aXJvbm1lbnR9IC8+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fbG9naW4tc3BlY3MtaXRlbSc+XG4gICAgICAgICAgICAgICAgICAgIDxUZXh0IGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsLS1wYXJhZ3JhcGgnPntsb2NhbGl6ZSgnTG9naW4gSUQnKX08L1RleHQ+XG4gICAgICAgICAgICAgICAgICAgIDxTcGVjQm94IHZhbHVlPXsobXQ1X3RyYWRlX2FjY291bnQgYXMgVFRyYWRpbmdQbGF0Zm9ybUFjY291bnRzKT8uZGlzcGxheV9sb2dpbn0gLz5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19sb2dpbi1zcGVjcy1pdGVtJz5cbiAgICAgICAgICAgICAgICAgICAgPFRleHQgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWwtLXBhcmFncmFwaCc+e2xvY2FsaXplKCdQYXNzd29yZCcpfTwvVGV4dD5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbC0tcGFyYWdyYXBoJz5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxQYXNzd29yZEJveFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBsYXRmb3JtPSdtdDUnXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17KCkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb25zdCBhY2NvdW50X3R5cGUgPSBnZXRDRkRBY2NvdW50S2V5KHtcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1hcmtldF90eXBlOiBtdDVfdHJhZGVfYWNjb3VudC5tYXJrZXRfdHlwZSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN1Yl9hY2NvdW50X3R5cGU6IG10NV90cmFkZV9hY2NvdW50LnN1Yl9hY2NvdW50X3R5cGUsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwbGF0Zm9ybTogQ0ZEX1BMQVRGT1JNUy5ETVQ1LFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc2hvcnRjb2RlOiBtdDVfdHJhZGVfYWNjb3VudC5sYW5kaW5nX2NvbXBhbnlfc2hvcnQsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0pO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBvblBhc3N3b3JkTWFuYWdlcihcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG10NV90cmFkZV9hY2NvdW50Py5sb2dpbixcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGdldFRpdGxlKG10NV90cmFkZV9hY2NvdW50Lm1hcmtldF90eXBlLCBpc19ldV91c2VyKSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG10NV90cmFkZV9hY2NvdW50LmFjY291bnRfdHlwZSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFjY291bnRfdHlwZSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChtdDVfdHJhZGVfYWNjb3VudCBhcyBEZXRhaWxzT2ZFYWNoTVQ1TG9naW5pZCk/LnNlcnZlclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0b2dnbGVNb2RhbCgpO1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fZG93bmxvYWQtY2VudGVyLWFwcCc+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fZG93bmxvYWQtY2VudGVyLWFwcC0tb3B0aW9uJz5cbiAgICAgICAgICAgICAgICAgICAgPEljb24gaWNvbj0nSWNNdDVMb2dvJyBzaXplPXszMn0gLz5cbiAgICAgICAgICAgICAgICAgICAgPFRleHQgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWxfX2Rvd25sb2FkLWNlbnRlci1hcHAtLW9wdGlvbi1pdGVtJyBzaXplPSd4cyc+XG4gICAgICAgICAgICAgICAgICAgICAgICB7bG9jYWxpemUoJ01ldGFUcmFkZXIgNSB3ZWInKX1cbiAgICAgICAgICAgICAgICAgICAgPC9UZXh0PlxuICAgICAgICAgICAgICAgICAgICA8YVxuICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSdkYy1idG4gY2ZkLXRyYWRlLW1vZGFsX19kb3dubG9hZC1jZW50ZXItYXBwLS1vcHRpb24tbGluaydcbiAgICAgICAgICAgICAgICAgICAgICAgIHR5cGU9J2J1dHRvbidcbiAgICAgICAgICAgICAgICAgICAgICAgIGhyZWY9e2dldE1UNVdlYlRlcm1pbmFsTGluayh7XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgY2F0ZWdvcnk6IG10NV90cmFkZV9hY2NvdW50LmFjY291bnRfdHlwZSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsb2dpbmlkOiAobXQ1X3RyYWRlX2FjY291bnQgYXMgVFRyYWRpbmdQbGF0Zm9ybUFjY291bnRzKS5kaXNwbGF5X2xvZ2luLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlcnZlcl9uYW1lOiAobXQ1X3RyYWRlX2FjY291bnQgYXMgRGV0YWlsc09mRWFjaE1UNUxvZ2luaWQpPy5zZXJ2ZXJfaW5mbz8uZW52aXJvbm1lbnQsXG4gICAgICAgICAgICAgICAgICAgICAgICB9KX1cbiAgICAgICAgICAgICAgICAgICAgICAgIHRhcmdldD0nX2JsYW5rJ1xuICAgICAgICAgICAgICAgICAgICAgICAgcmVsPSdub29wZW5lciBub3JlZmVycmVyJ1xuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgICA8VGV4dCBzaXplPSd4eHMnIHdlaWdodD0nYm9sZCc+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge2xvY2FsaXplKCdPcGVuJyl9XG4gICAgICAgICAgICAgICAgICAgICAgICA8L1RleHQ+XG4gICAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19kb3dubG9hZC1jZW50ZXItYXBwLS1vcHRpb24nPlxuICAgICAgICAgICAgICAgICAgICA8SWNvbiBpY29uPSdJY1dpbmRvd3NMb2dvJyBzaXplPXszMn0gLz5cbiAgICAgICAgICAgICAgICAgICAgPFRleHQgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWxfX2Rvd25sb2FkLWNlbnRlci1hcHAtLW9wdGlvbi1pdGVtJyBzaXplPSd4cyc+XG4gICAgICAgICAgICAgICAgICAgICAgICB7bG9jYWxpemUoJ01ldGFUcmFkZXIgNSBXaW5kb3dzIGFwcCcpfVxuICAgICAgICAgICAgICAgICAgICA8L1RleHQ+XG4gICAgICAgICAgICAgICAgICAgIDxhXG4gICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9J2RjLWJ0biBjZmQtdHJhZGUtbW9kYWxfX2Rvd25sb2FkLWNlbnRlci1hcHAtLW9wdGlvbi1saW5rJ1xuICAgICAgICAgICAgICAgICAgICAgICAgdHlwZT0nYnV0dG9uJ1xuICAgICAgICAgICAgICAgICAgICAgICAgaHJlZj17Z2V0UGxhdGZvcm1NdDVEb3dubG9hZExpbmsoJ3dpbmRvd3MnKX1cbiAgICAgICAgICAgICAgICAgICAgICAgIHRhcmdldD0nX2JsYW5rJ1xuICAgICAgICAgICAgICAgICAgICAgICAgcmVsPSdub29wZW5lciBub3JlZmVycmVyJ1xuICAgICAgICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgICAgICAgICA8VGV4dCBzaXplPSd4eHMnIHdlaWdodD0nYm9sZCc+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge2xvY2FsaXplKCdEb3dubG9hZCcpfVxuICAgICAgICAgICAgICAgICAgICAgICAgPC9UZXh0PlxuICAgICAgICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fZG93bmxvYWQtY2VudGVyLWFwcC0tb3B0aW9uJz5cbiAgICAgICAgICAgICAgICAgICAgPEljb24gaWNvbj0nSWNNYWNvc0xvZ28nIHNpemU9ezMyfSAvPlxuICAgICAgICAgICAgICAgICAgICA8VGV4dCBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fZG93bmxvYWQtY2VudGVyLWFwcC0tb3B0aW9uLWl0ZW0nIHNpemU9J3hzJz5cbiAgICAgICAgICAgICAgICAgICAgICAgIHtsb2NhbGl6ZSgnTWV0YVRyYWRlciA1IE1hY09TIGFwcCcpfVxuICAgICAgICAgICAgICAgICAgICA8L1RleHQ+XG4gICAgICAgICAgICAgICAgICAgIDxhXG4gICAgICAgICAgICAgICAgICAgICAgICBjbGFzc05hbWU9J2RjLWJ0biBjZmQtdHJhZGUtbW9kYWxfX2Rvd25sb2FkLWNlbnRlci1hcHAtLW9wdGlvbi1saW5rJ1xuICAgICAgICAgICAgICAgICAgICAgICAgdHlwZT0nYnV0dG9uJ1xuICAgICAgICAgICAgICAgICAgICAgICAgaHJlZj17Z2V0UGxhdGZvcm1NdDVEb3dubG9hZExpbmsoJ21hY29zJyl9XG4gICAgICAgICAgICAgICAgICAgICAgICB0YXJnZXQ9J19ibGFuaydcbiAgICAgICAgICAgICAgICAgICAgICAgIHJlbD0nbm9vcGVuZXIgbm9yZWZlcnJlcidcbiAgICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICAgICAgPFRleHQgc2l6ZT0neHhzJyB3ZWlnaHQ9J2JvbGQnPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHtsb2NhbGl6ZSgnRG93bmxvYWQnKX1cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvVGV4dD5cbiAgICAgICAgICAgICAgICAgICAgPC9hPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWxfX2Rvd25sb2FkLWNlbnRlci1hcHAtLW9wdGlvbic+XG4gICAgICAgICAgICAgICAgICAgIDxJY29uIGljb249J0ljTGludXhMb2dvJyBzaXplPXszMn0gLz5cbiAgICAgICAgICAgICAgICAgICAgPFRleHQgY2xhc3NOYW1lPSdjZmQtdHJhZGUtbW9kYWxfX2Rvd25sb2FkLWNlbnRlci1hcHAtLW9wdGlvbi1pdGVtJyBzaXplPSd4cyc+XG4gICAgICAgICAgICAgICAgICAgICAgICB7bG9jYWxpemUoJ01ldGFUcmFkZXIgNSBMaW51eCBhcHAnKX1cbiAgICAgICAgICAgICAgICAgICAgPC9UZXh0PlxuICAgICAgICAgICAgICAgICAgICA8YVxuICAgICAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPSdkYy1idG4gY2ZkLXRyYWRlLW1vZGFsX19kb3dubG9hZC1jZW50ZXItYXBwLS1vcHRpb24tbGluaydcbiAgICAgICAgICAgICAgICAgICAgICAgIHR5cGU9J2J1dHRvbidcbiAgICAgICAgICAgICAgICAgICAgICAgIGhyZWY9e2dldFBsYXRmb3JtTXQ1RG93bmxvYWRMaW5rKCdsaW51eCcpfVxuICAgICAgICAgICAgICAgICAgICAgICAgdGFyZ2V0PSdfYmxhbmsnXG4gICAgICAgICAgICAgICAgICAgICAgICByZWw9J25vb3BlbmVyIG5vcmVmZXJyZXInXG4gICAgICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxUZXh0IHNpemU9J3h4cycgd2VpZ2h0PSdib2xkJz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7bG9jYWxpemUoJ0xlYXJuIG1vcmUnKX1cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvVGV4dD5cbiAgICAgICAgICAgICAgICAgICAgPC9hPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19kb3dubG9hZC1jZW50ZXItb3B0aW9ucyc+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fZG93bmxvYWQtY2VudGVyLW9wdGlvbnMtLW1vYmlsZS1saW5rcyc+XG4gICAgICAgICAgICAgICAgICAgIDxhIGhyZWY9e2dldFBsYXRmb3JtTXQ1RG93bmxvYWRMaW5rKCdhbmRyb2lkJyl9IHRhcmdldD0nX2JsYW5rJyByZWw9J25vb3BlbmVyIG5vcmVmZXJyZXInPlxuICAgICAgICAgICAgICAgICAgICAgICAgPEljb24gaWNvbj0nSWNJbnN0YWxsYXRpb25Hb29nbGUnIHdpZHRoPXsxMzV9IGhlaWdodD17NDB9IC8+XG4gICAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICAgICAgPGEgaHJlZj17Z2V0UGxhdGZvcm1NdDVEb3dubG9hZExpbmsoJ2h1YXdlaScpfSB0YXJnZXQ9J19ibGFuaycgcmVsPSdub29wZW5lciBub3JlZmVycmVyJz5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxJY29uIGljb249J0ljSW5zdGFsbGF0aW9uSHVhd2VpJyB3aWR0aD17MTM1fSBoZWlnaHQ9ezQwfSAvPlxuICAgICAgICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9J2NmZC10cmFkZS1tb2RhbF9fZG93bmxvYWQtY2VudGVyLW9wdGlvbnMtLXFyY29kZSc+XG4gICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPXtnZXRVcmxCYXNlKCcvcHVibGljL2ltYWdlcy9jb21tb24vbXQ1X2Rvd25sb2FkLnBuZycpfSB3aWR0aD17ODB9IGhlaWdodD17ODB9IC8+XG4gICAgICAgICAgICAgICAgICAgIDxUZXh0IGFsaWduPSdjZW50ZXInIHNpemU9J3h4cyc+XG4gICAgICAgICAgICAgICAgICAgICAgICB7bG9jYWxpemUoJ1NjYW4gdGhlIFFSIGNvZGUgdG8gZG93bmxvYWQgRGVyaXYgTVQ1LicpfVxuICAgICAgICAgICAgICAgICAgICA8L1RleHQ+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgKTtcblxuICAgIHJldHVybiAoXG4gICAgICAgIDxSZWFjdC5TdXNwZW5zZSBmYWxsYmFjaz17PFVJTG9hZGVyIC8+fT5cbiAgICAgICAgICAgIDxEZXNrdG9wV3JhcHBlcj5cbiAgICAgICAgICAgICAgICA8TW9kYWxcbiAgICAgICAgICAgICAgICAgICAgZGlzYWJsZUFwcD17ZGlzYWJsZUFwcH1cbiAgICAgICAgICAgICAgICAgICAgZW5hYmxlQXBwPXtlbmFibGVBcHB9XG4gICAgICAgICAgICAgICAgICAgIGlzX29wZW49e2lzX29wZW59XG4gICAgICAgICAgICAgICAgICAgIHRpdGxlPXtsb2NhbGl6ZSgnVHJhZGUnKX1cbiAgICAgICAgICAgICAgICAgICAgdG9nZ2xlTW9kYWw9e3RvZ2dsZU1vZGFsfVxuICAgICAgICAgICAgICAgICAgICBzaG91bGRfaGVhZGVyX3N0aWNrX2JvZHk9e2ZhbHNlfVxuICAgICAgICAgICAgICAgICAgICB3aWR0aD0nNjAwcHgnXG4gICAgICAgICAgICAgICAgICAgIGhlaWdodD0nNzA5cHgnXG4gICAgICAgICAgICAgICAgICAgIGV4aXRfY2xhc3NuYW1lPSdjZmQtbW9kYWwtLWN1c3RvbS1leGl0J1xuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAge2dldFBhZ2VDb250ZW50KCl9XG4gICAgICAgICAgICAgICAgPC9Nb2RhbD5cbiAgICAgICAgICAgIDwvRGVza3RvcFdyYXBwZXI+XG4gICAgICAgICAgICA8TW9iaWxlV3JhcHBlcj5cbiAgICAgICAgICAgICAgICA8UGFnZU92ZXJsYXlcbiAgICAgICAgICAgICAgICAgICAgaXNfb3Blbj17aXNfb3Blbn1cbiAgICAgICAgICAgICAgICAgICAgcG9ydGFsX2lkPSdkZXJpdl9hcHAnXG4gICAgICAgICAgICAgICAgICAgIGhlYWRlcj0nVHJhZGUnXG4gICAgICAgICAgICAgICAgICAgIG9uQ2xpY2tDbG9zZT17dG9nZ2xlTW9kYWx9XG4gICAgICAgICAgICAgICAgICAgIGhlYWRlcl9jbGFzc25hbWU9J2NmZC10cmFkZS1tb2RhbF9fbW9iaWxlLXRpdGxlJ1xuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgICAgPERpdjEwMHZoQ29udGFpbmVyIGNsYXNzTmFtZT0nY2ZkLXRyYWRlLW1vZGFsX19tb2JpbGUtdmlldy13cmFwcGVyJyBoZWlnaHRfb2Zmc2V0PSc4MHB4Jz5cbiAgICAgICAgICAgICAgICAgICAgICAgIHtnZXRQYWdlQ29udGVudCgpfVxuICAgICAgICAgICAgICAgICAgICA8L0RpdjEwMHZoQ29udGFpbmVyPlxuICAgICAgICAgICAgICAgIDwvUGFnZU92ZXJsYXk+XG4gICAgICAgICAgICA8L01vYmlsZVdyYXBwZXI+XG4gICAgICAgIDwvUmVhY3QuU3VzcGVuc2U+XG4gICAgKTtcbn07XG5cbmV4cG9ydCBkZWZhdWx0IGNvbm5lY3QoKHsgbW9kdWxlcywgdWkgfTogUm9vdFN0b3JlKSA9PiAoe1xuICAgIGRpc2FibGVBcHA6IHVpLmRpc2FibGVBcHAsXG4gICAgZW5hYmxlQXBwOiB1aS5lbmFibGVBcHAsXG4gICAgbXQ1X3RyYWRlX2FjY291bnQ6IG1vZHVsZXMuY2ZkLm10NV90cmFkZV9hY2NvdW50LFxufSkpKE1UNVRyYWRlTW9kYWwpO1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/Containers/mt5-trade-modal.tsx\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/Helpers/constants.ts":
+/*!**********************************!*\
+  !*** ./src/Helpers/constants.ts ***!
+  \**********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"getBrokerName\": () =&gt; (/* binding */ getBrokerName),\n/* harmony export */   \"getPlatformDXTradeDownloadLink\": () =&gt; (/* binding */ getPlatformDXTradeDownloadLink),\n/* harmony export */   \"getPlatformMt5DownloadLink\": () =&gt; (/* binding */ getPlatformMt5DownloadLink),\n/* harmony export */   \"getDXTradeWebTerminalLink\": () =&gt; (/* binding */ getDXTradeWebTerminalLink),\n/* harmony export */   \"getMT5WebTerminalLink\": () =&gt; (/* binding */ getMT5WebTerminalLink),\n/* harmony export */   \"getTopUpConfig\": () =&gt; (/* binding */ getTopUpConfig)\n/* harmony export */ });\n/* harmony import */ var _deriv_shared__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @deriv/shared */ \"@deriv/shared\");\n/* harmony import */ var _deriv_shared__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_deriv_shared__WEBPACK_IMPORTED_MODULE_0__);\n\nvar REAL_DXTRADE_URL = 'https://dx.deriv.com';\nvar DEMO_DXTRADE_URL = 'https://dx-demo.deriv.com';\nvar DXTRADE_IOS_APP_URL = 'https://apps.apple.com/us/app/deriv-x/id1563337503';\nvar DXTRADE_ANDROID_APP_URL = 'https://play.google.com/store/apps/details?id=com.deriv.dx';\nvar DXTRADE_HUAWEI_APP_URL = 'https://appgallery.huawei.com/app/C104633219';\n\nvar getBrokerName = function getBrokerName() {\n  return 'Deriv Limited';\n};\n\nvar getTopUpConfig = function getTopUpConfig() {\n  return {\n    minimum_amount: 1000,\n    additional_amount: 10000\n  };\n};\n\nvar getPlatformDXTradeDownloadLink = function getPlatformDXTradeDownloadLink(platform) {\n  switch (platform) {\n    case 'ios':\n      return DXTRADE_IOS_APP_URL;\n\n    case 'huawei':\n      return DXTRADE_HUAWEI_APP_URL;\n\n    default:\n      return DXTRADE_ANDROID_APP_URL;\n  }\n};\n\nvar getPlatformMt5DownloadLink = function getPlatformMt5DownloadLink() {\n  var platform = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : undefined;\n\n  switch (platform || (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.OSDetect)()) {\n    case 'windows':\n      return 'https://download.mql5.com/cdn/web/deriv.limited/mt5/derivmt5setup.exe';\n\n    case 'linux':\n      return 'https://www.metatrader5.com/en/terminal/help/start_advanced/install_linux';\n\n    case 'macos':\n      return 'https://download.mql5.com/cdn/web/metaquotes.software.corp/mt5/MetaTrader5.dmg';\n\n    case 'huawei':\n      return 'https://appgallery.huawei.com/#/app/C102015329';\n\n    case 'android':\n      return 'https://download.mql5.com/cdn/mobile/mt5/android?server=Deriv-Demo,Deriv-Server';\n\n    default:\n      return getMT5WebTerminalLink({\n        category: 'real'\n      });\n    // Web\n  }\n};\n\nvar getDXTradeWebTerminalLink = function getDXTradeWebTerminalLink(category, token) {\n  var url = category === 'real' ? REAL_DXTRADE_URL : DEMO_DXTRADE_URL;\n\n  if (token) {\n    url += \"?token=\".concat(token);\n  }\n\n  return url;\n};\n\nvar getMT5WebTerminalLink = function getMT5WebTerminalLink(_ref) {\n  var category = _ref.category,\n      loginid = _ref.loginid,\n      _ref$server_name = _ref.server_name,\n      server_name = _ref$server_name === void 0 ? 'Deriv-Server' : _ref$server_name;\n  var is_demo = category === 'demo';\n  var server = is_demo ? 'Deriv-Demo' : server_name;\n  var login = loginid !== null &amp;&amp; loginid !== void 0 ? loginid : '';\n  return \"https://trade.mql5.com/trade?servers=\".concat(server, \"&amp;trade_server=\").concat(server).concat(login &amp;&amp; \"&amp;login=\".concat(login));\n};\n\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvSGVscGVycy9jb25zdGFudHMudHMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBQTtBQUVBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFBQTtBQUFBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBRkE7QUFJQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFDQTtBQUNBOztBQUNBO0FBQ0E7QUFOQTtBQVFBOztBQUVBO0FBQUE7O0FBQ0E7QUFDQTtBQUNBOztBQUNBO0FBQ0E7O0FBQ0E7QUFDQTs7QUFDQTtBQUNBOztBQUNBO0FBQ0E7O0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQVpBO0FBY0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQVFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL0BkZXJpdi9jZmQvLi9zcmMvSGVscGVycy9jb25zdGFudHMudHM/ZGIwZSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBPU0RldGVjdCB9IGZyb20gJ0BkZXJpdi9zaGFyZWQnO1xuXG5jb25zdCBSRUFMX0RYVFJBREVfVVJMID0gJ2h0dHBzOi8vZHguZGVyaXYuY29tJztcbmNvbnN0IERFTU9fRFhUUkFERV9VUkwgPSAnaHR0cHM6Ly9keC1kZW1vLmRlcml2LmNvbSc7XG5cbmNvbnN0IERYVFJBREVfSU9TX0FQUF9VUkwgPSAnaHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZGVyaXYteC9pZDE1NjMzMzc1MDMnO1xuY29uc3QgRFhUUkFERV9BTkRST0lEX0FQUF9VUkwgPSAnaHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5kZXJpdi5keCc7XG5jb25zdCBEWFRSQURFX0hVQVdFSV9BUFBfVVJMID0gJ2h0dHBzOi8vYXBwZ2FsbGVyeS5odWF3ZWkuY29tL2FwcC9DMTA0NjMzMjE5JztcblxuY29uc3QgZ2V0QnJva2VyTmFtZSA9ICgpID0+ICdEZXJpdiBMaW1pdGVkJztcblxuY29uc3QgZ2V0VG9wVXBDb25maWcgPSAoKSA9PiB7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgbWluaW11bV9hbW91bnQ6IDEwMDAsXG4gICAgICAgIGFkZGl0aW9uYWxfYW1vdW50OiAxMDAwMCxcbiAgICB9O1xufTtcblxuY29uc3QgZ2V0UGxhdGZvcm1EWFRyYWRlRG93bmxvYWRMaW5rID0gKHBsYXRmb3JtOiAnaW9zJyB8ICdhbmRyb2lkJyB8ICdodWF3ZWknKSA9PiB7XG4gICAgc3dpdGNoIChwbGF0Zm9ybSkge1xuICAgICAgICBjYXNlICdpb3MnOlxuICAgICAgICAgICAgcmV0dXJuIERYVFJBREVfSU9TX0FQUF9VUkw7XG4gICAgICAgIGNhc2UgJ2h1YXdlaSc6XG4gICAgICAgICAgICByZXR1cm4gRFhUUkFERV9IVUFXRUlfQVBQX1VSTDtcbiAgICAgICAgZGVmYXVsdDpcbiAgICAgICAgICAgIHJldHVybiBEWFRSQURFX0FORFJPSURfQVBQX1VSTDtcbiAgICB9XG59O1xuXG5jb25zdCBnZXRQbGF0Zm9ybU10NURvd25sb2FkTGluayA9IChwbGF0Zm9ybTogc3RyaW5nIHwgdW5kZWZpbmVkID0gdW5kZWZpbmVkKSA9PiB7XG4gICAgc3dpdGNoIChwbGF0Zm9ybSB8fCBPU0RldGVjdCgpKSB7XG4gICAgICAgIGNhc2UgJ3dpbmRvd3MnOlxuICAgICAgICAgICAgcmV0dXJuICdodHRwczovL2Rvd25sb2FkLm1xbDUuY29tL2Nkbi93ZWIvZGVyaXYubGltaXRlZC9tdDUvZGVyaXZtdDVzZXR1cC5leGUnO1xuICAgICAgICBjYXNlICdsaW51eCc6XG4gICAgICAgICAgICByZXR1cm4gJ2h0dHBzOi8vd3d3Lm1ldGF0cmFkZXI1LmNvbS9lbi90ZXJtaW5hbC9oZWxwL3N0YXJ0X2FkdmFuY2VkL2luc3RhbGxfbGludXgnO1xuICAgICAgICBjYXNlICdtYWNvcyc6XG4gICAgICAgICAgICByZXR1cm4gJ2h0dHBzOi8vZG93bmxvYWQubXFsNS5jb20vY2RuL3dlYi9tZXRhcXVvdGVzLnNvZnR3YXJlLmNvcnAvbXQ1L01ldGFUcmFkZXI1LmRtZyc7XG4gICAgICAgIGNhc2UgJ2h1YXdlaSc6XG4gICAgICAgICAgICByZXR1cm4gJ2h0dHBzOi8vYXBwZ2FsbGVyeS5odWF3ZWkuY29tLyMvYXBwL0MxMDIwMTUzMjknO1xuICAgICAgICBjYXNlICdhbmRyb2lkJzpcbiAgICAgICAgICAgIHJldHVybiAnaHR0cHM6Ly9kb3dubG9hZC5tcWw1LmNvbS9jZG4vbW9iaWxlL210NS9hbmRyb2lkP3NlcnZlcj1EZXJpdi1EZW1vLERlcml2LVNlcnZlcic7XG4gICAgICAgIGRlZmF1bHQ6XG4gICAgICAgICAgICByZXR1cm4gZ2V0TVQ1V2ViVGVybWluYWxMaW5rKHsgY2F0ZWdvcnk6ICdyZWFsJyB9KTsgLy8gV2ViXG4gICAgfVxufTtcblxuY29uc3QgZ2V0RFhUcmFkZVdlYlRlcm1pbmFsTGluayA9IChjYXRlZ29yeTogc3RyaW5nLCB0b2tlbj86IHN0cmluZykgPT4ge1xuICAgIGxldCB1cmwgPSBjYXRlZ29yeSA9PT0gJ3JlYWwnID8gUkVBTF9EWFRSQURFX1VSTCA6IERFTU9fRFhUUkFERV9VUkw7XG5cbiAgICBpZiAodG9rZW4pIHtcbiAgICAgICAgdXJsICs9IGA/dG9rZW49JHt0b2tlbn1gO1xuICAgIH1cblxuICAgIHJldHVybiB1cmw7XG59O1xuXG5jb25zdCBnZXRNVDVXZWJUZXJtaW5hbExpbmsgPSAoe1xuICAgIGNhdGVnb3J5LFxuICAgIGxvZ2luaWQsXG4gICAgc2VydmVyX25hbWUgPSAnRGVyaXYtU2VydmVyJyxcbn06IHtcbiAgICBjYXRlZ29yeT86IHN0cmluZztcbiAgICBsb2dpbmlkPzogc3RyaW5nO1xuICAgIHNlcnZlcl9uYW1lPzogc3RyaW5nO1xufSkgPT4ge1xuICAgIGNvbnN0IGlzX2RlbW8gPSBjYXRlZ29yeSA9PT0gJ2RlbW8nO1xuICAgIGNvbnN0IHNlcnZlciA9IGlzX2RlbW8gPyAnRGVyaXYtRGVtbycgOiBzZXJ2ZXJfbmFtZTtcbiAgICBjb25zdCBsb2dpbiA9IGxvZ2luaWQgPz8gJyc7XG5cbiAgICByZXR1cm4gYGh0dHBzOi8vdHJhZGUubXFsNS5jb20vdHJhZGU/c2VydmVycz0ke3NlcnZlcn0mdHJhZGVfc2VydmVyPSR7c2VydmVyfSR7bG9naW4gJiYgYCZsb2dpbj0ke2xvZ2lufWB9YDtcbn07XG5cbmV4cG9ydCB7XG4gICAgZ2V0QnJva2VyTmFtZSxcbiAgICBnZXRQbGF0Zm9ybURYVHJhZGVEb3dubG9hZExpbmssXG4gICAgZ2V0UGxhdGZvcm1NdDVEb3dubG9hZExpbmssXG4gICAgZ2V0RFhUcmFkZVdlYlRlcm1pbmFsTGluayxcbiAgICBnZXRNVDVXZWJUZXJtaW5hbExpbmssXG4gICAgZ2V0VG9wVXBDb25maWcsXG59O1xuIl0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/Helpers/constants.ts\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "./src/Stores/connect.js":
+/*!*******************************!*\
+  !*** ./src/Stores/connect.js ***!
+  \*******************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"MobxContent\": () =&gt; (/* binding */ MobxContent),\n/* harmony export */   \"MobxContentProvider\": () =&gt; (/* binding */ MobxContentProvider),\n/* harmony export */   \"connect\": () =&gt; (/* binding */ connect)\n/* harmony export */ });\n/* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mobx-react */ \"mobx-react\");\n/* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mobx_react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly &amp;&amp; (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i &lt; arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\nvar isClassComponent = function isClassComponent(Component) {\n  return !!(typeof Component === 'function' &amp;&amp; Component.prototype &amp;&amp; Component.prototype.isReactComponent);\n};\n\nvar MobxContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createContext(null);\n\nfunction injectStorePropsToComponent(propsToSelectFn, BaseComponent) {\n  var Component = function Component(own_props) {\n    var store = react__WEBPACK_IMPORTED_MODULE_1___default().useContext(MobxContent);\n    var ObservedComponent = BaseComponent;\n\n    if (isClassComponent(BaseComponent)) {\n      var FunctionalWrapperComponent = function FunctionalWrapperComponent(props) {\n        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(BaseComponent, props);\n      };\n\n      ObservedComponent = FunctionalWrapperComponent;\n    } //  This is a temporary approach to pass stores from different packages\n\n\n    var context = own_props.context || store;\n    return (0,mobx_react__WEBPACK_IMPORTED_MODULE_0__.useObserver)(function () {\n      return ObservedComponent(_objectSpread(_objectSpread({}, own_props), propsToSelectFn(context, own_props)));\n    });\n  };\n\n  Component.displayName = BaseComponent.name;\n  return Component;\n}\n\nvar MobxContentProvider = function MobxContentProvider(_ref) {\n  var store = _ref.store,\n      children = _ref.children;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(MobxContent.Provider, {\n    value: _objectSpread(_objectSpread({}, store), {}, {\n      mobxStores: store\n    })\n  }, children);\n};\nvar connect = function connect(propsToSelectFn) {\n  return function (Component) {\n    return injectStorePropsToComponent(propsToSelectFn, Component);\n  };\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvU3RvcmVzL2Nvbm5lY3QuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7OztBQUFBO0FBQ0E7O0FBRUE7QUFBQTtBQUFBOztBQUdBOztBQUVBO0FBQ0E7QUFDQTtBQUVBOztBQUVBO0FBQ0E7QUFBQTtBQUFBOztBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFBQTtBQUFBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQUE7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQTtBQUVBO0FBQUE7QUFBQTtBQUFBO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9AZGVyaXYvY2ZkLy4vc3JjL1N0b3Jlcy9jb25uZWN0LmpzPzhlMWIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgdXNlT2JzZXJ2ZXIgfSBmcm9tICdtb2J4LXJlYWN0JztcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbmNvbnN0IGlzQ2xhc3NDb21wb25lbnQgPSBDb21wb25lbnQgPT5cbiAgICAhISh0eXBlb2YgQ29tcG9uZW50ID09PSAnZnVuY3Rpb24nICYmIENvbXBvbmVudC5wcm90b3R5cGUgJiYgQ29tcG9uZW50LnByb3RvdHlwZS5pc1JlYWN0Q29tcG9uZW50KTtcblxuZXhwb3J0IGNvbnN0IE1vYnhDb250ZW50ID0gUmVhY3QuY3JlYXRlQ29udGV4dChudWxsKTtcblxuZnVuY3Rpb24gaW5qZWN0U3RvcmVQcm9wc1RvQ29tcG9uZW50KHByb3BzVG9TZWxlY3RGbiwgQmFzZUNvbXBvbmVudCkge1xuICAgIGNvbnN0IENvbXBvbmVudCA9IG93bl9wcm9wcyA9PiB7XG4gICAgICAgIGNvbnN0IHN0b3JlID0gUmVhY3QudXNlQ29udGV4dChNb2J4Q29udGVudCk7XG5cbiAgICAgICAgbGV0IE9ic2VydmVkQ29tcG9uZW50ID0gQmFzZUNvbXBvbmVudDtcblxuICAgICAgICBpZiAoaXNDbGFzc0NvbXBvbmVudChCYXNlQ29tcG9uZW50KSkge1xuICAgICAgICAgICAgY29uc3QgRnVuY3Rpb25hbFdyYXBwZXJDb21wb25lbnQgPSBwcm9wcyA9PiA8QmFzZUNvbXBvbmVudCB7Li4ucHJvcHN9IC8+O1xuICAgICAgICAgICAgT2JzZXJ2ZWRDb21wb25lbnQgPSBGdW5jdGlvbmFsV3JhcHBlckNvbXBvbmVudDtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vICBUaGlzIGlzIGEgdGVtcG9yYXJ5IGFwcHJvYWNoIHRvIHBhc3Mgc3RvcmVzIGZyb20gZGlmZmVyZW50IHBhY2thZ2VzXG4gICAgICAgIGNvbnN0IGNvbnRleHQgPSBvd25fcHJvcHMuY29udGV4dCB8fCBzdG9yZTtcbiAgICAgICAgcmV0dXJuIHVzZU9ic2VydmVyKCgpID0+IE9ic2VydmVkQ29tcG9uZW50KHsgLi4ub3duX3Byb3BzLCAuLi5wcm9wc1RvU2VsZWN0Rm4oY29udGV4dCwgb3duX3Byb3BzKSB9KSk7XG4gICAgfTtcblxuICAgIENvbXBvbmVudC5kaXNwbGF5TmFtZSA9IEJhc2VDb21wb25lbnQubmFtZTtcbiAgICByZXR1cm4gQ29tcG9uZW50O1xufVxuXG5leHBvcnQgY29uc3QgTW9ieENvbnRlbnRQcm92aWRlciA9ICh7IHN0b3JlLCBjaGlsZHJlbiB9KSA9PiB7XG4gICAgcmV0dXJuIDxNb2J4Q29udGVudC5Qcm92aWRlciB2YWx1ZT17eyAuLi5zdG9yZSwgbW9ieFN0b3Jlczogc3RvcmUgfX0+e2NoaWxkcmVufTwvTW9ieENvbnRlbnQuUHJvdmlkZXI+O1xufTtcblxuZXhwb3J0IGNvbnN0IGNvbm5lY3QgPSBwcm9wc1RvU2VsZWN0Rm4gPT4gQ29tcG9uZW50ID0+IGluamVjdFN0b3JlUHJvcHNUb0NvbXBvbmVudChwcm9wc1RvU2VsZWN0Rm4sIENvbXBvbmVudCk7XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/Stores/connect.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "@deriv/components":
+/*!************************************!*\
+  !*** external "@deriv/components" ***!
+  \************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = __WEBPACK_EXTERNAL_MODULE__deriv_components__;</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "@deriv/shared":
+/*!********************************!*\
+  !*** external "@deriv/shared" ***!
+  \********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = __WEBPACK_EXTERNAL_MODULE__deriv_shared__;</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "@deriv/translations":
+/*!**************************************!*\
+  !*** external "@deriv/translations" ***!
+  \**************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = __WEBPACK_EXTERNAL_MODULE__deriv_translations__;</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "mobx-react":
+/*!*****************************!*\
+  !*** external "mobx-react" ***!
+  \*****************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = __WEBPACK_EXTERNAL_MODULE_mobx_react__;</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = __WEBPACK_EXTERNAL_MODULE_react__;</span>
+&nbsp;
+/***/ })
+&nbsp;
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = <span class="cstat-no" title="statement not covered" >{};</span>
+/******/ 	
+/******/ 	// The require function
+/******/ 	function <span class="fstat-no" title="function not covered" >__webpack_require__(</span>moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = <span class="cstat-no" title="statement not covered" >__webpack_module_cache__[moduleId];</span>
+/******/ 		<span class="cstat-no" title="statement not covered" >if (cachedModule !== undefined) {</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >return cachedModule.exports;</span>
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = <span class="cstat-no" title="statement not covered" >__webpack_module_cache__[moduleId] = {</span>
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_modules__[moduleId](module, module.exports, __webpack_require__);</span>
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		<span class="cstat-no" title="statement not covered" >return module.exports;</span>
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.n = <span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {</span>
+/******/ 			var getter = <span class="cstat-no" title="statement not covered" >module &amp;&amp; module.__esModule ?</span>
+/******/ 				<span class="fstat-no" title="function not covered" >()</span> =&gt; (<span class="cstat-no" title="statement not covered" >module['default'])</span> :
+/******/ 				<span class="fstat-no" title="function not covered" >()</span> =&gt; (<span class="cstat-no" title="statement not covered" >module)</span>;
+/******/ 			<span class="cstat-no" title="statement not covered" >__webpack_require__.d(getter, { a: getter });</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >return getter;</span>
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+/******/ 		// define getter functions for harmony exports
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.d = <span class="fstat-no" title="function not covered" >(e</span>xports, definition) =&gt; {</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >for(var key in definition) {</span>
+/******/ 				<span class="cstat-no" title="statement not covered" >if(__webpack_require__.o(definition, key) &amp;&amp; !__webpack_require__.o(exports, key)) {</span>
+/******/ 					<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });</span>
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.o = <span class="fstat-no" title="function not covered" >(o</span>bj, prop) =&gt; (<span class="cstat-no" title="statement not covered" >Object.prototype.hasOwnProperty.call(obj, prop))</span></span>
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+/******/ 		// define __esModule on exports
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.r = <span class="fstat-no" title="function not covered" >(e</span>xports) =&gt; {</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >if(typeof Symbol !== 'undefined' &amp;&amp; Symbol.toStringTag) {</span>
+/******/ 				<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });</span>
+/******/ 			}
+/******/ 			<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, '__esModule', { value: true });</span>
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
+/******/ 	var __webpack_exports__ = <span class="cstat-no" title="statement not covered" >__webpack_require__("./src/Containers/mt5-trade-modal.tsx");</span>
+/******/ 	<span class="cstat-no" title="statement not covered" >__webpack_exports__ = __webpack_exports__["default"];</span>
+/******/ 	
+/******/ 	<span class="cstat-no" title="statement not covered" >return __webpack_exports__;</span>
+/******/ })()
+;
+});</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Thu Feb 02 2023 15:30:08 GMT+0800 (Malaysia Time)
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    

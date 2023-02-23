@@ -1,0 +1,2085 @@
+0 silly argv {
+0 silly argv   _: [ 'bootstrap' ],
+0 silly argv   ci: true,
+0 silly argv   hoist: true,
+0 silly argv   strict: true,
+0 silly argv   lernaVersion: '5.6.2',
+0 silly argv   '$0': '/Users/henryhein/Desktop/deriv-app/node_modules/.bin/lerna'
+0 silly argv }
+1 notice cli v5.6.2
+2 verbose rootPath /Users/henryhein/Desktop/deriv-app
+3 info versioning independent
+4 info ci enabled
+5 verbose hoist using globs ["**"]
+6 silly npmConfig {
+6 silly npmConfig   registry: undefined,
+6 silly npmConfig   npmClient: 'npm',
+6 silly npmConfig   npmClientArgs: [ '--no-save' ],
+6 silly npmConfig   mutex: undefined,
+6 silly npmConfig   subCommand: 'install'
+6 silly npmConfig }
+7 info Bootstrapping 18 packages
+8 verbose lifecycle preinstall
+9 silly lifecycle No script for "preinstall" in "@deriv/publisher", continuing
+10 silly lifecycle No script for "preinstall" in "@deriv/stores", continuing
+11 silly lifecycle No script for "preinstall" in "@deriv/translations", continuing
+12 silly lifecycle No script for "preinstall" in "@deriv/shared", continuing
+13 silly lifecycle No script for "preinstall" in "@deriv/api", continuing
+14 silly lifecycle No script for "preinstall" in "@deriv/components", continuing
+15 silly lifecycle No script for "preinstall" in "@deriv/indicators", continuing
+16 silly lifecycle No script for "preinstall" in "@deriv/account", continuing
+17 silly lifecycle No script for "preinstall" in "@deriv/bot-skeleton", continuing
+18 silly lifecycle No script for "preinstall" in "@deriv/hooks", continuing
+19 silly lifecycle No script for "preinstall" in "@deriv/p2p", continuing
+20 silly lifecycle No script for "preinstall" in "@deriv/reports", continuing
+21 silly lifecycle No script for "preinstall" in "@deriv/bot-web-ui", continuing
+22 silly lifecycle No script for "preinstall" in "@deriv/cashier", continuing
+23 silly lifecycle No script for "preinstall" in "@deriv/cfd", continuing
+24 silly lifecycle No script for "preinstall" in "@deriv/trader", continuing
+25 silly lifecycle No script for "preinstall" in "@deriv/appstore", continuing
+26 silly lifecycle No script for "preinstall" in "@deriv/core", continuing
+27 silly hasDependencyInstalled root @babel/core
+28 silly hasDependencyInstalled root @babel/eslint-parser
+29 silly hasDependencyInstalled root @babel/plugin-proposal-class-properties
+30 silly hasDependencyInstalled root @babel/plugin-proposal-decorators
+31 silly hasDependencyInstalled root @babel/plugin-proposal-export-default-from
+32 silly hasDependencyInstalled root @babel/plugin-proposal-export-namespace-from
+33 silly hasDependencyInstalled root @babel/plugin-proposal-nullish-coalescing-operator
+34 silly hasDependencyInstalled root @babel/plugin-proposal-object-rest-spread
+35 silly hasDependencyInstalled root @babel/plugin-proposal-optional-chaining
+36 silly hasDependencyInstalled root @babel/plugin-proposal-unicode-property-regex
+37 silly hasDependencyInstalled root @babel/plugin-syntax-dynamic-import
+38 silly hasDependencyInstalled root @babel/preset-env
+39 silly hasDependencyInstalled root @babel/preset-react
+40 silly hasDependencyInstalled root @commitlint/cli
+41 silly hasDependencyInstalled root @commitlint/config-conventional
+42 silly hasDependencyInstalled root @commitlint/config-nx-scopes
+43 silly hasDependencyInstalled root @jest/globals
+44 silly hasDependencyInstalled root @nrwl/nx-cloud
+45 silly hasDependencyInstalled root @testing-library/react
+46 silly hasDependencyInstalled root @types/jest
+47 silly hasDependencyInstalled root @types/node
+48 silly hasDependencyInstalled root @types/react
+49 silly hasDependencyInstalled root @types/react-dom
+50 silly hasDependencyInstalled root @testing-library/user-event
+51 silly hasDependencyInstalled root @types/react-router-dom
+52 silly hasDependencyInstalled root @types/react-virtualized
+53 silly hasDependencyInstalled root @typescript-eslint/eslint-plugin
+54 silly hasDependencyInstalled root @typescript-eslint/parser
+55 silly hasDependencyInstalled root babel-polyfill
+56 silly hasDependencyInstalled root eslint
+57 silly hasDependencyInstalled root eslint-config-airbnb-base
+58 silly hasDependencyInstalled root eslint-config-binary
+59 silly hasDependencyInstalled root eslint-config-prettier
+60 silly hasDependencyInstalled root eslint-formatter-pretty
+61 silly hasDependencyInstalled root eslint-import-resolver-typescript
+62 silly hasDependencyInstalled root eslint-import-resolver-webpack
+63 silly hasDependencyInstalled root eslint-plugin-import
+64 silly hasDependencyInstalled root eslint-plugin-jest-dom
+65 silly hasDependencyInstalled root eslint-plugin-prettier
+66 silly hasDependencyInstalled root eslint-plugin-react
+67 silly hasDependencyInstalled root eslint-plugin-react-hooks
+68 silly hasDependencyInstalled root eslint-plugin-testing-library
+69 silly hasDependencyInstalled root husky
+70 silly hasDependencyInstalled root jest
+71 silly hasDependencyInstalled root lerna
+72 silly hasDependencyInstalled root lint-staged
+73 silly hasDependencyInstalled root nx
+74 silly hasDependencyInstalled root postcss
+75 silly hasDependencyInstalled root prettier
+76 silly hasDependencyInstalled root react-test-renderer
+77 silly hasDependencyInstalled root stylelint
+78 silly hasDependencyInstalled root stylelint-config-prettier
+79 silly hasDependencyInstalled root stylelint-formatter-pretty
+80 silly hasDependencyInstalled root stylelint-no-unsupported-browser-features
+81 silly hasDependencyInstalled root stylelint-selector-bem-pattern
+82 silly hasDependencyInstalled root stylelint-webpack-plugin
+83 silly hasDependencyInstalled root @testing-library/jest-dom
+84 silly hasDependencyInstalled root jest-chain
+85 silly hasDependencyInstalled root jest-extended
+86 silly hasDependencyInstalled root ts-jest
+87 silly hasDependencyInstalled root fsevents
+88 silly hasDependencyInstalled root @babel/preset-typescript
+89 silly hasDependencyInstalled root @types/react-transition-group
+90 silly hasDependencyInstalled root babel-jest
+91 silly hasDependencyInstalled root dotenv
+92 silly hasDependencyInstalled root react
+93 silly hasDependencyInstalled root react-dom
+94 silly hasDependencyInstalled root typescript
+95 silly hasDependencyInstalled root babel-eslint
+96 silly hasDependencyInstalled root babel-loader
+97 silly hasDependencyInstalled root clean-webpack-plugin
+98 silly hasDependencyInstalled root css-loader
+99 silly hasDependencyInstalled root css-minimizer-webpack-plugin
+100 silly hasDependencyInstalled root history
+101 silly hasDependencyInstalled root mini-css-extract-plugin
+102 silly hasDependencyInstalled root node-sass
+103 silly hasDependencyInstalled root postcss-loader
+104 silly hasDependencyInstalled root postcss-preset-env
+105 silly hasDependencyInstalled root postcss-scss
+106 silly hasDependencyInstalled root resolve-url-loader
+107 silly hasDependencyInstalled root rimraf
+108 silly hasDependencyInstalled root sass-loader
+109 silly hasDependencyInstalled root sass-resources-loader
+110 silly hasDependencyInstalled root terser-webpack-plugin
+111 silly hasDependencyInstalled root webpack
+112 silly hasDependencyInstalled root @binary-com/binary-document-uploader
+113 silly hasDependencyInstalled root @deriv/api-types
+114 silly hasDependencyInstalled root bowser
+115 silly hasDependencyInstalled root classnames
+116 silly hasDependencyInstalled root formik
+117 silly hasDependencyInstalled root i18n-iso-countries
+118 silly hasDependencyInstalled root js-cookie
+119 silly hasDependencyInstalled root mobx
+120 silly hasDependencyInstalled root mobx-react
+121 silly hasDependencyInstalled root onfido-sdk-ui
+122 silly hasDependencyInstalled root prop-types
+123 silly hasDependencyInstalled root qrcode.react
+124 silly hasDependencyInstalled root react-router
+125 silly hasDependencyInstalled root react-router-dom
+126 silly hasDependencyInstalled root react-i18next
+127 silly hasDependencyInstalled root @storybook/addon-docs
+128 silly hasDependencyInstalled root @storybook/addon-essentials
+129 silly hasDependencyInstalled root @storybook/addon-links
+130 silly hasDependencyInstalled root @storybook/builder-webpack5
+131 silly hasDependencyInstalled root @storybook/manager-webpack5
+132 silly hasDependencyInstalled root @storybook/react
+133 silly hasDependencyInstalled root @types/classnames
+134 silly hasDependencyInstalled root @types/object.fromentries
+135 silly hasDependencyInstalled root babel-core
+136 silly hasDependencyInstalled root copy-webpack-plugin
+137 silly hasDependencyInstalled root concurrently
+138 silly hasDependencyInstalled root cross-env
+139 silly hasDependencyInstalled root fork-ts-checker-webpack-plugin
+140 silly hasDependencyInstalled root source-map-loader
+141 silly hasDependencyInstalled root style-loader
+142 silly hasDependencyInstalled root webpack-bundle-analyzer
+143 silly hasDependencyInstalled root webpack-cli
+144 silly hasDependencyInstalled root @deriv/ui
+145 silly hasDependencyInstalled root mobx-react-lite
+146 silly hasDependencyInstalled root object.fromentries
+147 silly hasDependencyInstalled root react-joyride
+148 silly hasDependencyInstalled root deep-diff
+149 silly hasDependencyInstalled root @deriv/deriv-api
+150 silly hasDependencyInstalled root @deriv/js-interpreter
+151 silly hasDependencyInstalled root binary-utils
+152 silly hasDependencyInstalled root blockly
+153 silly hasDependencyInstalled root file-saver
+154 silly hasDependencyInstalled root immutable
+155 silly hasDependencyInstalled root localforage
+156 silly hasDependencyInstalled root lz-string
+157 silly hasDependencyInstalled root redux
+158 silly hasDependencyInstalled root redux-thunk
+159 silly hasDependencyInstalled root scratch-blocks
+160 silly hasDependencyInstalled root shx
+161 silly hasDependencyInstalled root css-hot-loader
+162 silly hasDependencyInstalled root loader-utils
+163 silly hasDependencyInstalled root raw-loader
+164 silly hasDependencyInstalled root svg-sprite-loader
+165 silly hasDependencyInstalled root @deriv/deriv-charts
+166 silly hasDependencyInstalled root crc-32
+167 silly hasDependencyInstalled root gh-pages
+168 silly hasDependencyInstalled root pako
+169 silly hasDependencyInstalled root react-content-loader
+170 silly hasDependencyInstalled root react-transition-group
+171 silly hasDependencyInstalled root @types/qrcode.react
+172 silly hasDependencyInstalled root file-loader
+173 silly hasDependencyInstalled root react-svg-loader
+174 silly hasDependencyInstalled root webpack-manifest-plugin
+175 silly hasDependencyInstalled root webpack-node-externals
+176 silly hasDependencyInstalled root loadjs
+177 silly hasDependencyInstalled root lodash.debounce
+178 silly hasDependencyInstalled root moment
+179 silly hasDependencyInstalled root react-loadable
+180 silly hasDependencyInstalled root react-pose
+181 silly hasDependencyInstalled root circular-dependency-plugin
+182 silly hasDependencyInstalled root html-loader
+183 silly hasDependencyInstalled root html-webpack-plugin
+184 silly hasDependencyInstalled root html-webpack-tags-plugin
+185 silly hasDependencyInstalled root ignore-styles
+186 silly hasDependencyInstalled root jsdom
+187 silly hasDependencyInstalled root jsdom-global
+188 silly hasDependencyInstalled root mock-local-storage
+189 silly hasDependencyInstalled root svgo
+190 silly hasDependencyInstalled root @types/react-loadable
+191 silly hasDependencyInstalled root extend
+192 silly hasDependencyInstalled root i18next
+193 silly hasDependencyInstalled root mobx-utils
+194 silly hasDependencyInstalled root null-loader
+195 silly hasDependencyInstalled root react-qrcode
+196 silly hasDependencyInstalled root @storybook/addon-actions
+197 silly hasDependencyInstalled root @storybook/addon-interactions
+198 silly hasDependencyInstalled root @storybook/testing-library
+199 silly hasDependencyInstalled root @storybook/addon-info
+200 silly hasDependencyInstalled root @storybook/addon-knobs
+201 silly hasDependencyInstalled root copy-webpack-plugin-v6
+202 silly hasDependencyInstalled root svgo-loader
+203 silly hasDependencyInstalled root @contentpass/zxcvbn
+204 silly hasDependencyInstalled root @deriv/deriv-onboarding
+205 silly hasDependencyInstalled root glob
+206 silly hasDependencyInstalled root lodash.throttle
+207 silly hasDependencyInstalled root react-div-100vh
+208 silly hasDependencyInstalled root react-drag-drawer
+209 silly hasDependencyInstalled root react-dropzone
+210 silly hasDependencyInstalled root react-swipeable
+211 silly hasDependencyInstalled root react-tiny-popover
+212 silly hasDependencyInstalled root react-virtualized
+213 silly hasDependencyInstalled root git-revision-webpack-plugin
+214 silly hasDependencyInstalled root preload-webpack-plugin
+215 silly hasDependencyInstalled root webpack-dev-middleware
+216 silly hasDependencyInstalled root webpack-dev-server
+217 silly hasDependencyInstalled root workbox-webpack-plugin
+218 silly hasDependencyInstalled root @babel/polyfill
+219 silly hasDependencyInstalled root @livechat/customer-sdk
+220 silly hasDependencyInstalled root acorn
+221 silly hasDependencyInstalled root canvas-toBlob
+222 silly hasDependencyInstalled root promise-polyfill
+223 silly hasDependencyInstalled root react-window
+224 silly hasDependencyInstalled root web-push-notifications
+225 silly hasDependencyInstalled root react-simple-star-rating
+226 silly hasDependencyInstalled root sendbird
+227 silly hasDependencyInstalled root commander
+228 silly hasDependencyInstalled root @types/jsdom
+229 silly hasDependencyInstalled root @types/js-cookie
+230 silly hasDependencyInstalled root mobx-persist-store
+231 silly hasDependencyInstalled root xmldom
+232 silly root dependencies {}
+233 silly leaf dependencies {}
+234 info Installing external dependencies
+235 verbose actions 2 actions, concurrency 8
+236 info hoist Installing hoisted dependencies into root
+237 silly npmInstallDependencies root [
+237 silly npmInstallDependencies   '@babel/core@^7.12.10',
+237 silly npmInstallDependencies   '@babel/eslint-parser@^7.17.0',
+237 silly npmInstallDependencies   '@babel/plugin-proposal-class-properties@^7.12.1',
+237 silly npmInstallDependencies   '@babel/plugin-proposal-decorators@^7.12.12',
+237 silly npmInstallDependencies   '@babel/plugin-proposal-export-default-from@^7.12.1',
+237 silly npmInstallDependencies   '@babel/plugin-proposal-export-namespace-from@^7.12.1',
+237 silly npmInstallDependencies   '@babel/plugin-proposal-nullish-coalescing-operator@^7.12.1',
+237 silly npmInstallDependencies   '@babel/plugin-proposal-object-rest-spread@^7.12.1',
+237 silly npmInstallDependencies   '@babel/plugin-proposal-optional-chaining@^7.12.7',
+237 silly npmInstallDependencies   '@babel/plugin-proposal-unicode-property-regex@^7.16.7',
+237 silly npmInstallDependencies   '@babel/plugin-syntax-dynamic-import@^7.8.3',
+237 silly npmInstallDependencies   '@babel/preset-env@^7.12.11',
+237 silly npmInstallDependencies   '@babel/preset-react@^7.16.7',
+237 silly npmInstallDependencies   '@commitlint/cli@^17.1.2',
+237 silly npmInstallDependencies   '@commitlint/config-conventional@^17.1.0',
+237 silly npmInstallDependencies   '@commitlint/config-nx-scopes@^17.0.0',
+237 silly npmInstallDependencies   '@jest/globals@^26.5.3',
+237 silly npmInstallDependencies   '@nrwl/nx-cloud@latest',
+237 silly npmInstallDependencies   '@testing-library/react@^12.0.0',
+237 silly npmInstallDependencies   '@types/jest@^27.4.1',
+237 silly npmInstallDependencies   '@types/node@^17.0.27',
+237 silly npmInstallDependencies   '@types/react@^18.0.7',
+237 silly npmInstallDependencies   '@types/react-dom@^18.0.0',
+237 silly npmInstallDependencies   '@testing-library/user-event@^13.5.0',
+237 silly npmInstallDependencies   '@types/react-router-dom@^5.1.6',
+237 silly npmInstallDependencies   '@types/react-virtualized@^9.21.21',
+237 silly npmInstallDependencies   '@typescript-eslint/eslint-plugin@^5.8.0',
+237 silly npmInstallDependencies   '@typescript-eslint/parser@^5.8.0',
+237 silly npmInstallDependencies   'babel-polyfill@^6.26.0',
+237 silly npmInstallDependencies   'eslint@^7.18.0',
+237 silly npmInstallDependencies   'eslint-config-airbnb-base@^14.2.1',
+237 silly npmInstallDependencies   'eslint-config-binary@^1.0.2',
+237 silly npmInstallDependencies   'eslint-config-prettier@^7.2.0',
+237 silly npmInstallDependencies   'eslint-formatter-pretty@^4.0.0',
+237 silly npmInstallDependencies   'eslint-import-resolver-typescript@^2.7.1',
+237 silly npmInstallDependencies   'eslint-import-resolver-webpack@^0.13.0',
+237 silly npmInstallDependencies   'eslint-plugin-import@^2.23.4',
+237 silly npmInstallDependencies   'eslint-plugin-jest-dom@^3.8.1',
+237 silly npmInstallDependencies   'eslint-plugin-prettier@^3.3.1',
+237 silly npmInstallDependencies   'eslint-plugin-react@^7.22.0',
+237 silly npmInstallDependencies   'eslint-plugin-react-hooks@^4.2.0',
+237 silly npmInstallDependencies   'eslint-plugin-testing-library@^4.2.0',
+237 silly npmInstallDependencies   'husky@^7.0.0',
+237 silly npmInstallDependencies   'jest@^26.4.2',
+237 silly npmInstallDependencies   'lerna@^5.5.1',
+237 silly npmInstallDependencies   'lint-staged@^10.4.0',
+237 silly npmInstallDependencies   'nx@^14.5.10',
+237 silly npmInstallDependencies   'postcss@^8.3.6',
+237 silly npmInstallDependencies   'prettier@^2.1.2',
+237 silly npmInstallDependencies   'react-test-renderer@^16.13.1',
+237 silly npmInstallDependencies   'stylelint@^13.13.1',
+237 silly npmInstallDependencies   'stylelint-config-prettier@^8.0.2',
+237 silly npmInstallDependencies   'stylelint-formatter-pretty@^2.1.1',
+237 silly npmInstallDependencies   'stylelint-no-unsupported-browser-features@^4.0.0',
+237 silly npmInstallDependencies   'stylelint-selector-bem-pattern@^2.1.0',
+237 silly npmInstallDependencies   'stylelint-webpack-plugin@^2.1.1',
+237 silly npmInstallDependencies   '@testing-library/jest-dom@^5.12.0',
+237 silly npmInstallDependencies   'jest-chain@^1.1.5',
+237 silly npmInstallDependencies   'jest-extended@^1.2.0',
+237 silly npmInstallDependencies   'ts-jest@^26.4.2',
+237 silly npmInstallDependencies   'fsevents@^2.3.2',
+237 silly npmInstallDependencies   '@babel/preset-typescript@^7.16.5',
+237 silly npmInstallDependencies   '@types/react-transition-group@^4.4.4',
+237 silly npmInstallDependencies   'babel-jest@^27.3.1',
+237 silly npmInstallDependencies   'dotenv@^8.2.0',
+237 silly npmInstallDependencies   'react@^16.14.0',
+237 silly npmInstallDependencies   'react-dom@^16.14.0',
+237 silly npmInstallDependencies   'typescript@^4.6.3',
+237 silly npmInstallDependencies   'babel-eslint@^10.1.0',
+237 silly npmInstallDependencies   'babel-loader@^8.1.0',
+237 silly npmInstallDependencies   'clean-webpack-plugin@^3.0.0',
+237 silly npmInstallDependencies   'css-loader@^5.0.1',
+237 silly npmInstallDependencies   'css-minimizer-webpack-plugin@^3.0.1',
+237 silly npmInstallDependencies   'history@^5.0.0',
+237 silly npmInstallDependencies   'mini-css-extract-plugin@^1.3.4',
+237 silly npmInstallDependencies   'node-sass@^7.0.1',
+237 silly npmInstallDependencies   'postcss-loader@^6.2.1',
+237 silly npmInstallDependencies   'postcss-preset-env@^7.4.3',
+237 silly npmInstallDependencies   'postcss-scss@^4.0.3',
+237 silly npmInstallDependencies   'resolve-url-loader@^3.1.2',
+237 silly npmInstallDependencies   'rimraf@^3.0.2',
+237 silly npmInstallDependencies   'sass-loader@^12.6.0',
+237 silly npmInstallDependencies   'sass-resources-loader@^2.1.1',
+237 silly npmInstallDependencies   'terser-webpack-plugin@^5.1.1',
+237 silly npmInstallDependencies   'webpack@^5.46.0',
+237 silly npmInstallDependencies   '@binary-com/binary-document-uploader@^2.4.7',
+237 silly npmInstallDependencies   '@deriv/api-types@^1.0.54',
+237 silly npmInstallDependencies   'bowser@^2.9.0',
+237 silly npmInstallDependencies   'classnames@^2.2.6',
+237 silly npmInstallDependencies   'formik@^2.1.4',
+237 silly npmInstallDependencies   'i18n-iso-countries@^6.8.0',
+237 silly npmInstallDependencies   'js-cookie@^2.2.1',
+237 silly npmInstallDependencies   'mobx@^6.6.1',
+237 silly npmInstallDependencies   'mobx-react@^7.5.1',
+237 silly npmInstallDependencies   'onfido-sdk-ui@8.1.1',
+237 silly npmInstallDependencies   'prop-types@^15.7.2',
+237 silly npmInstallDependencies   'qrcode.react@^1.0.0',
+237 silly npmInstallDependencies   'react-router@^5.2.0',
+237 silly npmInstallDependencies   'react-router-dom@^5.2.0',
+237 silly npmInstallDependencies   'react-i18next@^11.11.0',
+237 silly npmInstallDependencies   ... 105 more items
+237 silly npmInstallDependencies ]
+238 silly npmInstallDependencies backup /Users/henryhein/Desktop/deriv-app/package.json
+239 info hoist Pruning hoisted dependencies
+240 silly prune [
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/core',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/core',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/publisher/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/@babel/eslint-parser',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-class-properties',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-class-properties',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-decorators',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-decorators',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-export-default-from',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-export-default-from',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-export-namespace-from',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-export-namespace-from',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-nullish-coalescing-operator',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-nullish-coalescing-operator',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-object-rest-spread',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-object-rest-spread',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-optional-chaining',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-optional-chaining',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/plugin-proposal-unicode-property-regex',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-unicode-property-regex',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-syntax-dynamic-import',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-syntax-dynamic-import',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/preset-env',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/preset-env',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/preset-env',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/publisher/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/@babel/preset-react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@jest/globals',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@testing-library/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/api/node_modules/@testing-library/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@testing-library/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@testing-library/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@testing-library/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/@testing-library/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@testing-library/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/@testing-library/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/react',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/react-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@testing-library/user-event',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/api/node_modules/@testing-library/user-event',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@testing-library/user-event',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/@testing-library/user-event',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react-router-dom',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/core/node_modules/babel-polyfill',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/babel-polyfill',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-config-airbnb-base',
+240 silly prune   '/Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-config-binary',
+240 silly prune   ... 601 more items
+240 silly prune ]
+241 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/core
+242 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/core
+243 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@babel/eslint-parser
+244 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@babel/eslint-parser
+245 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@babel/eslint-parser
+246 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@babel/eslint-parser
+247 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/eslint-parser
+248 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/eslint-parser
+249 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/core
+250 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/eslint-parser
+251 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/core
+252 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/eslint-parser
+253 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@babel/eslint-parser
+254 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/eslint-parser
+255 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@babel/eslint-parser
+256 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/publisher/node_modules/@babel/eslint-parser
+257 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@babel/eslint-parser
+258 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@babel/eslint-parser
+259 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/eslint-parser
+260 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@babel/eslint-parser
+261 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@babel/eslint-parser
+262 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/@babel/eslint-parser
+263 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/eslint-parser
+264 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-class-properties
+265 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/eslint-parser
+266 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-class-properties
+267 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/eslint-parser
+268 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-decorators
+269 verbose prune /Users/henryhein/Desktop/deriv-app/packages/publisher/node_modules/@babel/eslint-parser
+270 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-decorators
+271 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@babel/eslint-parser
+272 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-export-default-from
+273 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@babel/eslint-parser
+274 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-export-default-from
+275 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-class-properties
+276 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-export-namespace-from
+277 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/eslint-parser
+278 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-export-namespace-from
+279 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/@babel/eslint-parser
+280 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-nullish-coalescing-operator
+281 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-class-properties
+282 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-nullish-coalescing-operator
+283 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-decorators
+284 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-object-rest-spread
+285 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-decorators
+286 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-object-rest-spread
+287 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-export-default-from
+288 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-optional-chaining
+289 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-export-default-from
+290 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-optional-chaining
+291 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-export-namespace-from
+292 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/plugin-proposal-unicode-property-regex
+293 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-export-namespace-from
+294 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-unicode-property-regex
+295 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-nullish-coalescing-operator
+296 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-syntax-dynamic-import
+297 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-nullish-coalescing-operator
+298 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-syntax-dynamic-import
+299 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-object-rest-spread
+300 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/preset-env
+301 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-object-rest-spread
+302 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/preset-env
+303 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-proposal-optional-chaining
+304 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/preset-env
+305 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-optional-chaining
+306 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@babel/preset-react
+307 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/plugin-proposal-unicode-property-regex
+308 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@babel/preset-react
+309 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-proposal-unicode-property-regex
+310 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@babel/preset-react
+311 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/plugin-syntax-dynamic-import
+312 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@babel/preset-react
+313 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/plugin-syntax-dynamic-import
+314 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/preset-react
+315 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/preset-env
+316 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/preset-react
+317 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/preset-env
+318 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/preset-react
+319 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/preset-env
+320 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/preset-react
+321 silly npmInstallDependencies writing tempJson {
+321 silly npmInstallDependencies   name: 'root',
+321 silly npmInstallDependencies   private: true,
+321 silly npmInstallDependencies   engines: { node: '^16.16.0' },
+321 silly npmInstallDependencies   devDependencies: {
+321 silly npmInstallDependencies     '@babel/core': '^7.12.10',
+321 silly npmInstallDependencies     '@babel/eslint-parser': '^7.17.0',
+321 silly npmInstallDependencies     '@babel/plugin-proposal-class-properties': '^7.12.1',
+321 silly npmInstallDependencies     '@babel/plugin-proposal-decorators': '^7.12.12',
+321 silly npmInstallDependencies     '@babel/plugin-proposal-export-default-from': '^7.12.1',
+321 silly npmInstallDependencies     '@babel/plugin-proposal-export-namespace-from': '^7.12.1',
+321 silly npmInstallDependencies     '@babel/plugin-proposal-nullish-coalescing-operator': '^7.12.1',
+321 silly npmInstallDependencies     '@babel/plugin-proposal-object-rest-spread': '^7.12.1',
+321 silly npmInstallDependencies     '@babel/plugin-proposal-optional-chaining': '^7.12.7',
+321 silly npmInstallDependencies     '@babel/plugin-proposal-unicode-property-regex': '^7.16.7',
+321 silly npmInstallDependencies     '@babel/plugin-syntax-dynamic-import': '^7.8.3',
+321 silly npmInstallDependencies     '@babel/preset-env': '^7.12.11',
+321 silly npmInstallDependencies     '@babel/preset-react': '^7.16.7',
+321 silly npmInstallDependencies     '@commitlint/cli': '^17.1.2',
+321 silly npmInstallDependencies     '@commitlint/config-conventional': '^17.1.0',
+321 silly npmInstallDependencies     '@commitlint/config-nx-scopes': '^17.0.0',
+321 silly npmInstallDependencies     '@jest/globals': '^26.5.3',
+321 silly npmInstallDependencies     '@nrwl/nx-cloud': 'latest',
+321 silly npmInstallDependencies     '@testing-library/react': '^12.0.0',
+321 silly npmInstallDependencies     '@types/jest': '^27.4.1',
+321 silly npmInstallDependencies     '@types/node': '^17.0.27',
+321 silly npmInstallDependencies     '@types/react': '^18.0.7',
+321 silly npmInstallDependencies     '@types/react-dom': '^18.0.0',
+321 silly npmInstallDependencies     '@testing-library/user-event': '^13.5.0',
+321 silly npmInstallDependencies     '@types/react-router-dom': '^5.1.6',
+321 silly npmInstallDependencies     '@types/react-virtualized': '^9.21.21',
+321 silly npmInstallDependencies     '@typescript-eslint/eslint-plugin': '^5.8.0',
+321 silly npmInstallDependencies     '@typescript-eslint/parser': '^5.8.0',
+321 silly npmInstallDependencies     'babel-polyfill': '^6.26.0',
+321 silly npmInstallDependencies     eslint: '^7.18.0',
+321 silly npmInstallDependencies     'eslint-config-airbnb-base': '^14.2.1',
+321 silly npmInstallDependencies     'eslint-config-binary': '^1.0.2',
+321 silly npmInstallDependencies     'eslint-config-prettier': '^7.2.0',
+321 silly npmInstallDependencies     'eslint-formatter-pretty': '^4.0.0',
+321 silly npmInstallDependencies     'eslint-import-resolver-typescript': '^2.7.1',
+321 silly npmInstallDependencies     'eslint-import-resolver-webpack': '^0.13.0',
+321 silly npmInstallDependencies     'eslint-plugin-import': '^2.23.4',
+321 silly npmInstallDependencies     'eslint-plugin-jest-dom': '^3.8.1',
+321 silly npmInstallDependencies     'eslint-plugin-prettier': '^3.3.1',
+321 silly npmInstallDependencies     'eslint-plugin-react': '^7.22.0',
+321 silly npmInstallDependencies     'eslint-plugin-react-hooks': '^4.2.0',
+321 silly npmInstallDependencies     'eslint-plugin-testing-library': '^4.2.0',
+321 silly npmInstallDependencies     husky: '^7.0.0',
+321 silly npmInstallDependencies     jest: '^26.4.2',
+321 silly npmInstallDependencies     lerna: '^5.5.1',
+321 silly npmInstallDependencies     'lint-staged': '^10.4.0',
+321 silly npmInstallDependencies     nx: '^14.5.10',
+321 silly npmInstallDependencies     postcss: '^8.3.6',
+321 silly npmInstallDependencies     prettier: '^2.1.2',
+321 silly npmInstallDependencies     'react-test-renderer': '^16.13.1',
+321 silly npmInstallDependencies     stylelint: '^13.13.1',
+321 silly npmInstallDependencies     'stylelint-config-prettier': '^8.0.2',
+321 silly npmInstallDependencies     'stylelint-formatter-pretty': '^2.1.1',
+321 silly npmInstallDependencies     'stylelint-no-unsupported-browser-features': '^4.0.0',
+321 silly npmInstallDependencies     'stylelint-selector-bem-pattern': '^2.1.0',
+321 silly npmInstallDependencies     'stylelint-webpack-plugin': '^2.1.1',
+321 silly npmInstallDependencies     '@testing-library/jest-dom': '^5.12.0',
+321 silly npmInstallDependencies     'jest-chain': '^1.1.5',
+321 silly npmInstallDependencies     'jest-extended': '^1.2.0',
+321 silly npmInstallDependencies     'ts-jest': '^26.4.2'
+321 silly npmInstallDependencies   },
+321 silly npmInstallDependencies   dependencies: {
+321 silly npmInstallDependencies     '@babel/preset-typescript': '^7.16.5',
+321 silly npmInstallDependencies     '@types/react-transition-group': '^4.4.4',
+321 silly npmInstallDependencies     'babel-jest': '^27.3.1',
+321 silly npmInstallDependencies     dotenv: '^8.2.0',
+321 silly npmInstallDependencies     react: '^16.14.0',
+321 silly npmInstallDependencies     'react-dom': '^16.14.0',
+321 silly npmInstallDependencies     typescript: '^4.6.3',
+321 silly npmInstallDependencies     'babel-eslint': '^10.1.0',
+321 silly npmInstallDependencies     'babel-loader': '^8.1.0',
+321 silly npmInstallDependencies     'clean-webpack-plugin': '^3.0.0',
+321 silly npmInstallDependencies     'css-loader': '^5.0.1',
+321 silly npmInstallDependencies     'css-minimizer-webpack-plugin': '^3.0.1',
+321 silly npmInstallDependencies     history: '^5.0.0',
+321 silly npmInstallDependencies     'mini-css-extract-plugin': '^1.3.4',
+321 silly npmInstallDependencies     'node-sass': '^7.0.1',
+321 silly npmInstallDependencies     'postcss-loader': '^6.2.1',
+321 silly npmInstallDependencies     'postcss-preset-env': '^7.4.3',
+321 silly npmInstallDependencies     'postcss-scss': '^4.0.3',
+321 silly npmInstallDependencies     'resolve-url-loader': '^3.1.2',
+321 silly npmInstallDependencies     rimraf: '^3.0.2',
+321 silly npmInstallDependencies     'sass-loader': '^12.6.0',
+321 silly npmInstallDependencies     'sass-resources-loader': '^2.1.1',
+321 silly npmInstallDependencies     'terser-webpack-plugin': '^5.1.1',
+321 silly npmInstallDependencies     webpack: '^5.46.0',
+321 silly npmInstallDependencies     '@binary-com/binary-document-uploader': '^2.4.7',
+321 silly npmInstallDependencies     '@deriv/api-types': '^1.0.54',
+321 silly npmInstallDependencies     bowser: '^2.9.0',
+321 silly npmInstallDependencies     classnames: '^2.2.6',
+321 silly npmInstallDependencies     formik: '^2.1.4',
+321 silly npmInstallDependencies     'i18n-iso-countries': '^6.8.0',
+321 silly npmInstallDependencies     'js-cookie': '^2.2.1',
+321 silly npmInstallDependencies     mobx: '^6.6.1',
+321 silly npmInstallDependencies     'mobx-react': '^7.5.1',
+321 silly npmInstallDependencies     'onfido-sdk-ui': '8.1.1',
+321 silly npmInstallDependencies     'prop-types': '^15.7.2',
+321 silly npmInstallDependencies     'qrcode.react': '^1.0.0',
+321 silly npmInstallDependencies     'react-router': '^5.2.0',
+321 silly npmInstallDependencies     'react-router-dom': '^5.2.0',
+321 silly npmInstallDependencies     'react-i18next': '^11.11.0',
+321 silly npmInstallDependencies     '@storybook/addon-docs': '^6.5.10',
+321 silly npmInstallDependencies     '@storybook/addon-essentials': '^6.5.10',
+321 silly npmInstallDependencies     '@storybook/addon-links': '^6.5.10',
+321 silly npmInstallDependencies     '@storybook/builder-webpack5': '^6.5.10',
+321 silly npmInstallDependencies     '@storybook/manager-webpack5': '^6.5.10',
+321 silly npmInstallDependencies     '@storybook/react': '^6.5.10',
+321 silly npmInstallDependencies     '@types/classnames': '^2.2.11',
+321 silly npmInstallDependencies     '@types/object.fromentries': '^2.0.0',
+321 silly npmInstallDependencies     'babel-core': '^6.26.3',
+321 silly npmInstallDependencies     'copy-webpack-plugin': '^9.0.1',
+321 silly npmInstallDependencies     concurrently: '^5.3.0',
+321 silly npmInstallDependencies     'cross-env': '^5.2.0',
+321 silly npmInstallDependencies     'fork-ts-checker-webpack-plugin': '^6.5.0',
+321 silly npmInstallDependencies     'source-map-loader': '^1.1.2',
+321 silly npmInstallDependencies     'style-loader': '^1.2.1',
+321 silly npmInstallDependencies     'webpack-bundle-analyzer': '^4.3.0',
+321 silly npmInstallDependencies     'webpack-cli': '^4.7.2',
+321 silly npmInstallDependencies     '@deriv/ui': '^0.0.15',
+321 silly npmInstallDependencies     'mobx-react-lite': '^3.4.0',
+321 silly npmInstallDependencies     'object.fromentries': '^2.0.0',
+321 silly npmInstallDependencies     'react-joyride': '^2.5.3',
+321 silly npmInstallDependencies     'deep-diff': '^1.0.2',
+321 silly npmInstallDependencies     '@deriv/deriv-api': '^1.0.8',
+321 silly npmInstallDependencies     '@deriv/js-interpreter': '^3.0.0',
+321 silly npmInstallDependencies     'binary-utils': '^4.23.0',
+321 silly npmInstallDependencies     blockly: '3.20191014.4',
+321 silly npmInstallDependencies     'file-saver': '^2.0.2',
+321 silly npmInstallDependencies     immutable: '^3.8.2',
+321 silly npmInstallDependencies     localforage: '^1.9.0',
+321 silly npmInstallDependencies     'lz-string': '^1.4.4',
+321 silly npmInstallDependencies     redux: '^4.0.1',
+321 silly npmInstallDependencies     'redux-thunk': '^2.2.0',
+321 silly npmInstallDependencies     'scratch-blocks': '0.1.0-prerelease.20200917235131',
+321 silly npmInstallDependencies     shx: '^0.3.2',
+321 silly npmInstallDependencies     'css-hot-loader': '^1.4.4',
+321 silly npmInstallDependencies     'loader-utils': '^1.1.0',
+321 silly npmInstallDependencies     'raw-loader': '^4.0.0',
+321 silly npmInstallDependencies     'svg-sprite-loader': '^5.2.1',
+321 silly npmInstallDependencies     '@deriv/deriv-charts': '1.0.1',
+321 silly npmInstallDependencies     'crc-32': '^1.2.0',
+321 silly npmInstallDependencies     'gh-pages': '^2.1.1',
+321 silly npmInstallDependencies     pako: '^1.0.11',
+321 silly npmInstallDependencies     'react-content-loader': '^4.3.2',
+321 silly npmInstallDependencies     'react-transition-group': '4.4.2',
+321 silly npmInstallDependencies     '@types/qrcode.react': '^1.0.2',
+321 silly npmInstallDependencies     'file-loader': '^6.2.0',
+321 silly npmInstallDependencies     'react-svg-loader': '^3.0.3',
+321 silly npmInstallDependencies     'webpack-manifest-plugin': '^4.0.2',
+321 silly npmInstallDependencies     'webpack-node-externals': '^2.5.2',
+321 silly npmInstallDependencies     loadjs: '^4.2.0',
+321 silly npmInstallDependencies     'lodash.debounce': '^4.0.8',
+321 silly npmInstallDependencies     moment: '^2.29.2',
+321 silly npmInstallDependencies     'react-loadable': '^5.5.0',
+321 silly npmInstallDependencies     'react-pose': '^4.0.10',
+321 silly npmInstallDependencies     'circular-dependency-plugin': '^5.2.2',
+321 silly npmInstallDependencies     'html-loader': '^1.3.2',
+321 silly npmInstallDependencies     'html-webpack-plugin': '^5.0.0-beta.5',
+321 silly npmInstallDependencies     'html-webpack-tags-plugin': '^2.0.17',
+321 silly npmInstallDependencies     'ignore-styles': '^5.0.1',
+321 silly npmInstallDependencies     jsdom: '^16.2.1',
+321 silly npmInstallDependencies     'jsdom-global': '^2.1.1',
+321 silly npmInstallDependencies     'mock-local-storage': '^1.1.8',
+321 silly npmInstallDependencies     svgo: '^2.8.0',
+321 silly npmInstallDependencies     '@types/react-loadable': '^5.5.6',
+321 silly npmInstallDependencies     extend: '^3.0.2',
+321 silly npmInstallDependencies     i18next: '^20.3.2',
+321 silly npmInstallDependencies     'mobx-utils': '^6.0.5',
+321 silly npmInstallDependencies     'null-loader': '^4.0.1',
+321 silly npmInstallDependencies     'react-qrcode': '^0.3.5',
+321 silly npmInstallDependencies     '@storybook/addon-actions': '^6.5.10',
+321 silly npmInstallDependencies     '@storybook/addon-interactions': '^6.5.10',
+321 silly npmInstallDependencies     '@storybook/testing-library': '^0.0.13',
+321 silly npmInstallDependencies     '@storybook/addon-info': '^5.3.21',
+321 silly npmInstallDependencies     '@storybook/addon-knobs': '^6.4.0',
+321 silly npmInstallDependencies     'copy-webpack-plugin-v6': 'npm:copy-webpack-plugin@6',
+321 silly npmInstallDependencies     'svgo-loader': '^3.0.0',
+321 silly npmInstallDependencies     '@contentpass/zxcvbn': '^4.4.3',
+321 silly npmInstallDependencies     '@deriv/deriv-onboarding': '^1.0.0',
+321 silly npmInstallDependencies     glob: '^7.1.5',
+321 silly npmInstallDependencies     'lodash.throttle': '^4.1.1',
+321 silly npmInstallDependencies     'react-div-100vh': '^0.3.8',
+321 silly npmInstallDependencies     'react-drag-drawer': '^3.3.4',
+321 silly npmInstallDependencies     'react-dropzone': '11.0.1',
+321 silly npmInstallDependencies     'react-swipeable': '^5.5.1',
+321 silly npmInstallDependencies     'react-tiny-popover': '^5.1.0',
+321 silly npmInstallDependencies     'react-virtualized': '^9.22.2',
+321 silly npmInstallDependencies     'git-revision-webpack-plugin': '^5.0.0',
+321 silly npmInstallDependencies     'preload-webpack-plugin': '^3.0.0-beta.4',
+321 silly npmInstallDependencies     'webpack-dev-middleware': '^5.0.0',
+321 silly npmInstallDependencies     'webpack-dev-server': '^3.11.2',
+321 silly npmInstallDependencies     'workbox-webpack-plugin': '^6.0.2',
+321 silly npmInstallDependencies     '@babel/polyfill': '^7.4.4',
+321 silly npmInstallDependencies     '@livechat/customer-sdk': '^2.0.4',
+321 silly npmInstallDependencies     acorn: '^6.1.1',
+321 silly npmInstallDependencies     'canvas-toBlob': '^1.0.0',
+321 silly npmInstallDependencies     'promise-polyfill': '^8.1.3',
+321 silly npmInstallDependencies     'react-window': '^1.8.5',
+321 silly npmInstallDependencies     'web-push-notifications': '^3.33.0',
+321 silly npmInstallDependencies     'react-simple-star-rating': '4.0.4',
+321 silly npmInstallDependencies     sendbird: '~3.0.137',
+321 silly npmInstallDependencies     commander: '^3.0.2',
+321 silly npmInstallDependencies     '@types/jsdom': '^20.0.0',
+321 silly npmInstallDependencies     '@types/js-cookie': '^3.0.1',
+321 silly npmInstallDependencies     'mobx-persist-store': '1.1.2',
+321 silly npmInstallDependencies     xmldom: '^0.5.0'
+321 silly npmInstallDependencies   },
+321 silly npmInstallDependencies   optionalDependencies: { fsevents: '^2.3.2' }
+321 silly npmInstallDependencies }
+322 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@babel/preset-react
+323 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/preset-react
+324 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@babel/preset-react
+325 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/publisher/node_modules/@babel/preset-react
+326 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@babel/preset-react
+327 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@babel/preset-react
+328 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@babel/preset-react
+329 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@babel/preset-react
+330 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@babel/preset-react
+331 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/@babel/preset-react
+332 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@babel/preset-react
+333 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@jest/globals
+334 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/@babel/preset-react
+335 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@testing-library/react
+336 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/preset-react
+337 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/@testing-library/react
+338 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@babel/preset-react
+339 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@testing-library/react
+340 verbose prune /Users/henryhein/Desktop/deriv-app/packages/publisher/node_modules/@babel/preset-react
+341 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@testing-library/react
+342 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@babel/preset-react
+343 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@testing-library/react
+344 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@babel/preset-react
+345 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/@testing-library/react
+346 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/@babel/preset-react
+347 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@testing-library/react
+348 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@jest/globals
+349 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/@testing-library/react
+350 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@testing-library/react
+351 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@types/react
+352 verbose prune /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/@testing-library/react
+353 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react
+354 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@testing-library/react
+355 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@types/react
+356 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@testing-library/react
+357 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@types/react
+358 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@testing-library/react
+359 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@types/react
+360 verbose prune /Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/@testing-library/react
+361 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/react
+362 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@testing-library/react
+363 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@types/react
+364 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@types/react
+365 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@types/react
+366 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react
+367 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@types/react
+368 verbose prune /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/@testing-library/react
+369 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/react
+370 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@types/react
+371 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/react
+372 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@types/react
+373 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/react
+374 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@types/react
+375 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@types/react-dom
+376 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@types/react
+377 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react-dom
+378 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@types/react
+379 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@types/react-dom
+380 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/react
+381 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@types/react-dom
+382 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@types/react
+383 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@types/react-dom
+384 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/react
+385 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/react-dom
+386 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/react
+387 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@types/react-dom
+388 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@types/react-dom
+389 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@types/react-dom
+390 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react-dom
+391 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@types/react-dom
+392 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/react
+393 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/react-dom
+394 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@types/react-dom
+395 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/react-dom
+396 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@types/react-dom
+397 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/react-dom
+398 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@types/react-dom
+399 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@testing-library/user-event
+400 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/react-dom
+401 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/@testing-library/user-event
+402 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@types/react-dom
+403 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@testing-library/user-event
+404 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@types/react-dom
+405 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/@testing-library/user-event
+406 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/@types/react-dom
+407 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react-router-dom
+408 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/react-dom
+409 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/babel-polyfill
+410 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/react-dom
+411 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/babel-polyfill
+412 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/react-dom
+413 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-config-airbnb-base
+414 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@testing-library/user-event
+415 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-config-airbnb-base
+416 verbose prune /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/@testing-library/user-event
+417 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-config-airbnb-base
+418 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@testing-library/user-event
+419 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-config-airbnb-base
+420 verbose prune /Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/@testing-library/user-event
+421 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-config-airbnb-base
+422 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/react-router-dom
+423 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-config-airbnb-base
+424 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/babel-polyfill
+425 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-config-airbnb-base
+426 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-config-airbnb-base
+427 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-config-airbnb-base
+428 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-config-airbnb-base
+429 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-config-airbnb-base
+430 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/babel-polyfill
+431 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-config-airbnb-base
+432 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-config-airbnb-base
+433 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-config-binary
+434 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-config-airbnb-base
+435 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-config-binary
+436 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-config-airbnb-base
+437 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-config-binary
+438 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-config-airbnb-base
+439 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-config-binary
+440 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-config-airbnb-base
+441 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-config-binary
+442 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-config-airbnb-base
+443 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-config-binary
+444 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-config-airbnb-base
+445 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-config-binary
+446 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-config-airbnb-base
+447 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-config-binary
+448 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-config-binary
+449 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-config-binary
+450 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-config-binary
+451 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-config-binary
+452 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-config-binary
+453 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-config-prettier
+454 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-config-binary
+455 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-config-prettier
+456 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-config-binary
+457 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-config-prettier
+458 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-config-binary
+459 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-config-prettier
+460 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-config-binary
+461 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-config-prettier
+462 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-config-binary
+463 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-config-prettier
+464 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-config-binary
+465 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-config-prettier
+466 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-config-binary
+467 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-config-prettier
+468 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-config-prettier
+469 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-config-prettier
+470 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-config-prettier
+471 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-config-prettier
+472 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-config-prettier
+473 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-formatter-pretty
+474 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-config-prettier
+475 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-formatter-pretty
+476 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-config-prettier
+477 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-import-resolver-webpack
+478 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-config-prettier
+479 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-plugin-import
+480 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-config-prettier
+481 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-plugin-import
+482 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-config-prettier
+483 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-plugin-import
+484 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-config-prettier
+485 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-plugin-import
+486 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-config-prettier
+487 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-plugin-import
+488 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-formatter-pretty
+489 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-plugin-import
+490 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-formatter-pretty
+491 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-plugin-import
+492 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-import-resolver-webpack
+493 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-plugin-import
+494 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-plugin-import
+495 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-plugin-import
+496 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-plugin-import
+497 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-plugin-import
+498 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-plugin-import
+499 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-plugin-prettier
+500 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-plugin-import
+501 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-plugin-prettier
+502 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-plugin-import
+503 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-plugin-prettier
+504 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-plugin-import
+505 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-plugin-prettier
+506 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-plugin-import
+507 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-plugin-prettier
+508 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-plugin-import
+509 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-plugin-prettier
+510 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-plugin-import
+511 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-plugin-prettier
+512 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-plugin-import
+513 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-plugin-prettier
+514 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-plugin-prettier
+515 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-plugin-prettier
+516 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-plugin-prettier
+517 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-plugin-prettier
+518 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-plugin-prettier
+519 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-plugin-react
+520 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-plugin-prettier
+521 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-plugin-react
+522 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-plugin-prettier
+523 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-plugin-react
+524 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/eslint-plugin-prettier
+525 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-plugin-react
+526 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-plugin-prettier
+527 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-plugin-react
+528 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-plugin-prettier
+529 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-plugin-react
+530 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-plugin-prettier
+531 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-plugin-react
+532 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-plugin-prettier
+533 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-plugin-react
+534 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-plugin-react
+535 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-plugin-react
+536 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-plugin-react
+537 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-plugin-react-hooks
+538 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-plugin-react
+539 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-plugin-react-hooks
+540 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-plugin-react
+541 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-plugin-react-hooks
+542 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-plugin-react
+543 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-plugin-react-hooks
+544 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-plugin-react
+545 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-plugin-react-hooks
+546 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-plugin-react
+547 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-plugin-react-hooks
+548 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-plugin-react
+549 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-plugin-react-hooks
+550 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-plugin-react
+551 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-plugin-react-hooks
+552 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/eslint-plugin-react-hooks
+553 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-plugin-react-hooks
+554 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/eslint-plugin-react-hooks
+555 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/lint-staged
+556 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/eslint-plugin-react-hooks
+557 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/lint-staged
+558 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/eslint-plugin-react-hooks
+559 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/lint-staged
+560 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/eslint-plugin-react-hooks
+561 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/lint-staged
+562 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/eslint-plugin-react-hooks
+563 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/lint-staged
+564 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/eslint-plugin-react-hooks
+565 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/stylelint-formatter-pretty
+566 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/lint-staged
+567 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/stylelint-formatter-pretty
+568 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/lint-staged
+569 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/stylelint-formatter-pretty
+570 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/lint-staged
+571 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/stylelint-formatter-pretty
+572 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/eslint-plugin-react-hooks
+573 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/stylelint-webpack-plugin
+574 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/lint-staged
+575 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/stylelint-webpack-plugin
+576 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/eslint-plugin-react-hooks
+577 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/ts-jest
+578 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/lint-staged
+579 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react
+580 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/stylelint-formatter-pretty
+581 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/react
+582 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/stylelint-formatter-pretty
+583 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/react
+584 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/stylelint-formatter-pretty
+585 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/react
+586 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/stylelint-formatter-pretty
+587 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react
+588 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/stylelint-webpack-plugin
+589 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react
+590 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/ts-jest
+591 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react
+592 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react
+593 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react
+594 verbose prune /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/react
+595 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/react
+596 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/react
+597 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/react
+598 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/react
+599 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react
+600 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react
+601 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react
+602 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react
+603 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/react
+604 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react
+605 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/react
+606 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/stylelint-webpack-plugin
+607 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react
+608 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react
+609 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/react
+610 verbose prune /Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/react
+611 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react-dom
+612 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/react
+613 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/react-dom
+614 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react
+615 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-dom
+616 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react
+617 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-dom
+618 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/react
+619 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-dom
+620 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react
+621 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-dom
+622 verbose prune /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/react
+623 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/react-dom
+624 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/react
+625 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-dom
+626 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react-dom
+627 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-dom
+628 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/react-dom
+629 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-dom
+630 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-dom
+631 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/typescript
+632 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-dom
+633 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/typescript
+634 verbose prune /Users/henryhein/Desktop/deriv-app/packages/indicators/node_modules/react-dom
+635 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/typescript
+636 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-dom
+637 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/typescript
+638 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-dom
+639 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/typescript
+640 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-dom
+641 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/typescript
+642 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-dom
+643 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/typescript
+644 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-dom
+645 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/typescript
+646 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/typescript
+647 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/typescript
+648 verbose prune /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/typescript
+649 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/typescript
+650 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/typescript
+651 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/typescript
+652 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/typescript
+653 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/typescript
+654 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/typescript
+655 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/typescript
+656 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/typescript
+657 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/typescript
+658 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/typescript
+659 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/typescript
+660 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/typescript
+661 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/babel-eslint
+662 verbose prune /Users/henryhein/Desktop/deriv-app/packages/hooks/node_modules/typescript
+663 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/babel-eslint
+664 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/typescript
+665 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/babel-eslint
+666 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/typescript
+667 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/babel-loader
+668 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/typescript
+669 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/babel-loader
+670 verbose prune /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/typescript
+671 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/babel-loader
+672 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/typescript
+673 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/babel-loader
+674 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/babel-eslint
+675 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/babel-loader
+676 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/typescript
+677 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/babel-loader
+678 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/babel-eslint
+679 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/babel-loader
+680 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/babel-eslint
+681 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/babel-loader
+682 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/babel-loader
+683 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/babel-loader
+684 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/babel-loader
+685 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/babel-loader
+686 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/babel-loader
+687 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/clean-webpack-plugin
+688 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/babel-loader
+689 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/clean-webpack-plugin
+690 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/babel-loader
+691 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/clean-webpack-plugin
+692 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/babel-loader
+693 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/clean-webpack-plugin
+694 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/babel-loader
+695 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/clean-webpack-plugin
+696 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/babel-loader
+697 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/clean-webpack-plugin
+698 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/babel-loader
+699 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/clean-webpack-plugin
+700 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/babel-loader
+701 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/css-loader
+702 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/clean-webpack-plugin
+703 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/css-loader
+704 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/clean-webpack-plugin
+705 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/css-loader
+706 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/clean-webpack-plugin
+707 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/css-loader
+708 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/clean-webpack-plugin
+709 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/css-loader
+710 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/clean-webpack-plugin
+711 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/css-loader
+712 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/clean-webpack-plugin
+713 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/css-loader
+714 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/clean-webpack-plugin
+715 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/css-loader
+716 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/css-loader
+717 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/css-loader
+718 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/css-loader
+719 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/css-minimizer-webpack-plugin
+720 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/css-loader
+721 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/css-minimizer-webpack-plugin
+722 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/css-loader
+723 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/css-minimizer-webpack-plugin
+724 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/css-loader
+725 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/css-minimizer-webpack-plugin
+726 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/css-loader
+727 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/css-minimizer-webpack-plugin
+728 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/css-loader
+729 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/css-minimizer-webpack-plugin
+730 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/css-loader
+731 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/css-minimizer-webpack-plugin
+732 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/css-loader
+733 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/css-minimizer-webpack-plugin
+734 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/css-minimizer-webpack-plugin
+735 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/history
+736 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/css-minimizer-webpack-plugin
+737 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/mini-css-extract-plugin
+738 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/css-minimizer-webpack-plugin
+739 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/mini-css-extract-plugin
+740 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/css-minimizer-webpack-plugin
+741 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/mini-css-extract-plugin
+742 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/css-minimizer-webpack-plugin
+743 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/mini-css-extract-plugin
+744 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/css-minimizer-webpack-plugin
+745 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mini-css-extract-plugin
+746 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/history
+747 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mini-css-extract-plugin
+748 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/mini-css-extract-plugin
+749 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/mini-css-extract-plugin
+750 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/mini-css-extract-plugin
+751 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mini-css-extract-plugin
+752 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/mini-css-extract-plugin
+753 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mini-css-extract-plugin
+754 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/mini-css-extract-plugin
+755 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/node-sass
+756 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mini-css-extract-plugin
+757 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/node-sass
+758 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mini-css-extract-plugin
+759 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/node-sass
+760 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/mini-css-extract-plugin
+761 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/node-sass
+762 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mini-css-extract-plugin
+763 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/node-sass
+764 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mini-css-extract-plugin
+765 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/node-sass
+766 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/node-sass
+767 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/node-sass
+768 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/node-sass
+769 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/node-sass
+770 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/node-sass
+771 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/node-sass
+772 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/node-sass
+773 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/node-sass
+774 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/node-sass
+775 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/postcss-loader
+776 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/node-sass
+777 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/postcss-loader
+778 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/css-minimizer-webpack-plugin
+779 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/postcss-loader
+780 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/node-sass
+781 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/postcss-loader
+782 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/node-sass
+783 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/postcss-loader
+784 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/node-sass
+785 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/postcss-loader
+786 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/node-sass
+787 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/postcss-loader
+788 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/postcss-loader
+789 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/postcss-loader
+790 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/postcss-loader
+791 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/postcss-preset-env
+792 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/postcss-loader
+793 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/postcss-preset-env
+794 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/postcss-loader
+795 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/postcss-preset-env
+796 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/postcss-loader
+797 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/postcss-preset-env
+798 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/postcss-loader
+799 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/postcss-preset-env
+800 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/postcss-loader
+801 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/postcss-preset-env
+802 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/postcss-loader
+803 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/postcss-preset-env
+804 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/postcss-preset-env
+805 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/postcss-preset-env
+806 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/postcss-preset-env
+807 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/postcss-scss
+808 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/postcss-preset-env
+809 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/postcss-scss
+810 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/postcss-preset-env
+811 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/postcss-scss
+812 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/postcss-preset-env
+813 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/postcss-scss
+814 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/postcss-preset-env
+815 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/postcss-scss
+816 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/postcss-preset-env
+817 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/postcss-scss
+818 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/postcss-preset-env
+819 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/postcss-scss
+820 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/postcss-scss
+821 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/postcss-scss
+822 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/postcss-scss
+823 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/resolve-url-loader
+824 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/postcss-scss
+825 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/resolve-url-loader
+826 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/postcss-scss
+827 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/resolve-url-loader
+828 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/postcss-scss
+829 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/resolve-url-loader
+830 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/postcss-scss
+831 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/resolve-url-loader
+832 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/postcss-scss
+833 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/resolve-url-loader
+834 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/postcss-scss
+835 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/resolve-url-loader
+836 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/resolve-url-loader
+837 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/rimraf
+838 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/resolve-url-loader
+839 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/sass-loader
+840 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/resolve-url-loader
+841 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/sass-loader
+842 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/resolve-url-loader
+843 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/sass-loader
+844 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/resolve-url-loader
+845 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/sass-loader
+846 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/resolve-url-loader
+847 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/sass-loader
+848 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/resolve-url-loader
+849 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/sass-loader
+850 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/rimraf
+851 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/sass-loader
+852 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/sass-loader
+853 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/sass-loader
+854 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/sass-loader
+855 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/sass-loader
+856 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/sass-loader
+857 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/sass-loader
+858 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/sass-loader
+859 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/sass-resources-loader
+860 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/sass-loader
+861 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/sass-resources-loader
+862 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/sass-loader
+863 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/sass-resources-loader
+864 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/sass-loader
+865 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/sass-resources-loader
+866 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/sass-loader
+867 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/sass-resources-loader
+868 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/sass-loader
+869 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/sass-resources-loader
+870 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/sass-loader
+871 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/sass-resources-loader
+872 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/sass-resources-loader
+873 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/sass-resources-loader
+874 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/sass-resources-loader
+875 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/sass-resources-loader
+876 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/sass-resources-loader
+877 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/sass-resources-loader
+878 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/sass-resources-loader
+879 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/terser-webpack-plugin
+880 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/sass-resources-loader
+881 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/terser-webpack-plugin
+882 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/sass-resources-loader
+883 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/terser-webpack-plugin
+884 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/sass-resources-loader
+885 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/terser-webpack-plugin
+886 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/sass-resources-loader
+887 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/terser-webpack-plugin
+888 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/sass-resources-loader
+889 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/terser-webpack-plugin
+890 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/sass-resources-loader
+891 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/terser-webpack-plugin
+892 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/terser-webpack-plugin
+893 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/webpack
+894 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/terser-webpack-plugin
+895 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/webpack
+896 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/terser-webpack-plugin
+897 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/webpack
+898 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/terser-webpack-plugin
+899 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/webpack
+900 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/terser-webpack-plugin
+901 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack
+902 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/terser-webpack-plugin
+903 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/webpack
+904 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/terser-webpack-plugin
+905 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack
+906 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/webpack
+907 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/webpack
+908 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/webpack
+909 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack
+910 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/webpack
+911 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack
+912 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/webpack
+913 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@binary-com/binary-document-uploader
+914 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack
+915 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@deriv/api-types
+916 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/webpack
+917 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/@deriv/api-types
+918 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack
+919 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@deriv/api-types
+920 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/webpack
+921 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@deriv/api-types
+922 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack
+923 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@deriv/api-types
+924 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack
+925 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@deriv/api-types
+926 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@binary-com/binary-document-uploader
+927 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@deriv/api-types
+928 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/@deriv/api-types
+929 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/@deriv/api-types
+930 verbose prune /Users/henryhein/Desktop/deriv-app/packages/api/node_modules/@deriv/api-types
+931 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@deriv/api-types
+932 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@deriv/api-types
+933 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/bowser
+934 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@deriv/api-types
+935 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/classnames
+936 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@deriv/api-types
+937 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/classnames
+938 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@deriv/api-types
+939 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/classnames
+940 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@deriv/api-types
+941 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/classnames
+942 verbose prune /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/@deriv/api-types
+943 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/classnames
+944 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/bowser
+945 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/classnames
+946 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@deriv/api-types
+947 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/classnames
+948 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/classnames
+949 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/classnames
+950 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/classnames
+951 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/classnames
+952 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/classnames
+953 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/classnames
+954 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/classnames
+955 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/formik
+956 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/classnames
+957 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/formik
+958 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/classnames
+959 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/formik
+960 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/classnames
+961 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/formik
+962 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/classnames
+963 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/formik
+964 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/css-minimizer-webpack-plugin
+965 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/formik
+966 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/classnames
+967 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/formik
+968 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/classnames
+969 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/formik
+970 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/formik
+971 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/formik
+972 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/formik
+973 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/i18n-iso-countries
+974 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/formik
+975 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/js-cookie
+976 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/formik
+977 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/js-cookie
+978 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/formik
+979 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/js-cookie
+980 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/formik
+981 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/js-cookie
+982 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/formik
+983 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/mobx
+984 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/formik
+985 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/mobx
+986 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/formik
+987 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/mobx
+988 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/i18n-iso-countries
+989 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/mobx
+990 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/js-cookie
+991 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/mobx
+992 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/js-cookie
+993 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mobx
+994 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/js-cookie
+995 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mobx
+996 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/js-cookie
+997 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/mobx
+998 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/mobx
+999 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mobx
+1000 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/mobx
+1001 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/mobx
+1002 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/mobx
+1003 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/mobx
+1004 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/mobx
+1005 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mobx
+1006 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/mobx
+1007 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/mobx-react
+1008 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mobx
+1009 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/mobx-react
+1010 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mobx
+1011 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/mobx-react
+1012 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/mobx
+1013 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mobx-react
+1014 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mobx
+1015 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mobx-react
+1016 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/mobx
+1017 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mobx-react
+1018 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mobx
+1019 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mobx-react
+1020 verbose prune /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/mobx
+1021 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/onfido-sdk-ui
+1022 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/mobx-react
+1023 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/prop-types
+1024 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/mobx-react
+1025 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/prop-types
+1026 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/mobx-react
+1027 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/prop-types
+1028 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mobx-react
+1029 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/prop-types
+1030 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mobx-react
+1031 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/prop-types
+1032 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mobx-react
+1033 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/prop-types
+1034 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/onfido-sdk-ui
+1035 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/prop-types
+1036 silly getNpmExecOpts /Users/henryhein/Desktop/deriv-app undefined
+1037 silly npmInstall [ 'npm', [ 'install', '--no-save' ] ]
+1038 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/prop-types
+1039 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/prop-types
+1040 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/prop-types
+1041 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/prop-types
+1042 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/prop-types
+1043 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/prop-types
+1044 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/prop-types
+1045 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/prop-types
+1046 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/prop-types
+1047 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/qrcode.react
+1048 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/prop-types
+1049 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/qrcode.react
+1050 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/prop-types
+1051 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react-router
+1052 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mobx-react
+1053 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/react-router
+1054 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/prop-types
+1055 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-router
+1056 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/prop-types
+1057 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-router
+1058 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/prop-types
+1059 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-router
+1060 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/prop-types
+1061 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-router
+1062 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/qrcode.react
+1063 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/react-router
+1064 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/qrcode.react
+1065 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-router
+1066 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react-router
+1067 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react-router-dom
+1068 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/react-router
+1069 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/react-router-dom
+1070 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-router
+1071 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-router-dom
+1072 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-router
+1073 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-router-dom
+1074 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-router
+1075 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-router-dom
+1076 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-router
+1077 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-router-dom
+1078 verbose prune /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/react-router
+1079 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-router-dom
+1080 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-router
+1081 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-router-dom
+1082 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react-router-dom
+1083 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react-i18next
+1084 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/react-router-dom
+1085 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-i18next
+1086 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-router-dom
+1087 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-i18next
+1088 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-router-dom
+1089 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-i18next
+1090 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-router-dom
+1091 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/react-i18next
+1092 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-router-dom
+1093 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/addon-docs
+1094 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-router-dom
+1095 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/addon-essentials
+1096 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-router-dom
+1097 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-essentials
+1098 verbose prune /Users/henryhein/Desktop/deriv-app/packages/account/node_modules/react-i18next
+1099 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/addon-links
+1100 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-i18next
+1101 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-links
+1102 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-i18next
+1103 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/builder-webpack5
+1104 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-i18next
+1105 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/builder-webpack5
+1106 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/react-i18next
+1107 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/manager-webpack5
+1108 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/addon-docs
+1109 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/manager-webpack5
+1110 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/addon-essentials
+1111 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/react
+1112 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-essentials
+1113 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/react
+1114 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/addon-links
+1115 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/classnames
+1116 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-links
+1117 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/classnames
+1118 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/builder-webpack5
+1119 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/classnames
+1120 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/builder-webpack5
+1121 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/classnames
+1122 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/manager-webpack5
+1123 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/object.fromentries
+1124 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/manager-webpack5
+1125 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/babel-core
+1126 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@storybook/react
+1127 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/babel-core
+1128 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/react
+1129 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/copy-webpack-plugin
+1130 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/classnames
+1131 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/copy-webpack-plugin
+1132 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/classnames
+1133 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/copy-webpack-plugin
+1134 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/classnames
+1135 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/copy-webpack-plugin
+1136 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/classnames
+1137 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/copy-webpack-plugin
+1138 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@types/object.fromentries
+1139 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/copy-webpack-plugin
+1140 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/babel-core
+1141 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/copy-webpack-plugin
+1142 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/babel-core
+1143 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/copy-webpack-plugin
+1144 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/copy-webpack-plugin
+1145 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/copy-webpack-plugin
+1146 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/copy-webpack-plugin
+1147 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/concurrently
+1148 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/copy-webpack-plugin
+1149 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/concurrently
+1150 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/copy-webpack-plugin
+1151 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/cross-env
+1152 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/copy-webpack-plugin
+1153 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/cross-env
+1154 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/copy-webpack-plugin
+1155 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/cross-env
+1156 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/copy-webpack-plugin
+1157 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/cross-env
+1158 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/copy-webpack-plugin
+1159 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/fork-ts-checker-webpack-plugin
+1160 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/copy-webpack-plugin
+1161 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/fork-ts-checker-webpack-plugin
+1162 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/concurrently
+1163 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/fork-ts-checker-webpack-plugin
+1164 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/concurrently
+1165 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/fork-ts-checker-webpack-plugin
+1166 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/cross-env
+1167 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/source-map-loader
+1168 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/cross-env
+1169 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/style-loader
+1170 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/cross-env
+1171 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/style-loader
+1172 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/cross-env
+1173 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/style-loader
+1174 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/fork-ts-checker-webpack-plugin
+1175 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/webpack-bundle-analyzer
+1176 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/fork-ts-checker-webpack-plugin
+1177 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack-bundle-analyzer
+1178 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/fork-ts-checker-webpack-plugin
+1179 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/webpack-bundle-analyzer
+1180 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/fork-ts-checker-webpack-plugin
+1181 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-bundle-analyzer
+1182 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/source-map-loader
+1183 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/webpack-bundle-analyzer
+1184 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/style-loader
+1185 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack-bundle-analyzer
+1186 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/style-loader
+1187 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack-bundle-analyzer
+1188 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/style-loader
+1189 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/webpack-cli
+1190 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/webpack-bundle-analyzer
+1191 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/webpack-cli
+1192 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack-bundle-analyzer
+1193 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/webpack-cli
+1194 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/webpack-bundle-analyzer
+1195 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack-cli
+1196 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-bundle-analyzer
+1197 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/webpack-cli
+1198 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/webpack-bundle-analyzer
+1199 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-cli
+1200 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack-bundle-analyzer
+1201 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/webpack-cli
+1202 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack-bundle-analyzer
+1203 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack-cli
+1204 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/webpack-cli
+1205 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack-cli
+1206 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/webpack-cli
+1207 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@deriv/ui
+1208 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/webpack-cli
+1209 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/mobx-react-lite
+1210 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack-cli
+1211 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/mobx-react-lite
+1212 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/webpack-cli
+1213 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/mobx-react-lite
+1214 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-cli
+1215 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/object.fromentries
+1216 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/webpack-cli
+1217 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/object.fromentries
+1218 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack-cli
+1219 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/object.fromentries
+1220 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack-cli
+1221 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/object.fromentries
+1222 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/@deriv/ui
+1223 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/object.fromentries
+1224 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/mobx-react-lite
+1225 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/react-joyride
+1226 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/mobx-react-lite
+1227 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/deep-diff
+1228 verbose prune /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/mobx-react-lite
+1229 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@deriv/deriv-api
+1230 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/object.fromentries
+1231 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@deriv/deriv-api
+1232 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/object.fromentries
+1233 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@deriv/deriv-api
+1234 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/object.fromentries
+1235 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@deriv/deriv-api
+1236 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/object.fromentries
+1237 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@deriv/deriv-api
+1238 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/object.fromentries
+1239 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@deriv/deriv-api
+1240 verbose prune /Users/henryhein/Desktop/deriv-app/packages/appstore/node_modules/react-joyride
+1241 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@deriv/js-interpreter
+1242 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/deep-diff
+1243 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/binary-utils
+1244 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@deriv/deriv-api
+1245 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/blockly
+1246 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@deriv/deriv-api
+1247 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/file-saver
+1248 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@deriv/deriv-api
+1249 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/immutable
+1250 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@deriv/deriv-api
+1251 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/immutable
+1252 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@deriv/deriv-api
+1253 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/localforage
+1254 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@deriv/deriv-api
+1255 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/lz-string
+1256 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/@deriv/js-interpreter
+1257 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/lz-string
+1258 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/binary-utils
+1259 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/redux
+1260 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/blockly
+1261 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/redux-thunk
+1262 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/file-saver
+1263 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/scratch-blocks
+1264 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/immutable
+1265 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/shx
+1266 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/immutable
+1267 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/css-hot-loader
+1268 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/localforage
+1269 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/css-hot-loader
+1270 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/lz-string
+1271 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/loader-utils
+1272 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/lz-string
+1273 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/raw-loader
+1274 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/redux
+1275 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/svg-sprite-loader
+1276 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/redux-thunk
+1277 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/svg-sprite-loader
+1278 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/scratch-blocks
+1279 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@deriv/deriv-charts
+1280 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-skeleton/node_modules/shx
+1281 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@deriv/deriv-charts
+1282 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/css-hot-loader
+1283 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@deriv/deriv-charts
+1284 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/css-hot-loader
+1285 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/crc-32
+1286 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/loader-utils
+1287 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/crc-32
+1288 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/raw-loader
+1289 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/crc-32
+1290 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/svg-sprite-loader
+1291 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/crc-32
+1292 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/svg-sprite-loader
+1293 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/crc-32
+1294 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/@deriv/deriv-charts
+1295 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/gh-pages
+1296 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@deriv/deriv-charts
+1297 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/gh-pages
+1298 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@deriv/deriv-charts
+1299 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/gh-pages
+1300 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/crc-32
+1301 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/pako
+1302 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/crc-32
+1303 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/react-content-loader
+1304 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/crc-32
+1305 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-content-loader
+1306 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/crc-32
+1307 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-content-loader
+1308 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/crc-32
+1309 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-content-loader
+1310 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/gh-pages
+1311 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-content-loader
+1312 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/gh-pages
+1313 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-content-loader
+1314 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/gh-pages
+1315 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-content-loader
+1316 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/pako
+1317 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/react-transition-group
+1318 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/react-content-loader
+1319 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-transition-group
+1320 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-content-loader
+1321 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-transition-group
+1322 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-content-loader
+1323 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-transition-group
+1324 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-content-loader
+1325 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-transition-group
+1326 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-content-loader
+1327 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-transition-group
+1328 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-content-loader
+1329 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-transition-group
+1330 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-content-loader
+1331 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@types/qrcode.react
+1332 verbose prune /Users/henryhein/Desktop/deriv-app/packages/bot-web-ui/node_modules/react-transition-group
+1333 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/file-loader
+1334 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-transition-group
+1335 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/file-loader
+1336 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-transition-group
+1337 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/file-loader
+1338 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-transition-group
+1339 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/file-loader
+1340 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-transition-group
+1341 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/file-loader
+1342 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-transition-group
+1343 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-svg-loader
+1344 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-transition-group
+1345 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-svg-loader
+1346 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/@types/qrcode.react
+1347 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-svg-loader
+1348 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/file-loader
+1349 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-svg-loader
+1350 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/file-loader
+1351 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-svg-loader
+1352 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/file-loader
+1353 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-svg-loader
+1354 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/file-loader
+1355 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/webpack-manifest-plugin
+1356 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/file-loader
+1357 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack-manifest-plugin
+1358 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-svg-loader
+1359 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-manifest-plugin
+1360 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-svg-loader
+1361 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack-manifest-plugin
+1362 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-svg-loader
+1363 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack-manifest-plugin
+1364 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-svg-loader
+1365 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/webpack-node-externals
+1366 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-svg-loader
+1367 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack-node-externals
+1368 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-svg-loader
+1369 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-node-externals
+1370 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/webpack-manifest-plugin
+1371 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack-node-externals
+1372 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack-manifest-plugin
+1373 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack-node-externals
+1374 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-manifest-plugin
+1375 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/loadjs
+1376 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack-manifest-plugin
+1377 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/loadjs
+1378 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack-manifest-plugin
+1379 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/lodash.debounce
+1380 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/webpack-node-externals
+1381 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/lodash.debounce
+1382 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/webpack-node-externals
+1383 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/lodash.debounce
+1384 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-node-externals
+1385 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/lodash.debounce
+1386 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/webpack-node-externals
+1387 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/lodash.debounce
+1388 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/webpack-node-externals
+1389 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/moment
+1390 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/loadjs
+1391 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/moment
+1392 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/loadjs
+1393 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/moment
+1394 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/lodash.debounce
+1395 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/moment
+1396 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/lodash.debounce
+1397 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/moment
+1398 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/lodash.debounce
+1399 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/moment
+1400 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/lodash.debounce
+1401 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-loadable
+1402 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/lodash.debounce
+1403 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-loadable
+1404 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/moment
+1405 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-loadable
+1406 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/moment
+1407 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/react-loadable
+1408 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/moment
+1409 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-loadable
+1410 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/moment
+1411 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-pose
+1412 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/moment
+1413 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-pose
+1414 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/moment
+1415 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-pose
+1416 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-loadable
+1417 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-pose
+1418 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-loadable
+1419 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-pose
+1420 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-loadable
+1421 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/circular-dependency-plugin
+1422 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/react-loadable
+1423 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/circular-dependency-plugin
+1424 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-loadable
+1425 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/circular-dependency-plugin
+1426 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cashier/node_modules/react-pose
+1427 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/circular-dependency-plugin
+1428 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-pose
+1429 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/html-loader
+1430 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-pose
+1431 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/html-loader
+1432 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/react-pose
+1433 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/html-loader
+1434 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/react-pose
+1435 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/html-loader
+1436 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/circular-dependency-plugin
+1437 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/html-webpack-plugin
+1438 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/circular-dependency-plugin
+1439 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/html-webpack-plugin
+1440 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/circular-dependency-plugin
+1441 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/html-webpack-plugin
+1442 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/circular-dependency-plugin
+1443 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/html-webpack-plugin
+1444 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/html-loader
+1445 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/html-webpack-tags-plugin
+1446 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/html-loader
+1447 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/html-webpack-tags-plugin
+1448 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/html-loader
+1449 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/html-webpack-tags-plugin
+1450 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/html-loader
+1451 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/html-webpack-tags-plugin
+1452 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/html-webpack-plugin
+1453 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/ignore-styles
+1454 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/html-webpack-plugin
+1455 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/ignore-styles
+1456 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/html-webpack-plugin
+1457 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/ignore-styles
+1458 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/html-webpack-plugin
+1459 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/ignore-styles
+1460 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/html-webpack-tags-plugin
+1461 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/jsdom
+1462 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/html-webpack-tags-plugin
+1463 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/jsdom
+1464 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/html-webpack-tags-plugin
+1465 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/jsdom
+1466 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/html-webpack-tags-plugin
+1467 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/jsdom
+1468 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/ignore-styles
+1469 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/jsdom
+1470 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/ignore-styles
+1471 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/jsdom-global
+1472 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/ignore-styles
+1473 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/jsdom-global
+1474 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/ignore-styles
+1475 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/jsdom-global
+1476 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/jsdom
+1477 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/jsdom-global
+1478 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/jsdom
+1479 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mock-local-storage
+1480 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/jsdom
+1481 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mock-local-storage
+1482 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/jsdom
+1483 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mock-local-storage
+1484 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/jsdom
+1485 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mock-local-storage
+1486 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/jsdom-global
+1487 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/svgo
+1488 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/jsdom-global
+1489 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/svgo
+1490 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/jsdom-global
+1491 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/svgo
+1492 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/jsdom-global
+1493 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/svgo
+1494 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mock-local-storage
+1495 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/react-loadable
+1496 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mock-local-storage
+1497 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/react-loadable
+1498 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mock-local-storage
+1499 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/react-loadable
+1500 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mock-local-storage
+1501 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/react-loadable
+1502 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/svgo
+1503 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/extend
+1504 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/svgo
+1505 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/extend
+1506 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/svgo
+1507 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/extend
+1508 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/svgo
+1509 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/extend
+1510 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/@types/react-loadable
+1511 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/extend
+1512 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/@types/react-loadable
+1513 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/i18next
+1514 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/react-loadable
+1515 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/i18next
+1516 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/@types/react-loadable
+1517 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/i18next
+1518 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/extend
+1519 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/i18next
+1520 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/extend
+1521 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/i18next
+1522 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/extend
+1523 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/i18next
+1524 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/extend
+1525 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mobx-utils
+1526 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/extend
+1527 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mobx-utils
+1528 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/i18next
+1529 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mobx-utils
+1530 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/i18next
+1531 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mobx-utils
+1532 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/i18next
+1533 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/null-loader
+1534 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/i18next
+1535 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/null-loader
+1536 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/i18next
+1537 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/null-loader
+1538 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/i18next
+1539 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/null-loader
+1540 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/mobx-utils
+1541 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-qrcode
+1542 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/mobx-utils
+1543 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-actions
+1544 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/mobx-utils
+1545 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-interactions
+1546 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/mobx-utils
+1547 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/testing-library
+1548 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/null-loader
+1549 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-info
+1550 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/null-loader
+1551 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-knobs
+1552 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/null-loader
+1553 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/copy-webpack-plugin-v6
+1554 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/null-loader
+1555 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/svgo-loader
+1556 verbose prune /Users/henryhein/Desktop/deriv-app/packages/cfd/node_modules/react-qrcode
+1557 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@contentpass/zxcvbn
+1558 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-actions
+1559 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@deriv/deriv-onboarding
+1560 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-interactions
+1561 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/glob
+1562 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/testing-library
+1563 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/glob
+1564 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-info
+1565 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/glob
+1566 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@storybook/addon-knobs
+1567 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/lodash.throttle
+1568 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/copy-webpack-plugin-v6
+1569 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/lodash.throttle
+1570 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/svgo-loader
+1571 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/lodash.throttle
+1572 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@contentpass/zxcvbn
+1573 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/lodash.throttle
+1574 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/@deriv/deriv-onboarding
+1575 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-div-100vh
+1576 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/glob
+1577 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-drag-drawer
+1578 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/glob
+1579 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-dropzone
+1580 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/glob
+1581 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-swipeable
+1582 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/lodash.throttle
+1583 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-tiny-popover
+1584 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/lodash.throttle
+1585 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-tiny-popover
+1586 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/lodash.throttle
+1587 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-virtualized
+1588 verbose prune /Users/henryhein/Desktop/deriv-app/packages/trader/node_modules/lodash.throttle
+1589 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/git-revision-webpack-plugin
+1590 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-div-100vh
+1591 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/preload-webpack-plugin
+1592 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-drag-drawer
+1593 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-dev-middleware
+1594 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-dropzone
+1595 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-dev-server
+1596 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-swipeable
+1597 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/workbox-webpack-plugin
+1598 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-tiny-popover
+1599 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/workbox-webpack-plugin
+1600 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-tiny-popover
+1601 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/polyfill
+1602 verbose prune /Users/henryhein/Desktop/deriv-app/packages/components/node_modules/react-virtualized
+1603 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@livechat/customer-sdk
+1604 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/git-revision-webpack-plugin
+1605 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/acorn
+1606 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/preload-webpack-plugin
+1607 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/acorn
+1608 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-dev-middleware
+1609 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/canvas-toBlob
+1610 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/webpack-dev-server
+1611 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/canvas-toBlob
+1612 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/workbox-webpack-plugin
+1613 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/canvas-toBlob
+1614 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/workbox-webpack-plugin
+1615 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/promise-polyfill
+1616 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@babel/polyfill
+1617 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/promise-polyfill
+1618 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/@livechat/customer-sdk
+1619 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-window
+1620 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/acorn
+1621 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/web-push-notifications
+1622 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/acorn
+1623 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-simple-star-rating
+1624 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/canvas-toBlob
+1625 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/sendbird
+1626 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/canvas-toBlob
+1627 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/commander
+1628 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/canvas-toBlob
+1629 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/commander
+1630 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/promise-polyfill
+1631 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/jsdom
+1632 verbose prune /Users/henryhein/Desktop/deriv-app/packages/reports/node_modules/promise-polyfill
+1633 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/js-cookie
+1634 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/react-window
+1635 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/mobx-persist-store
+1636 verbose prune /Users/henryhein/Desktop/deriv-app/packages/core/node_modules/web-push-notifications
+1637 silly rimrafDir /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/xmldom
+1638 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/react-simple-star-rating
+1639 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/sendbird
+1640 verbose prune /Users/henryhein/Desktop/deriv-app/packages/p2p/node_modules/commander
+1641 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/commander
+1642 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/jsdom
+1643 verbose prune /Users/henryhein/Desktop/deriv-app/packages/shared/node_modules/@types/js-cookie
+1644 verbose prune /Users/henryhein/Desktop/deriv-app/packages/stores/node_modules/mobx-persist-store
+1645 verbose prune /Users/henryhein/Desktop/deriv-app/packages/translations/node_modules/xmldom
+1646 info hoist Finished pruning hoisted dependencies
+1647 silly npmInstallDependencies cleanup /Users/henryhein/Desktop/deriv-app/package.json
+1648 error Error: ENOENT: no such file or directory, rename '/Users/henryhein/Desktop/deriv-app/package.json.lerna_backup' -> '/Users/henryhein/Desktop/deriv-app/package.json'
+1648 error     at Object.renameSync (node:fs:1026:3)
+1648 error     at cleanup (/Users/henryhein/Desktop/deriv-app/node_modules/@lerna/npm-install/npm-install.js:70:10)
+1648 error     at done (/Users/henryhein/Desktop/deriv-app/node_modules/@lerna/npm-install/npm-install.js:78:7)
+1648 error     at /Users/henryhein/Desktop/deriv-app/node_modules/@lerna/npm-install/npm-install.js:94:19
+1648 error     at runMicrotasks (<anonymous>)
+1648 error     at processTicksAndRejections (node:internal/process/task_queues:96:5)

@@ -1,0 +1,475 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for account/dist/account/js/personal-details-config.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">account/dist/account/js</a> personal-details-config.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/43</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/24</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/17</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/42</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+<span class="cstat-no" title="statement not covered" >(function <span class="fstat-no" title="function not covered" >webpackUniversalModuleDefinition(</span>root, factory) {</span>
+<span class="cstat-no" title="statement not covered" >	if(typeof exports === 'object' &amp;&amp; typeof module === 'object')</span>
+<span class="cstat-no" title="statement not covered" >		module.exports = factory(require("@deriv/shared"), require("@deriv/translations"));</span>
+	else <span class="cstat-no" title="statement not covered" >if(typeof define === 'function' &amp;&amp; define.amd)</span>
+<span class="cstat-no" title="statement not covered" >		define(["@deriv/shared", "@deriv/translations"], factory);</span>
+	else <span class="cstat-no" title="statement not covered" >if(typeof exports === 'object')</span>
+<span class="cstat-no" title="statement not covered" >		exports["@deriv/account"] = factory(require("@deriv/shared"), require("@deriv/translations"));</span>
+	else
+<span class="cstat-no" title="statement not covered" >		root["@deriv/account"] = factory(root["@deriv/shared"], root["@deriv/translations"]);</span>
+})(self, <span class="fstat-no" title="function not covered" >fu</span>nction(__WEBPACK_EXTERNAL_MODULE__deriv_shared__, __WEBPACK_EXTERNAL_MODULE__deriv_translations__) {
+<span class="cstat-no" title="statement not covered" >return /******/ (<span class="fstat-no" title="function not covered" >()</span> =&gt; { // webpackBootstrap</span>
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = (<span class="cstat-no" title="statement not covered" >{</span>
+&nbsp;
+/***/ "./Configs/personal-details-config.js":
+/*!********************************************!*\
+  !*** ./Configs/personal-details-config.js ***!
+  \********************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(_</span>_unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _deriv_shared__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @deriv/shared */ \"@deriv/shared\");\n/* harmony import */ var _deriv_shared__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_deriv_shared__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _deriv_translations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @deriv/translations */ \"@deriv/translations\");\n/* harmony import */ var _deriv_translations__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_deriv_translations__WEBPACK_IMPORTED_MODULE_1__);\nfunction _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }\n\nfunction _nonIterableRest() { throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== \"undefined\" &amp;&amp; arr[Symbol.iterator] || arr[\"@@iterator\"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i &amp;&amp; _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n &amp;&amp; _i[\"return\"] != null) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; }\n\nfunction _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }\n\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" &amp;&amp; o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" &amp;&amp; iter[Symbol.iterator] != null || iter[\"@@iterator\"] != null) return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len &gt; arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i &lt; len; i++) { arr2[i] = arr[i]; } return arr2; }\n\n\n\n\nvar personal_details_config = function personal_details_config(_ref) {\n  var _account_settings$acc, _account_settings$sal, _account_settings$fir, _account_settings$las, _residence_list$find, _residence_list$find2, _account_settings$pho, _residence_list$find3, _account_settings$tax;\n\n  var residence_list = _ref.residence_list,\n      account_settings = _ref.account_settings,\n      is_appstore = _ref.is_appstore;\n\n  if (!residence_list || !account_settings) {\n    return {};\n  }\n\n  var disabled_items = _toConsumableArray(Object.keys(account_settings).filter(function (field_name) {\n    return field_name !== 'account_opening_reason' &amp;&amp; !!field_name;\n  })); // minimum characters required is 9 numbers (excluding +- signs or space)\n\n\n  var min_phone_number = 9;\n  var max_phone_number = 35;\n  var config = {\n    account_opening_reason: {\n      supported_in: ['iom', 'malta', 'maltainvest'],\n      default_value: (_account_settings$acc = account_settings.account_opening_reason) !== null &amp;&amp; _account_settings$acc !== void 0 ? _account_settings$acc : '',\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Account opening reason is required.')]]\n    },\n    salutation: {\n      supported_in: ['iom', 'malta', 'maltainvest'],\n      default_value: (_account_settings$sal = account_settings.salutation) !== null &amp;&amp; _account_settings$sal !== void 0 ? _account_settings$sal : '',\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Salutation is required.')]]\n    },\n    first_name: {\n      supported_in: ['svg', 'iom', 'malta', 'maltainvest'],\n      default_value: (_account_settings$fir = account_settings.first_name) !== null &amp;&amp; _account_settings$fir !== void 0 ? _account_settings$fir : '',\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('First name is required.')], ['length', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('First name should be between 2 and 50 characters.'), {\n        min: 2,\n        max: 50\n      }], ['letter_symbol', (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.getErrorMessages)().letter_symbol()]]\n    },\n    last_name: {\n      supported_in: ['svg', 'iom', 'malta', 'maltainvest'],\n      default_value: (_account_settings$las = account_settings.last_name) !== null &amp;&amp; _account_settings$las !== void 0 ? _account_settings$las : '',\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Last name is required.')], ['length', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Last name should be between 2 and 50 characters.'), {\n        min: 2,\n        max: 50\n      }], ['letter_symbol', (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.getErrorMessages)().letter_symbol()]]\n    },\n    date_of_birth: {\n      supported_in: ['svg', 'iom', 'malta', 'maltainvest'],\n      default_value: account_settings.date_of_birth ? (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.toMoment)(account_settings.date_of_birth).format('YYYY-MM-DD') : '',\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Date of birth is required.')], [function (v) {\n        return (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.toMoment)(v).isValid() &amp;&amp; (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.toMoment)(v).isBefore((0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.toMoment)().subtract(18, 'years'));\n      }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('You must be 18 years old and above.')]]\n    },\n    place_of_birth: {\n      supported_in: ['maltainvest', 'iom', 'malta'],\n      default_value: account_settings.place_of_birth ? (_residence_list$find = residence_list.find(function (item) {\n        return item.value === account_settings.place_of_birth;\n      })) === null || _residence_list$find === void 0 ? void 0 : _residence_list$find.text : '',\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Place of birth is required.')]]\n    },\n    citizen: {\n      supported_in: ['iom', 'malta', 'maltainvest'],\n      default_value: account_settings.citizen ? (_residence_list$find2 = residence_list.find(function (item) {\n        return item.value === account_settings.citizen;\n      })) === null || _residence_list$find2 === void 0 ? void 0 : _residence_list$find2.text : '',\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Citizenship is required')]]\n    },\n    phone: {\n      supported_in: ['svg', 'iom', 'malta', 'maltainvest'],\n      default_value: (_account_settings$pho = account_settings.phone) !== null &amp;&amp; _account_settings$pho !== void 0 ? _account_settings$pho : '',\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Phone is required.')], ['phone', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Phone is not in a proper format.')], [function (value) {\n        // phone_trim uses regex that trims non-digits\n        var phone_trim = value.replace(/\\D/g, '');\n        return (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.validLength)(phone_trim, {\n          min: min_phone_number,\n          max: max_phone_number\n        });\n      }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('You should enter {{min}}-{{max}} numbers.', {\n        min: min_phone_number,\n        max: max_phone_number\n      })]]\n    },\n    tax_residence: {\n      default_value: account_settings.tax_residence ? (_residence_list$find3 = residence_list.find(function (item) {\n        return item.value === account_settings.tax_residence;\n      })) === null || _residence_list$find3 === void 0 ? void 0 : _residence_list$find3.text : '',\n      supported_in: ['maltainvest'],\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Tax residence is required.')]]\n    },\n    tax_identification_number: {\n      default_value: (_account_settings$tax = account_settings.tax_identification_number) !== null &amp;&amp; _account_settings$tax !== void 0 ? _account_settings$tax : '',\n      supported_in: ['maltainvest'],\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Tax Identification Number is required.')], ['length', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)(\"Tax Identification Number can't be longer than 25 characters.\"), {\n        min: 0,\n        max: 25\n      }], ['regular', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Letters, numbers, spaces, periods, hyphens and forward slashes only.'), {\n        regex: /^(?!^$|\\s+)[A-Za-z0-9./\\s-]{0,25}$/\n      }], [function (value, options, _ref2) {\n        var tax_residence = _ref2.tax_residence;\n        return !!tax_residence;\n      }, (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Please fill in Tax residence.')], [function (value, options, _ref3) {\n        var _from_list$, _from_list$$tin_forma;\n\n        var tax_residence = _ref3.tax_residence;\n        var from_list = residence_list.filter(function (res) {\n          return res.text === tax_residence &amp;&amp; res.tin_format;\n        });\n        var tax_regex = (_from_list$ = from_list[0]) === null || _from_list$ === void 0 ? void 0 : (_from_list$$tin_forma = _from_list$.tin_format) === null || _from_list$$tin_forma === void 0 ? void 0 : _from_list$$tin_forma[0];\n        return tax_regex ? new RegExp(tax_regex).test(value) : true;\n      }, ['warn', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('This Tax Identification Number (TIN) is invalid. You may continue with account creation, but to facilitate future payment processes, valid tax information will be required.')]]]\n    },\n    employment_status: {\n      default_value: '',\n      supported_in: ['maltainvest'],\n      rules: [['req', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Employment status is required.')]]\n    },\n    tax_identification_confirm: {\n      default_value: false,\n      supported_in: ['maltainvest'],\n      rules: [['confirm', (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Please confirm your tax information.')]]\n    }\n  };\n\n  var getConfig = function getConfig() {\n    if (is_appstore) {\n      var allowed_fields = ['first_name', 'last_name', 'date_of_birth', 'phone'];\n      return Object.keys(config).reduce(function (new_config, key) {\n        if (allowed_fields.includes(key)) {\n          new_config[key] = config[key];\n        }\n\n        return new_config;\n      }, {});\n    }\n\n    return config;\n  };\n\n  return [getConfig(), disabled_items];\n};\n\nvar personalDetailsConfig = function personalDetailsConfig(_ref4, PersonalDetails) {\n  var upgrade_info = _ref4.upgrade_info,\n      real_account_signup_target = _ref4.real_account_signup_target,\n      residence_list = _ref4.residence_list,\n      account_settings = _ref4.account_settings;\n  var is_appstore = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : false;\n\n  var _personal_details_con = personal_details_config({\n    residence_list: residence_list,\n    account_settings: account_settings,\n    is_appstore: is_appstore\n  }),\n      _personal_details_con2 = _slicedToArray(_personal_details_con, 2),\n      config = _personal_details_con2[0],\n      disabled_items = _personal_details_con2[1];\n\n  return {\n    header: {\n      active_title: is_appstore ? (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('A few personal details') : (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Complete your personal details'),\n      title: is_appstore ? (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('PERSONAL') : (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Personal details')\n    },\n    body: PersonalDetails,\n    form_value: (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.getDefaultFields)(real_account_signup_target, config),\n    props: {\n      validate: (0,_deriv_shared__WEBPACK_IMPORTED_MODULE_0__.generateValidationFunction)(real_account_signup_target, transformConfig(config, {\n        real_account_signup_target: real_account_signup_target\n      })),\n      is_svg: (upgrade_info === null || upgrade_info === void 0 ? void 0 : upgrade_info.can_upgrade_to) === 'svg',\n      account_opening_reason_list: [{\n        text: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Hedging'),\n        value: 'Hedging'\n      }, {\n        text: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Income Earning'),\n        value: 'Income Earning'\n      }, {\n        text: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Speculative'),\n        value: 'Speculative'\n      }],\n      salutation_list: [{\n        label: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Mr'),\n        value: 'Mr'\n      }, {\n        label: (0,_deriv_translations__WEBPACK_IMPORTED_MODULE_1__.localize)('Ms'),\n        value: 'Ms'\n      }],\n      disabled_items: disabled_items\n    },\n    passthrough: ['residence_list', 'is_fully_authenticated'],\n    icon: 'IcDashboardPersonalDetails'\n  };\n};\n\nvar transformConfig = function transformConfig(config, _ref5) {\n  var real_account_signup_target = _ref5.real_account_signup_target;\n\n  // Remove required rule for malta and iom\n  if (['malta', 'iom'].includes(real_account_signup_target) &amp;&amp; config.tax_residence) {\n    config.tax_residence.rules.shift();\n  }\n\n  return config;\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (personalDetailsConfig);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9Db25maWdzL3BlcnNvbmFsLWRldGFpbHMtY29uZmlnLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUNBOztBQUVBO0FBQUE7O0FBQUE7QUFBQTtBQUFBOztBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQUE7OztBQUlBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBSEE7QUFLQTtBQUNBO0FBQ0E7QUFDQTtBQUhBO0FBS0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUFBO0FBQUE7QUFMQTtBQVNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFBQTtBQUFBO0FBTEE7QUFTQTtBQUNBO0FBQ0E7QUFHQTtBQUdBO0FBQUE7QUFSQTtBQWFBO0FBQ0E7QUFDQTtBQUNBO0FBQUE7QUFFQTtBQUxBO0FBT0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUVBO0FBTEE7QUFPQTtBQUNBO0FBQ0E7QUFDQTtBQUtBO0FBQ0E7QUFDQTtBQUFBO0FBQUE7QUFBQTtBQUNBO0FBRUE7QUFDQTtBQUZBO0FBWkE7QUFtQkE7QUFDQTtBQUNBO0FBQUE7QUFFQTtBQUNBO0FBTEE7QUFPQTtBQUNBO0FBQ0E7QUFDQTtBQUtBO0FBQUE7QUFBQTtBQU1BO0FBREE7QUFLQTtBQUNBO0FBQ0E7QUFJQTs7QUFBQTtBQUNBO0FBQUE7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQTVCQTtBQXNDQTtBQUNBO0FBQ0E7QUFDQTtBQUhBO0FBS0E7QUFDQTtBQUNBO0FBQ0E7QUFIQTtBQTdIQTs7QUFvSUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBQ0E7QUFDQTtBQUNBOztBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUlBO0FBQUE7QUFBQTtBQUFBO0FBQUE7O0FBQ0E7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTs7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUZBO0FBSUE7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUFBO0FBRUE7QUFDQTtBQUVBO0FBQ0E7QUFGQTtBQUtBO0FBQ0E7QUFGQTtBQUtBO0FBQ0E7QUFGQTtBQUtBO0FBRUE7QUFDQTtBQUZBO0FBTUE7QUFDQTtBQUZBO0FBS0E7QUEvQkE7QUFpQ0E7QUFDQTtBQXpDQTtBQTJDQTs7QUFFQTtBQUFBOztBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUNBO0FBQ0E7O0FBRUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9AZGVyaXYvYWNjb3VudC8uL0NvbmZpZ3MvcGVyc29uYWwtZGV0YWlscy1jb25maWcuanM/NDAxZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB0b01vbWVudCwgZ2V0RXJyb3JNZXNzYWdlcywgZ2VuZXJhdGVWYWxpZGF0aW9uRnVuY3Rpb24sIGdldERlZmF1bHRGaWVsZHMsIHZhbGlkTGVuZ3RoIH0gZnJvbSAnQGRlcml2L3NoYXJlZCc7XG5pbXBvcnQgeyBsb2NhbGl6ZSB9IGZyb20gJ0BkZXJpdi90cmFuc2xhdGlvbnMnO1xuXG5jb25zdCBwZXJzb25hbF9kZXRhaWxzX2NvbmZpZyA9ICh7IHJlc2lkZW5jZV9saXN0LCBhY2NvdW50X3NldHRpbmdzLCBpc19hcHBzdG9yZSB9KSA9PiB7XG4gICAgaWYgKCFyZXNpZGVuY2VfbGlzdCB8fCAhYWNjb3VudF9zZXR0aW5ncykge1xuICAgICAgICByZXR1cm4ge307XG4gICAgfVxuXG4gICAgY29uc3QgZGlzYWJsZWRfaXRlbXMgPSBbXG4gICAgICAgIC4uLk9iamVjdC5rZXlzKGFjY291bnRfc2V0dGluZ3MpLmZpbHRlcihmaWVsZF9uYW1lID0+IGZpZWxkX25hbWUgIT09ICdhY2NvdW50X29wZW5pbmdfcmVhc29uJyAmJiAhIWZpZWxkX25hbWUpLFxuICAgIF07XG5cbiAgICAvLyBtaW5pbXVtIGNoYXJhY3RlcnMgcmVxdWlyZWQgaXMgOSBudW1iZXJzIChleGNsdWRpbmcgKy0gc2lnbnMgb3Igc3BhY2UpXG4gICAgY29uc3QgbWluX3Bob25lX251bWJlciA9IDk7XG4gICAgY29uc3QgbWF4X3Bob25lX251bWJlciA9IDM1O1xuXG4gICAgY29uc3QgY29uZmlnID0ge1xuICAgICAgICBhY2NvdW50X29wZW5pbmdfcmVhc29uOiB7XG4gICAgICAgICAgICBzdXBwb3J0ZWRfaW46IFsnaW9tJywgJ21hbHRhJywgJ21hbHRhaW52ZXN0J10sXG4gICAgICAgICAgICBkZWZhdWx0X3ZhbHVlOiBhY2NvdW50X3NldHRpbmdzLmFjY291bnRfb3BlbmluZ19yZWFzb24gPz8gJycsXG4gICAgICAgICAgICBydWxlczogW1sncmVxJywgbG9jYWxpemUoJ0FjY291bnQgb3BlbmluZyByZWFzb24gaXMgcmVxdWlyZWQuJyldXSxcbiAgICAgICAgfSxcbiAgICAgICAgc2FsdXRhdGlvbjoge1xuICAgICAgICAgICAgc3VwcG9ydGVkX2luOiBbJ2lvbScsICdtYWx0YScsICdtYWx0YWludmVzdCddLFxuICAgICAgICAgICAgZGVmYXVsdF92YWx1ZTogYWNjb3VudF9zZXR0aW5ncy5zYWx1dGF0aW9uID8/ICcnLFxuICAgICAgICAgICAgcnVsZXM6IFtbJ3JlcScsIGxvY2FsaXplKCdTYWx1dGF0aW9uIGlzIHJlcXVpcmVkLicpXV0sXG4gICAgICAgIH0sXG4gICAgICAgIGZpcnN0X25hbWU6IHtcbiAgICAgICAgICAgIHN1cHBvcnRlZF9pbjogWydzdmcnLCAnaW9tJywgJ21hbHRhJywgJ21hbHRhaW52ZXN0J10sXG4gICAgICAgICAgICBkZWZhdWx0X3ZhbHVlOiBhY2NvdW50X3NldHRpbmdzLmZpcnN0X25hbWUgPz8gJycsXG4gICAgICAgICAgICBydWxlczogW1xuICAgICAgICAgICAgICAgIFsncmVxJywgbG9jYWxpemUoJ0ZpcnN0IG5hbWUgaXMgcmVxdWlyZWQuJyldLFxuICAgICAgICAgICAgICAgIFsnbGVuZ3RoJywgbG9jYWxpemUoJ0ZpcnN0IG5hbWUgc2hvdWxkIGJlIGJldHdlZW4gMiBhbmQgNTAgY2hhcmFjdGVycy4nKSwgeyBtaW46IDIsIG1heDogNTAgfV0sXG4gICAgICAgICAgICAgICAgWydsZXR0ZXJfc3ltYm9sJywgZ2V0RXJyb3JNZXNzYWdlcygpLmxldHRlcl9zeW1ib2woKV0sXG4gICAgICAgICAgICBdLFxuICAgICAgICB9LFxuICAgICAgICBsYXN0X25hbWU6IHtcbiAgICAgICAgICAgIHN1cHBvcnRlZF9pbjogWydzdmcnLCAnaW9tJywgJ21hbHRhJywgJ21hbHRhaW52ZXN0J10sXG4gICAgICAgICAgICBkZWZhdWx0X3ZhbHVlOiBhY2NvdW50X3NldHRpbmdzLmxhc3RfbmFtZSA/PyAnJyxcbiAgICAgICAgICAgIHJ1bGVzOiBbXG4gICAgICAgICAgICAgICAgWydyZXEnLCBsb2NhbGl6ZSgnTGFzdCBuYW1lIGlzIHJlcXVpcmVkLicpXSxcbiAgICAgICAgICAgICAgICBbJ2xlbmd0aCcsIGxvY2FsaXplKCdMYXN0IG5hbWUgc2hvdWxkIGJlIGJldHdlZW4gMiBhbmQgNTAgY2hhcmFjdGVycy4nKSwgeyBtaW46IDIsIG1heDogNTAgfV0sXG4gICAgICAgICAgICAgICAgWydsZXR0ZXJfc3ltYm9sJywgZ2V0RXJyb3JNZXNzYWdlcygpLmxldHRlcl9zeW1ib2woKV0sXG4gICAgICAgICAgICBdLFxuICAgICAgICB9LFxuICAgICAgICBkYXRlX29mX2JpcnRoOiB7XG4gICAgICAgICAgICBzdXBwb3J0ZWRfaW46IFsnc3ZnJywgJ2lvbScsICdtYWx0YScsICdtYWx0YWludmVzdCddLFxuICAgICAgICAgICAgZGVmYXVsdF92YWx1ZTogYWNjb3VudF9zZXR0aW5ncy5kYXRlX29mX2JpcnRoXG4gICAgICAgICAgICAgICAgPyB0b01vbWVudChhY2NvdW50X3NldHRpbmdzLmRhdGVfb2ZfYmlydGgpLmZvcm1hdCgnWVlZWS1NTS1ERCcpXG4gICAgICAgICAgICAgICAgOiAnJyxcbiAgICAgICAgICAgIHJ1bGVzOiBbXG4gICAgICAgICAgICAgICAgWydyZXEnLCBsb2NhbGl6ZSgnRGF0ZSBvZiBiaXJ0aCBpcyByZXF1aXJlZC4nKV0sXG4gICAgICAgICAgICAgICAgW1xuICAgICAgICAgICAgICAgICAgICB2ID0+IHRvTW9tZW50KHYpLmlzVmFsaWQoKSAmJiB0b01vbWVudCh2KS5pc0JlZm9yZSh0b01vbWVudCgpLnN1YnRyYWN0KDE4LCAneWVhcnMnKSksXG4gICAgICAgICAgICAgICAgICAgIGxvY2FsaXplKCdZb3UgbXVzdCBiZSAxOCB5ZWFycyBvbGQgYW5kIGFib3ZlLicpLFxuICAgICAgICAgICAgICAgIF0sXG4gICAgICAgICAgICBdLFxuICAgICAgICB9LFxuICAgICAgICBwbGFjZV9vZl9iaXJ0aDoge1xuICAgICAgICAgICAgc3VwcG9ydGVkX2luOiBbJ21hbHRhaW52ZXN0JywgJ2lvbScsICdtYWx0YSddLFxuICAgICAgICAgICAgZGVmYXVsdF92YWx1ZTogYWNjb3VudF9zZXR0aW5ncy5wbGFjZV9vZl9iaXJ0aFxuICAgICAgICAgICAgICAgID8gcmVzaWRlbmNlX2xpc3QuZmluZChpdGVtID0+IGl0ZW0udmFsdWUgPT09IGFjY291bnRfc2V0dGluZ3MucGxhY2Vfb2ZfYmlydGgpPy50ZXh0XG4gICAgICAgICAgICAgICAgOiAnJyxcbiAgICAgICAgICAgIHJ1bGVzOiBbWydyZXEnLCBsb2NhbGl6ZSgnUGxhY2Ugb2YgYmlydGggaXMgcmVxdWlyZWQuJyldXSxcbiAgICAgICAgfSxcbiAgICAgICAgY2l0aXplbjoge1xuICAgICAgICAgICAgc3VwcG9ydGVkX2luOiBbJ2lvbScsICdtYWx0YScsICdtYWx0YWludmVzdCddLFxuICAgICAgICAgICAgZGVmYXVsdF92YWx1ZTogYWNjb3VudF9zZXR0aW5ncy5jaXRpemVuXG4gICAgICAgICAgICAgICAgPyByZXNpZGVuY2VfbGlzdC5maW5kKGl0ZW0gPT4gaXRlbS52YWx1ZSA9PT0gYWNjb3VudF9zZXR0aW5ncy5jaXRpemVuKT8udGV4dFxuICAgICAgICAgICAgICAgIDogJycsXG4gICAgICAgICAgICBydWxlczogW1sncmVxJywgbG9jYWxpemUoJ0NpdGl6ZW5zaGlwIGlzIHJlcXVpcmVkJyldXSxcbiAgICAgICAgfSxcbiAgICAgICAgcGhvbmU6IHtcbiAgICAgICAgICAgIHN1cHBvcnRlZF9pbjogWydzdmcnLCAnaW9tJywgJ21hbHRhJywgJ21hbHRhaW52ZXN0J10sXG4gICAgICAgICAgICBkZWZhdWx0X3ZhbHVlOiBhY2NvdW50X3NldHRpbmdzLnBob25lID8/ICcnLFxuICAgICAgICAgICAgcnVsZXM6IFtcbiAgICAgICAgICAgICAgICBbJ3JlcScsIGxvY2FsaXplKCdQaG9uZSBpcyByZXF1aXJlZC4nKV0sXG4gICAgICAgICAgICAgICAgWydwaG9uZScsIGxvY2FsaXplKCdQaG9uZSBpcyBub3QgaW4gYSBwcm9wZXIgZm9ybWF0LicpXSxcbiAgICAgICAgICAgICAgICBbXG4gICAgICAgICAgICAgICAgICAgIHZhbHVlID0+IHtcbiAgICAgICAgICAgICAgICAgICAgICAgIC8vIHBob25lX3RyaW0gdXNlcyByZWdleCB0aGF0IHRyaW1zIG5vbi1kaWdpdHNcbiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IHBob25lX3RyaW0gPSB2YWx1ZS5yZXBsYWNlKC9cXEQvZywgJycpO1xuICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHZhbGlkTGVuZ3RoKHBob25lX3RyaW0sIHsgbWluOiBtaW5fcGhvbmVfbnVtYmVyLCBtYXg6IG1heF9waG9uZV9udW1iZXIgfSk7XG4gICAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICAgIGxvY2FsaXplKCdZb3Ugc2hvdWxkIGVudGVyIHt7bWlufX0te3ttYXh9fSBudW1iZXJzLicsIHtcbiAgICAgICAgICAgICAgICAgICAgICAgIG1pbjogbWluX3Bob25lX251bWJlcixcbiAgICAgICAgICAgICAgICAgICAgICAgIG1heDogbWF4X3Bob25lX251bWJlcixcbiAgICAgICAgICAgICAgICAgICAgfSksXG4gICAgICAgICAgICAgICAgXSxcbiAgICAgICAgICAgIF0sXG4gICAgICAgIH0sXG4gICAgICAgIHRheF9yZXNpZGVuY2U6IHtcbiAgICAgICAgICAgIGRlZmF1bHRfdmFsdWU6IGFjY291bnRfc2V0dGluZ3MudGF4X3Jlc2lkZW5jZVxuICAgICAgICAgICAgICAgID8gcmVzaWRlbmNlX2xpc3QuZmluZChpdGVtID0+IGl0ZW0udmFsdWUgPT09IGFjY291bnRfc2V0dGluZ3MudGF4X3Jlc2lkZW5jZSk/LnRleHRcbiAgICAgICAgICAgICAgICA6ICcnLFxuICAgICAgICAgICAgc3VwcG9ydGVkX2luOiBbJ21hbHRhaW52ZXN0J10sXG4gICAgICAgICAgICBydWxlczogW1sncmVxJywgbG9jYWxpemUoJ1RheCByZXNpZGVuY2UgaXMgcmVxdWlyZWQuJyldXSxcbiAgICAgICAgfSxcbiAgICAgICAgdGF4X2lkZW50aWZpY2F0aW9uX251bWJlcjoge1xuICAgICAgICAgICAgZGVmYXVsdF92YWx1ZTogYWNjb3VudF9zZXR0aW5ncy50YXhfaWRlbnRpZmljYXRpb25fbnVtYmVyID8/ICcnLFxuICAgICAgICAgICAgc3VwcG9ydGVkX2luOiBbJ21hbHRhaW52ZXN0J10sXG4gICAgICAgICAgICBydWxlczogW1xuICAgICAgICAgICAgICAgIFsncmVxJywgbG9jYWxpemUoJ1RheCBJZGVudGlmaWNhdGlvbiBOdW1iZXIgaXMgcmVxdWlyZWQuJyldLFxuICAgICAgICAgICAgICAgIFtcbiAgICAgICAgICAgICAgICAgICAgJ2xlbmd0aCcsXG4gICAgICAgICAgICAgICAgICAgIGxvY2FsaXplKFwiVGF4IElkZW50aWZpY2F0aW9uIE51bWJlciBjYW4ndCBiZSBsb25nZXIgdGhhbiAyNSBjaGFyYWN0ZXJzLlwiKSxcbiAgICAgICAgICAgICAgICAgICAgeyBtaW46IDAsIG1heDogMjUgfSxcbiAgICAgICAgICAgICAgICBdLFxuICAgICAgICAgICAgICAgIFtcbiAgICAgICAgICAgICAgICAgICAgJ3JlZ3VsYXInLFxuICAgICAgICAgICAgICAgICAgICBsb2NhbGl6ZSgnTGV0dGVycywgbnVtYmVycywgc3BhY2VzLCBwZXJpb2RzLCBoeXBoZW5zIGFuZCBmb3J3YXJkIHNsYXNoZXMgb25seS4nKSxcbiAgICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICAgICAgcmVnZXg6IC9eKD8hXiR8XFxzKylbQS1aYS16MC05Li9cXHMtXXswLDI1fSQvLFxuICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIF0sXG4gICAgICAgICAgICAgICAgW1xuICAgICAgICAgICAgICAgICAgICAodmFsdWUsIG9wdGlvbnMsIHsgdGF4X3Jlc2lkZW5jZSB9KSA9PiB7XG4gICAgICAgICAgICAgICAgICAgICAgICByZXR1cm4gISF0YXhfcmVzaWRlbmNlO1xuICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICBsb2NhbGl6ZSgnUGxlYXNlIGZpbGwgaW4gVGF4IHJlc2lkZW5jZS4nKSxcbiAgICAgICAgICAgICAgICBdLFxuICAgICAgICAgICAgICAgIFtcbiAgICAgICAgICAgICAgICAgICAgKHZhbHVlLCBvcHRpb25zLCB7IHRheF9yZXNpZGVuY2UgfSkgPT4ge1xuICAgICAgICAgICAgICAgICAgICAgICAgY29uc3QgZnJvbV9saXN0ID0gcmVzaWRlbmNlX2xpc3QuZmlsdGVyKHJlcyA9PiByZXMudGV4dCA9PT0gdGF4X3Jlc2lkZW5jZSAmJiByZXMudGluX2Zvcm1hdCk7XG4gICAgICAgICAgICAgICAgICAgICAgICBjb25zdCB0YXhfcmVnZXggPSBmcm9tX2xpc3RbMF0/LnRpbl9mb3JtYXQ/LlswXTtcbiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiB0YXhfcmVnZXggPyBuZXcgUmVnRXhwKHRheF9yZWdleCkudGVzdCh2YWx1ZSkgOiB0cnVlO1xuICAgICAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgICAgICBbXG4gICAgICAgICAgICAgICAgICAgICAgICAnd2FybicsXG4gICAgICAgICAgICAgICAgICAgICAgICBsb2NhbGl6ZShcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAnVGhpcyBUYXggSWRlbnRpZmljYXRpb24gTnVtYmVyIChUSU4pIGlzIGludmFsaWQuIFlvdSBtYXkgY29udGludWUgd2l0aCBhY2NvdW50IGNyZWF0aW9uLCBidXQgdG8gZmFjaWxpdGF0ZSBmdXR1cmUgcGF5bWVudCBwcm9jZXNzZXMsIHZhbGlkIHRheCBpbmZvcm1hdGlvbiB3aWxsIGJlIHJlcXVpcmVkLidcbiAgICAgICAgICAgICAgICAgICAgICAgICksXG4gICAgICAgICAgICAgICAgICAgIF0sXG4gICAgICAgICAgICAgICAgXSxcbiAgICAgICAgICAgIF0sXG4gICAgICAgIH0sXG4gICAgICAgIGVtcGxveW1lbnRfc3RhdHVzOiB7XG4gICAgICAgICAgICBkZWZhdWx0X3ZhbHVlOiAnJyxcbiAgICAgICAgICAgIHN1cHBvcnRlZF9pbjogWydtYWx0YWludmVzdCddLFxuICAgICAgICAgICAgcnVsZXM6IFtbJ3JlcScsIGxvY2FsaXplKCdFbXBsb3ltZW50IHN0YXR1cyBpcyByZXF1aXJlZC4nKV1dLFxuICAgICAgICB9LFxuICAgICAgICB0YXhfaWRlbnRpZmljYXRpb25fY29uZmlybToge1xuICAgICAgICAgICAgZGVmYXVsdF92YWx1ZTogZmFsc2UsXG4gICAgICAgICAgICBzdXBwb3J0ZWRfaW46IFsnbWFsdGFpbnZlc3QnXSxcbiAgICAgICAgICAgIHJ1bGVzOiBbWydjb25maXJtJywgbG9jYWxpemUoJ1BsZWFzZSBjb25maXJtIHlvdXIgdGF4IGluZm9ybWF0aW9uLicpXV0sXG4gICAgICAgIH0sXG4gICAgfTtcblxuICAgIGNvbnN0IGdldENvbmZpZyA9ICgpID0+IHtcbiAgICAgICAgaWYgKGlzX2FwcHN0b3JlKSB7XG4gICAgICAgICAgICBjb25zdCBhbGxvd2VkX2ZpZWxkcyA9IFsnZmlyc3RfbmFtZScsICdsYXN0X25hbWUnLCAnZGF0ZV9vZl9iaXJ0aCcsICdwaG9uZSddO1xuICAgICAgICAgICAgcmV0dXJuIE9iamVjdC5rZXlzKGNvbmZpZykucmVkdWNlKChuZXdfY29uZmlnLCBrZXkpID0+IHtcbiAgICAgICAgICAgICAgICBpZiAoYWxsb3dlZF9maWVsZHMuaW5jbHVkZXMoa2V5KSkge1xuICAgICAgICAgICAgICAgICAgICBuZXdfY29uZmlnW2tleV0gPSBjb25maWdba2V5XTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgcmV0dXJuIG5ld19jb25maWc7XG4gICAgICAgICAgICB9LCB7fSk7XG4gICAgICAgIH1cbiAgICAgICAgcmV0dXJuIGNvbmZpZztcbiAgICB9O1xuXG4gICAgcmV0dXJuIFtnZXRDb25maWcoKSwgZGlzYWJsZWRfaXRlbXNdO1xufTtcblxuY29uc3QgcGVyc29uYWxEZXRhaWxzQ29uZmlnID0gKFxuICAgIHsgdXBncmFkZV9pbmZvLCByZWFsX2FjY291bnRfc2lnbnVwX3RhcmdldCwgcmVzaWRlbmNlX2xpc3QsIGFjY291bnRfc2V0dGluZ3MgfSxcbiAgICBQZXJzb25hbERldGFpbHMsXG4gICAgaXNfYXBwc3RvcmUgPSBmYWxzZVxuKSA9PiB7XG4gICAgY29uc3QgW2NvbmZpZywgZGlzYWJsZWRfaXRlbXNdID0gcGVyc29uYWxfZGV0YWlsc19jb25maWcoeyByZXNpZGVuY2VfbGlzdCwgYWNjb3VudF9zZXR0aW5ncywgaXNfYXBwc3RvcmUgfSk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgaGVhZGVyOiB7XG4gICAgICAgICAgICBhY3RpdmVfdGl0bGU6IGlzX2FwcHN0b3JlID8gbG9jYWxpemUoJ0EgZmV3IHBlcnNvbmFsIGRldGFpbHMnKSA6IGxvY2FsaXplKCdDb21wbGV0ZSB5b3VyIHBlcnNvbmFsIGRldGFpbHMnKSxcbiAgICAgICAgICAgIHRpdGxlOiBpc19hcHBzdG9yZSA/IGxvY2FsaXplKCdQRVJTT05BTCcpIDogbG9jYWxpemUoJ1BlcnNvbmFsIGRldGFpbHMnKSxcbiAgICAgICAgfSxcbiAgICAgICAgYm9keTogUGVyc29uYWxEZXRhaWxzLFxuICAgICAgICBmb3JtX3ZhbHVlOiBnZXREZWZhdWx0RmllbGRzKHJlYWxfYWNjb3VudF9zaWdudXBfdGFyZ2V0LCBjb25maWcpLFxuICAgICAgICBwcm9wczoge1xuICAgICAgICAgICAgdmFsaWRhdGU6IGdlbmVyYXRlVmFsaWRhdGlvbkZ1bmN0aW9uKFxuICAgICAgICAgICAgICAgIHJlYWxfYWNjb3VudF9zaWdudXBfdGFyZ2V0LFxuICAgICAgICAgICAgICAgIHRyYW5zZm9ybUNvbmZpZyhjb25maWcsIHsgcmVhbF9hY2NvdW50X3NpZ251cF90YXJnZXQgfSlcbiAgICAgICAgICAgICksXG4gICAgICAgICAgICBpc19zdmc6IHVwZ3JhZGVfaW5mbz8uY2FuX3VwZ3JhZGVfdG8gPT09ICdzdmcnLFxuICAgICAgICAgICAgYWNjb3VudF9vcGVuaW5nX3JlYXNvbl9saXN0OiBbXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICB0ZXh0OiBsb2NhbGl6ZSgnSGVkZ2luZycpLFxuICAgICAgICAgICAgICAgICAgICB2YWx1ZTogJ0hlZGdpbmcnLFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICB0ZXh0OiBsb2NhbGl6ZSgnSW5jb21lIEVhcm5pbmcnKSxcbiAgICAgICAgICAgICAgICAgICAgdmFsdWU6ICdJbmNvbWUgRWFybmluZycsXG4gICAgICAgICAgICAgICAgfSxcbiAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgIHRleHQ6IGxvY2FsaXplKCdTcGVjdWxhdGl2ZScpLFxuICAgICAgICAgICAgICAgICAgICB2YWx1ZTogJ1NwZWN1bGF0aXZlJyxcbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgXSxcbiAgICAgICAgICAgIHNhbHV0YXRpb25fbGlzdDogW1xuICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgbGFiZWw6IGxvY2FsaXplKCdNcicpLFxuICAgICAgICAgICAgICAgICAgICB2YWx1ZTogJ01yJyxcbiAgICAgICAgICAgICAgICB9LFxuXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICBsYWJlbDogbG9jYWxpemUoJ01zJyksXG4gICAgICAgICAgICAgICAgICAgIHZhbHVlOiAnTXMnLFxuICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICBdLFxuICAgICAgICAgICAgZGlzYWJsZWRfaXRlbXMsXG4gICAgICAgIH0sXG4gICAgICAgIHBhc3N0aHJvdWdoOiBbJ3Jlc2lkZW5jZV9saXN0JywgJ2lzX2Z1bGx5X2F1dGhlbnRpY2F0ZWQnXSxcbiAgICAgICAgaWNvbjogJ0ljRGFzaGJvYXJkUGVyc29uYWxEZXRhaWxzJyxcbiAgICB9O1xufTtcblxuY29uc3QgdHJhbnNmb3JtQ29uZmlnID0gKGNvbmZpZywgeyByZWFsX2FjY291bnRfc2lnbnVwX3RhcmdldCB9KSA9PiB7XG4gICAgLy8gUmVtb3ZlIHJlcXVpcmVkIHJ1bGUgZm9yIG1hbHRhIGFuZCBpb21cbiAgICBpZiAoWydtYWx0YScsICdpb20nXS5pbmNsdWRlcyhyZWFsX2FjY291bnRfc2lnbnVwX3RhcmdldCkgJiYgY29uZmlnLnRheF9yZXNpZGVuY2UpIHtcbiAgICAgICAgY29uZmlnLnRheF9yZXNpZGVuY2UucnVsZXMuc2hpZnQoKTtcbiAgICB9XG4gICAgcmV0dXJuIGNvbmZpZztcbn07XG5cbmV4cG9ydCBkZWZhdWx0IHBlcnNvbmFsRGV0YWlsc0NvbmZpZztcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./Configs/personal-details-config.js\n");</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "@deriv/shared":
+/*!********************************!*\
+  !*** external "@deriv/shared" ***!
+  \********************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = __WEBPACK_EXTERNAL_MODULE__deriv_shared__;</span>
+&nbsp;
+/***/ }),
+&nbsp;
+/***/ "@deriv/translations":
+/*!**************************************!*\
+  !*** external "@deriv/translations" ***!
+  \**************************************/
+/***/ (<span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = __WEBPACK_EXTERNAL_MODULE__deriv_translations__;</span>
+&nbsp;
+/***/ })
+&nbsp;
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = <span class="cstat-no" title="statement not covered" >{};</span>
+/******/ 	
+/******/ 	// The require function
+/******/ 	function <span class="fstat-no" title="function not covered" >__webpack_require__(</span>moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = <span class="cstat-no" title="statement not covered" >__webpack_module_cache__[moduleId];</span>
+/******/ 		<span class="cstat-no" title="statement not covered" >if (cachedModule !== undefined) {</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >return cachedModule.exports;</span>
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = <span class="cstat-no" title="statement not covered" >__webpack_module_cache__[moduleId] = {</span>
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_modules__[moduleId](module, module.exports, __webpack_require__);</span>
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		<span class="cstat-no" title="statement not covered" >return module.exports;</span>
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.n = <span class="fstat-no" title="function not covered" >(m</span>odule) =&gt; {</span>
+/******/ 			var getter = <span class="cstat-no" title="statement not covered" >module &amp;&amp; module.__esModule ?</span>
+/******/ 				<span class="fstat-no" title="function not covered" >()</span> =&gt; (<span class="cstat-no" title="statement not covered" >module['default'])</span> :
+/******/ 				<span class="fstat-no" title="function not covered" >()</span> =&gt; (<span class="cstat-no" title="statement not covered" >module)</span>;
+/******/ 			<span class="cstat-no" title="statement not covered" >__webpack_require__.d(getter, { a: getter });</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >return getter;</span>
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+/******/ 		// define getter functions for harmony exports
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.d = <span class="fstat-no" title="function not covered" >(e</span>xports, definition) =&gt; {</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >for(var key in definition) {</span>
+/******/ 				<span class="cstat-no" title="statement not covered" >if(__webpack_require__.o(definition, key) &amp;&amp; !__webpack_require__.o(exports, key)) {</span>
+/******/ 					<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });</span>
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.o = <span class="fstat-no" title="function not covered" >(o</span>bj, prop) =&gt; (<span class="cstat-no" title="statement not covered" >Object.prototype.hasOwnProperty.call(obj, prop))</span></span>
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	<span class="cstat-no" title="statement not covered" >(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+/******/ 		// define __esModule on exports
+/******/ 		<span class="cstat-no" title="statement not covered" >__webpack_require__.r = <span class="fstat-no" title="function not covered" >(e</span>xports) =&gt; {</span>
+/******/ 			<span class="cstat-no" title="statement not covered" >if(typeof Symbol !== 'undefined' &amp;&amp; Symbol.toStringTag) {</span>
+/******/ 				<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });</span>
+/******/ 			}
+/******/ 			<span class="cstat-no" title="statement not covered" >Object.defineProperty(exports, '__esModule', { value: true });</span>
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
+/******/ 	var __webpack_exports__ = <span class="cstat-no" title="statement not covered" >__webpack_require__("./Configs/personal-details-config.js");</span>
+/******/ 	<span class="cstat-no" title="statement not covered" >__webpack_exports__ = __webpack_exports__["default"];</span>
+/******/ 	
+/******/ 	<span class="cstat-no" title="statement not covered" >return __webpack_exports__;</span>
+/******/ })()
+;
+});</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at Thu Feb 02 2023 15:30:08 GMT+0800 (Malaysia Time)
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    
