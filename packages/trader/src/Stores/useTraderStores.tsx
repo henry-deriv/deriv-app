@@ -76,7 +76,7 @@ type TOverrideTradeStore = Omit<
     | 'ticks_history_stats'
     | 'validation_errors'
 > & {
-    accumulator_range_list?: number[];
+    accumulator_range_list: number[];
     basis_list: Array<TTextValueStrings>;
     cancellation_price?: number;
     cancellation_range_list: Array<TTextValueStrings>;
@@ -133,11 +133,7 @@ type TOverrideTradeStore = Omit<
         last_tick_epoch?: number;
     };
     trade_types: { [key: string]: string };
-    validation_errors?: {
-        amount?: string[];
-        barrier_1?: string[];
-        barrier_2?: string[];
-    };
+    validation_errors?: { [key: string]: string[] };
 };
 
 const TraderStoreContext = React.createContext<TOverrideTradeStore | null>(null);

@@ -44,6 +44,72 @@ import debounce from 'lodash.debounce';
 import { setLimitOrderBarriers } from './Helpers/limit-orders';
 // import { useP2PNotificationCount } from '@deriv/hooks';
 import type { TCoreStores } from '@deriv/stores/types';
+import { BuyContractResponse } from '@deriv/api-types';
+
+type TContractCategoriesList = Partial<
+    Record<
+        | 'Multipliers'
+        | 'Ups & Downs'
+        | 'Highs & Lows'
+        | 'Ins & Outs'
+        | 'Look Backs'
+        | 'Digits'
+        | 'Vanillas'
+        | 'Accumulators',
+        TContractTypesList
+    >
+>;
+type TContractTypesList = {
+    [key: string]: {
+        name: string;
+        categories: TTextValueStrings[];
+    };
+};
+type TProposalInfo = {
+    [key: string]: {
+        barrier?: string;
+        has_error?: boolean;
+        id: string;
+        has_increased?: boolean;
+        message?: string;
+        cancellation?: {
+            ask_price: number;
+            date_expiry: number;
+        };
+        growth_rate?: number;
+        returns?: string;
+        stake: string;
+        spot?: string;
+    };
+};
+type TStakeBoundary = Record<
+    TVanillaTradeType,
+    {
+        min_stake?: string;
+        max_stake?: string;
+    }
+>;
+type TTextValueStrings = {
+    text: string;
+    value: string;
+};
+type TToastBoxListItem = {
+    component: JSX.Element | null;
+    contract_types: TTextValueStrings[];
+    icon: string;
+    key: string;
+    label: string;
+};
+type TToastBoxObject = {
+    key?: boolean;
+    buy_price?: string;
+    currency?: string;
+    contract_type?: string;
+    list?: Array<TToastBoxListItem | undefined>;
+};
+type TValidationErrors = { [key: string]: string[] };
+type TValidationRules = Partial<ReturnType<typeof getValidationRules>>;
+type TVanillaTradeType = 'VANILLALONGCALL' | 'VANILLALONGPUT';
 
 const store_name = 'trade_store';
 const g_subscribers_map = {}; // blame amin.m
@@ -62,31 +128,33 @@ export default class TradeStore extends BaseStore {
     previous_symbol = '';
     active_symbols = [];
 
-    form_components = [];
+    form_components: string[] = [];
 
     // Contract Type
     contract_expiry_type = '';
     contract_start_type = '';
     contract_type = '';
-    contract_types_list = {};
-    trade_types = {};
+    contract_types_list: TContractCategoriesList = {};
+    trade_types: { [key: string]: string } = {};
 
     // Amount
     amount = 10;
     basis = '';
-    basis_list = [];
+    basis_list: Array<TTextValueStrings> = [];
     currency = '';
-    stake_boundary = { VANILLALONGCALL: {}, VANILLALONGPUT: {} };
+    stake_boundary: TStakeBoundary = { VANILLALONGCALL: {}, VANILLALONGPUT: {} };
 
     // Duration
     duration = 5;
-    duration_min_max = {};
+    duration_min_max: {
+        [key: string]: { min: number; max: number };
+    } = {};
     duration_unit = '';
-    duration_units_list = [];
-    expiry_date = '';
+    duration_units_list: Array<TTextValueStrings> = [];
+    expiry_date: string | null = '';
     expiry_epoch = '';
     expiry_time: string | null = '';
-    expiry_type = 'duration';
+    expiry_type: string | null = 'duration';
 
     // Barrier
     barrier_1 = '';
@@ -97,12 +165,12 @@ export default class TradeStore extends BaseStore {
     strike_price_choices = [];
 
     // Start Time
-    start_date = Number(0); // Number(0) refers to 'now'
-    start_dates_list = [];
-    start_time = null;
-    sessions = [];
+    start_date = 0; // 0 refers to 'now'
+    start_dates_list: Array<{ text: string; value: number }> = [];
+    start_time: string | null = null;
+    sessions: Array<{ open: moment.Moment; close: moment.Moment }> = [];
 
-    market_open_times = [];
+    market_open_times: string[] = [];
     // End Date Time
     /**
      * An array that contains market closing time.
@@ -110,52 +178,55 @@ export default class TradeStore extends BaseStore {
      * e.g. ["04:00:00", "08:00:00"]
      *
      */
-    market_close_times = [];
+    market_close_times: string[] = [];
 
     // Last Digit
     last_digit = 5;
     is_mobile_digit_view_selected = false;
 
     // Purchase
-    proposal_info = {};
-    purchase_info = {};
+    proposal_info: TProposalInfo = {};
+    purchase_info: BuyContractResponse | Record<string, never> = {};
 
     // Chart loader observables
-    is_chart_loading: any;
+    is_chart_loading?: boolean;
     should_show_active_symbols_loading = false;
 
     // Accumulator trade params
-    accumulator_range_list = [];
+    accumulator_range_list: number[] = [];
     growth_rate = 0.03;
     maximum_payout = 0;
     maximum_ticks = 0;
-    ticks_history_stats = {};
+    ticks_history_stats: {
+        ticks_stayed_in?: number[];
+        last_tick_epoch?: number;
+    } = {};
     tick_size_barrier = 0;
 
     // Multiplier trade params
     multiplier = 0;
-    multiplier_range_list = [];
-    stop_loss: any;
-    take_profit: any;
+    multiplier_range_list: number[] = [];
+    stop_loss?: string;
+    take_profit?: string;
     has_stop_loss = false;
     has_take_profit = false;
     has_cancellation = false;
     commission: any;
-    cancellation_price: any;
+    cancellation_price?: number;
     stop_out: any;
     expiration: any;
-    hovered_contract_type: any;
+    hovered_contract_type?: string | null;
     cancellation_duration = '60m';
-    cancellation_range_list = [];
+    cancellation_range_list: Array<TTextValueStrings> = [];
 
     // Vanilla trade params
-    vanilla_trade_type = 'VANILLALONGCALL';
+    vanilla_trade_type: TVanillaTradeType = 'VANILLALONGCALL';
 
     // Mobile
     is_trade_params_expanded = true;
 
     //Toastbox
-    contract_purchase_toast_box: any;
+    contract_purchase_toast_box?: TToastBoxObject;
 
     addTickByProposal = () => null;
     debouncedProposal = debounce(this.requestProposal, 500);
@@ -373,10 +444,10 @@ export default class TradeStore extends BaseStore {
             () => [this.has_stop_loss, this.has_take_profit],
             () => {
                 if (!this.has_stop_loss) {
-                    (this.validation_errors as any).stop_loss = [];
+                    (this.validation_errors as TValidationErrors).stop_loss = [];
                 }
                 if (!this.has_take_profit) {
-                    (this.validation_errors as any).take_profit = [];
+                    (this.validation_errors as TValidationErrors).take_profit = [];
                 }
             }
         );
@@ -390,8 +461,8 @@ export default class TradeStore extends BaseStore {
                 } else {
                     // we need to remove these two validation rules on contract_type change
                     // to be able to remove any existing Stop loss / Take profit validation errors
-                    delete (this.validation_rules as any).stop_loss;
-                    delete (this.validation_rules as any).take_profit;
+                    delete (this.validation_rules as TValidationRules).stop_loss;
+                    delete (this.validation_rules as TValidationRules).take_profit;
                 }
                 this.resetAccumulatorData();
             }
@@ -643,7 +714,7 @@ export default class TradeStore extends BaseStore {
         this.is_equal = is_equal;
     }
 
-    setIsTradeParamsExpanded(value: any) {
+    setIsTradeParamsExpanded(value: boolean) {
         this.is_trade_params_expanded = value;
     }
 
@@ -665,7 +736,7 @@ export default class TradeStore extends BaseStore {
         }
     }
 
-    onHoverPurchase(is_over: any, contract_type: any) {
+    onHoverPurchase(is_over: boolean, contract_type?: string) {
         if (this.is_accumulator) return;
         if (this.is_purchase_enabled && this.main_barrier && !this.is_multiplier) {
             (this.main_barrier as any).updateBarrierShade(is_over, contract_type);
@@ -678,7 +749,7 @@ export default class TradeStore extends BaseStore {
             barriers: this.root_store.portfolio.barriers,
             is_over,
             contract_type,
-            contract_info: (this.proposal_info as any)[contract_type],
+            contract_info: (this.proposal_info as any)[contract_type ?? ''],
         });
     }
 
@@ -1192,7 +1263,7 @@ export default class TradeStore extends BaseStore {
             (this.addTickByProposal as any)(response);
             setLimitOrderBarriers({
                 barriers: this.root_store.portfolio.barriers,
-                contract_info: (this.proposal_info as any)[this.hovered_contract_type],
+                contract_info: (this.proposal_info as any)[this.hovered_contract_type ?? ''],
                 contract_type,
                 is_over: true,
             });
@@ -1420,7 +1491,7 @@ export default class TradeStore extends BaseStore {
         }
     }
 
-    setChartStatus(status: any) {
+    setChartStatus(status: boolean) {
         this.is_chart_loading = status;
     }
 
