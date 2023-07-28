@@ -46,6 +46,63 @@ import { setLimitOrderBarriers } from './Helpers/limit-orders';
 import type { TCoreStores } from '@deriv/stores/types';
 import { ActiveSymbols, BuyContractResponse, PriceProposalRequest } from '@deriv/api-types';
 
+type TBarriers = Array<
+    ChartBarrierStore & {
+        hideOffscreenBarrier?: boolean;
+        isSingleBarrier?: boolean;
+    }
+>;
+type TChartLayout = {
+    adj: boolean;
+    aggregationType: string;
+    animation?: boolean;
+    candleWidth: number;
+    chartScale: string;
+    chartType: string;
+    crosshair: number;
+    extended: boolean;
+    flipped: boolean;
+    interval: number;
+    marketSessions: Partial<Record<string, boolean>>;
+    outliers: boolean;
+    panels: {
+        chart: {
+            chartName: string;
+            display: string;
+            index: number;
+            percent: number;
+            yAxis: {
+                name: string;
+                position: null;
+            };
+            yaxisLHS: string[];
+            yaxisRHS: string[];
+        };
+    };
+    periodicity: number;
+    previousMaxTicks?: number;
+    range: Partial<Record<string, unknown>>;
+    setSpan: Partial<Record<string, unknown>>;
+    studies?: Partial<Record<string, unknown>>;
+    symbols: [
+        {
+            interval: number;
+            periodicity: number;
+            setSpan: Partial<Record<string, unknown>>;
+            symbol: string;
+            symbolObject: ActiveSymbols[number];
+            timeUnit: string;
+        }
+    ];
+    timeUnit: string;
+    volumeUnderlay: boolean;
+};
+type TPrevChartLayout =
+    | (TChartLayout & {
+          isDone?: VoidFunction;
+          is_used?: boolean;
+      })
+    | null;
 type TContractCategoriesList = Partial<
     Record<
         | 'Multipliers'
@@ -69,24 +126,10 @@ type TDurationMinMax = {
     [key: string]: { min: number; max: number };
 };
 type TProposalInfo = {
-    [key: string]: {
-        barrier?: string;
-        has_error?: boolean;
-        id: string;
-        has_increased?: boolean;
-        message?: string;
-        cancellation?: {
-            ask_price: number;
-            date_expiry: number;
-        };
-        growth_rate?: number;
-        returns?: string;
-        stake: string;
-        spot?: string;
-    };
+    [key: string]: ReturnType<typeof getProposalInfo>;
 };
 type TStakeBoundary = Record<
-    TVanillaTradeType,
+    string,
     {
         min_stake?: string;
         max_stake?: string;
@@ -112,7 +155,6 @@ type TToastBoxObject = {
 };
 type TValidationErrors = { [key: string]: string[] };
 type TValidationRules = Partial<ReturnType<typeof getValidationRules>>;
-type TVanillaTradeType = 'VANILLALONGCALL' | 'VANILLALONGPUT';
 
 const store_name = 'trade_store';
 const g_subscribers_map = {}; // blame amin.m
@@ -161,9 +203,9 @@ export default class TradeStore extends BaseStore {
     barrier_1 = '';
     barrier_2 = '';
     barrier_count = 0;
-    main_barrier = null;
-    barriers = [];
-    strike_price_choices = [];
+    main_barrier: ChartBarrierStore | null = null;
+    barriers: TBarriers = [];
+    strike_price_choices: string[] = [];
 
     // Start Time
     start_date = 0; // 0 refers to 'now'
@@ -221,7 +263,7 @@ export default class TradeStore extends BaseStore {
     cancellation_range_list: Array<TTextValueStrings> = [];
 
     // Vanilla trade params
-    vanilla_trade_type: TVanillaTradeType = 'VANILLALONGCALL';
+    vanilla_trade_type = 'VANILLALONGCALL';
 
     // Mobile
     is_trade_params_expanded = true;
@@ -642,7 +684,7 @@ export default class TradeStore extends BaseStore {
         // waits for `website_status` in order to set `stake_default` for the selected currency
         await WS.wait('website_status');
         await runInAction(async () => {
-            await (this.processNewValuesAsync as any)(
+            await this.processNewValuesAsync(
                 {
                     // fallback to default currency if current logged-in client hasn't selected a currency yet
                     currency: this.root_store.client.currency || this.root_store.client.default_currency,
@@ -654,7 +696,7 @@ export default class TradeStore extends BaseStore {
         });
         await this.loadActiveSymbols(should_set_default_symbol);
         await this.setContractTypes();
-        await (this.processNewValuesAsync as any)(
+        await this.processNewValuesAsync(
             {
                 is_market_closed: isMarketClosed(this.active_symbols, this.symbol),
             },
@@ -664,7 +706,7 @@ export default class TradeStore extends BaseStore {
         );
     }
 
-    async onChangeMultiple(values: any) {
+    async onChangeMultiple(values: Partial<TradeStore>) {
         Object.keys(values).forEach(name => {
             if (!(name in this)) {
                 throw new Error(`Invalid Argument: ${name}`);
@@ -675,7 +717,7 @@ export default class TradeStore extends BaseStore {
         this.validateAllProperties(); // then run validation before sending proposal
     }
 
-    async onChange(e: any) {
+    async onChange(e: { target: { name: string; value: unknown } }) {
         const { name, value } = e.target;
         if (name === 'symbol' && value) {
             // set trade params skeleton and chart loader to true until processNewValuesAsync resolves
@@ -726,18 +768,18 @@ export default class TradeStore extends BaseStore {
         });
     }
 
-    updateBarrierColor(is_dark_mode: any) {
+    updateBarrierColor(is_dark_mode: boolean) {
         if (this.main_barrier) {
-            (this.main_barrier as any).updateBarrierColor(is_dark_mode);
+            this.main_barrier.updateBarrierColor(is_dark_mode);
         }
     }
 
     onHoverPurchase(is_over: boolean, contract_type?: string) {
         if (this.is_accumulator) return;
         if (this.is_purchase_enabled && this.main_barrier && !this.is_multiplier) {
-            (this.main_barrier as any).updateBarrierShade(is_over, contract_type);
+            this.main_barrier.updateBarrierShade(is_over, contract_type);
         } else if (!is_over && this.main_barrier && !this.is_multiplier) {
-            (this.main_barrier as any).updateBarrierShade(false, contract_type);
+            this.main_barrier.updateBarrierShade(false, contract_type);
         }
 
         this.hovered_contract_type = is_over ? contract_type : null;
@@ -745,7 +787,7 @@ export default class TradeStore extends BaseStore {
             barriers: this.root_store.portfolio.barriers,
             is_over,
             contract_type,
-            contract_info: (this.proposal_info as any)[contract_type ?? ''],
+            contract_info: this.proposal_info[contract_type ?? ''],
         });
     }
 
@@ -772,7 +814,7 @@ export default class TradeStore extends BaseStore {
             purchase_spot_barrier.hideOffscreenBarrier = true;
             purchase_spot_barrier.isSingleBarrier = true;
             purchase_spot_barrier.updateBarrierColor(this.root_store.ui.is_dark_mode_on);
-            (this.barriers as any).push(purchase_spot_barrier);
+            this.barriers.push(purchase_spot_barrier);
             this.root_store.portfolio.barriers.push(purchase_spot_barrier);
         }
     }
@@ -791,7 +833,8 @@ export default class TradeStore extends BaseStore {
     clearLimitOrderBarriers() {
         this.hovered_contract_type = null;
         const { barriers } = this;
-        (setLimitOrderBarriers as any)({
+        //@ts-expect-error: TODO: check if type error is gone after limit-orders.js is migrated to ts
+        setLimitOrderBarriers({
             barriers,
             is_over: false,
         });
@@ -810,24 +853,19 @@ export default class TradeStore extends BaseStore {
         return this.root_store.portfolio.barriers && toJS(this.root_store.portfolio.barriers);
     }
 
-    setMainBarrier = (proposal_info: any) => {
+    setMainBarrier = (proposal_info: PriceProposalRequest) => {
         if (!proposal_info) {
             return;
         }
-        const { contract_type, barrier, high_barrier, low_barrier } = proposal_info;
-
+        const { contract_type, barrier, barrier2 } = proposal_info;
         if (isBarrierSupported(contract_type)) {
             const color = this.root_store.ui.is_dark_mode_on ? BARRIER_COLORS.DARK_GRAY : BARRIER_COLORS.GRAY;
             // create barrier only when it's available in response
-            this.main_barrier = new (ChartBarrierStore as any)(
-                barrier || high_barrier,
-                low_barrier,
-                this.onChartBarrierChange,
-                {
-                    color,
-                    not_draggable: this.is_vanilla,
-                }
-            );
+            //@ts-expect-error: TODO: check if type error is gone after ChartBarrierStore is migrated to typescript
+            this.main_barrier = new ChartBarrierStore(barrier, barrier2, this.onChartBarrierChange, {
+                color,
+                not_draggable: this.is_vanilla,
+            });
             // this.main_barrier.updateBarrierShade(true, contract_type);
         } else {
             this.main_barrier = null;
@@ -1005,12 +1043,12 @@ export default class TradeStore extends BaseStore {
             updateChartType,
             updateGranularity,
         } = this.root_store.contract_trade || {};
-        if ((obj_new_values as any).contract_type === 'accumulator') {
+        if (obj_new_values.contract_type === 'accumulator') {
             savePreviousChartMode(chart_type, granularity);
             updateGranularity(0);
             updateChartType('mountain');
         } else if (
-            ((obj_new_values as any).contract_type || (obj_new_values as any).symbol) &&
+            (obj_new_values.contract_type || obj_new_values.symbol) &&
             prev_chart_type &&
             prev_granularity &&
             (prev_chart_type !== chart_type || prev_granularity !== granularity)
@@ -1022,8 +1060,8 @@ export default class TradeStore extends BaseStore {
 
         if (/\bduration\b/.test(Object.keys(obj_new_values) as unknown as string)) {
             // TODO: fix this in input-field.jsx
-            if (typeof (obj_new_values as any).duration === 'string') {
-                (obj_new_values as any).duration = +(obj_new_values as any).duration;
+            if (typeof obj_new_values.duration === 'string') {
+                obj_new_values.duration = +obj_new_values.duration;
             }
         }
         // Sets the default value to Amount when Currency has changed from Fiat to Crypto and vice versa.
@@ -1033,19 +1071,18 @@ export default class TradeStore extends BaseStore {
             this.proposal_requests = {};
         }
         if (is_changed_by_user && /\bcurrency\b/.test(Object.keys(obj_new_values) as unknown as string)) {
-            const prev_currency = (obj_old_values as any)?.currency || this.currency;
-            const has_currency_changed = (obj_new_values as any).currency !== prev_currency;
+            const prev_currency = obj_old_values?.currency || this.currency;
+            const has_currency_changed = obj_new_values.currency !== prev_currency;
 
             const should_reset_stake =
-                isCryptocurrency((obj_new_values as any).currency) ||
+                isCryptocurrency(obj_new_values.currency ?? '') ||
                 // For switch between fiat and crypto and vice versa
-                isCryptocurrency((obj_new_values as any).currency) !== isCryptocurrency(prev_currency);
+                isCryptocurrency(obj_new_values.currency ?? '') !== isCryptocurrency(prev_currency);
 
             if (has_currency_changed && should_reset_stake) {
-                (obj_new_values as any).amount =
-                    (obj_new_values as any).amount || getMinPayout((obj_new_values as any).currency);
+                obj_new_values.amount = obj_new_values.amount || getMinPayout(obj_new_values.currency ?? '');
             }
-            this.currency = (obj_new_values as any).currency;
+            this.currency = obj_new_values.currency ?? '';
         }
 
         let has_only_forward_starting_contracts;
@@ -1215,7 +1252,7 @@ export default class TradeStore extends BaseStore {
             }
             this.stop_out = limit_order?.stop_out?.order_amount;
         }
-        if (this.is_accumulator && (this.proposal_info as any)?.ACCU) {
+        if (this.is_accumulator && this.proposal_info?.ACCU) {
             const {
                 barrier_spot_distance,
                 maximum_ticks,
@@ -1226,7 +1263,7 @@ export default class TradeStore extends BaseStore {
                 high_barrier,
                 low_barrier,
                 spot_time,
-            } = (this.proposal_info as any).ACCU;
+            } = this.proposal_info.ACCU;
             this.ticks_history_stats = getUpdatedTicksHistoryStats({
                 previous_ticks_history_stats: this.ticks_history_stats,
                 new_ticks_history_stats: ticks_stayed_in,
@@ -1247,7 +1284,7 @@ export default class TradeStore extends BaseStore {
             }
         }
 
-        if (!this.main_barrier || (this.main_barrier as any)?.shade) {
+        if (!this.main_barrier || this.main_barrier?.shade) {
             this.setMainBarrier(response.echo_req);
         }
 
@@ -1255,7 +1292,7 @@ export default class TradeStore extends BaseStore {
             (this.addTickByProposal as any)(response);
             setLimitOrderBarriers({
                 barriers: this.root_store.portfolio.barriers,
-                contract_info: (this.proposal_info as any)[this.hovered_contract_type ?? ''],
+                contract_info: this.proposal_info[this.hovered_contract_type ?? ''],
                 contract_type,
                 is_over: true,
             });
@@ -1519,7 +1556,7 @@ export default class TradeStore extends BaseStore {
         this.resetAccumulatorData();
     }
 
-    prev_chart_layout: { is_used: boolean } | null = null;
+    prev_chart_layout: TPrevChartLayout = null;
 
     get chart_layout() {
         let layout = null;
@@ -1533,13 +1570,15 @@ export default class TradeStore extends BaseStore {
         return this.contract_type === 'multiplier' && /^cry/.test(this.symbol);
     }
 
-    exportLayout(layout: any) {
+    exportLayout(layout: TChartLayout) {
         delete layout.previousMaxTicks; // TODO: fix it in smartcharts
         this.prev_chart_layout = layout;
-        (this.prev_chart_layout as any).isDone = () => {
-            (this.prev_chart_layout as any).is_used = true;
-            this.setChartStatus(false);
-        };
+        if (this.prev_chart_layout) {
+            this.prev_chart_layout.isDone = () => {
+                if (this.prev_chart_layout) this.prev_chart_layout.is_used = true;
+                this.setChartStatus(false);
+            };
+        }
     }
 
     // ---------- WS ----------
@@ -1671,11 +1710,11 @@ export default class TradeStore extends BaseStore {
         return findFirstOpenMarket(active_symbols, markets_to_search);
     }
 
-    setStrikeChoices(strike_prices: any) {
+    setStrikeChoices(strike_prices: string[]) {
         this.strike_price_choices = strike_prices ?? [];
     }
 
-    setStakeBoundary(type: any, min_stake: any, max_stake: any) {
-        (this.stake_boundary as any)[type] = { min_stake, max_stake };
+    setStakeBoundary(type: string, min_stake: string, max_stake: string) {
+        this.stake_boundary[type] = { min_stake, max_stake };
     }
 }

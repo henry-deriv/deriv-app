@@ -18,13 +18,6 @@ type TBasis = {
     setAmountError: (has_error: boolean) => void;
 };
 
-type TObject = {
-    duration_unit: string;
-    duration: number;
-    basis: string;
-    amount: string | number;
-};
-
 const Basis = observer(
     ({
         basis,
@@ -59,7 +52,7 @@ const Basis = observer(
             return !isNaN(numericValue) ? parseFloat(numericValue.toFixed(user_currency_decimal_places)) : numericValue;
         };
         const setBasisAndAmount = (amount: number | string) => {
-            const on_change_obj = {} as TObject;
+            const on_change_obj: Partial<ReturnType<typeof useTraderStore>> = {};
 
             // Check for any duration changes in Duration trade params Tab before sending onChange object
             if (duration_unit !== trade_duration_unit && !has_duration_error)
@@ -68,7 +61,7 @@ const Basis = observer(
 
             if (amount !== trade_amount || basis !== trade_basis) {
                 on_change_obj.basis = basis;
-                on_change_obj.amount = amount;
+                on_change_obj.amount = +amount;
             }
 
             if (!isEmptyObject(on_change_obj)) onChangeMultiple(on_change_obj);
