@@ -44,7 +44,7 @@ import debounce from 'lodash.debounce';
 import { setLimitOrderBarriers } from './Helpers/limit-orders';
 // import { useP2PNotificationCount } from '@deriv/hooks';
 import type { TCoreStores } from '@deriv/stores/types';
-import { BuyContractResponse } from '@deriv/api-types';
+import { ActiveSymbols, BuyContractResponse, PriceProposalRequest } from '@deriv/api-types';
 
 type TContractCategoriesList = Partial<
     Record<
@@ -64,6 +64,9 @@ type TContractTypesList = {
         name: string;
         categories: TTextValueStrings[];
     };
+};
+type TDurationMinMax = {
+    [key: string]: { min: number; max: number };
 };
 type TProposalInfo = {
     [key: string]: {
@@ -126,7 +129,7 @@ export default class TradeStore extends BaseStore {
     symbol = '';
     is_market_closed = false;
     previous_symbol = '';
-    active_symbols = [];
+    active_symbols: ActiveSymbols = [];
 
     form_components: string[] = [];
 
@@ -146,9 +149,7 @@ export default class TradeStore extends BaseStore {
 
     // Duration
     duration = 5;
-    duration_min_max: {
-        [key: string]: { min: number; max: number };
-    } = {};
+    duration_min_max: TDurationMinMax = {};
     duration_unit = '';
     duration_units_list: Array<TTextValueStrings> = [];
     expiry_date: string | null = '';
@@ -186,7 +187,7 @@ export default class TradeStore extends BaseStore {
 
     // Purchase
     proposal_info: TProposalInfo = {};
-    purchase_info: BuyContractResponse | Record<string, never> = {};
+    purchase_info: Partial<BuyContractResponse> = {};
 
     // Chart loader observables
     is_chart_loading?: boolean;
@@ -211,10 +212,10 @@ export default class TradeStore extends BaseStore {
     has_stop_loss = false;
     has_take_profit = false;
     has_cancellation = false;
-    commission: any;
+    commission?: number;
     cancellation_price?: number;
-    stop_out: any;
-    expiration: any;
+    stop_out?: number;
+    expiration?: number;
     hovered_contract_type?: string | null;
     cancellation_duration = '60m';
     cancellation_range_list: Array<TTextValueStrings> = [];
@@ -230,10 +231,10 @@ export default class TradeStore extends BaseStore {
 
     addTickByProposal = () => null;
     debouncedProposal = debounce(this.requestProposal, 500);
-    proposal_requests = {};
+    proposal_requests: Partial<Record<string, PriceProposalRequest>> = {};
     is_purchasing_contract = false;
 
-    initial_barriers: any;
+    initial_barriers?: { barrier_1: string; barrier_2: string };
     is_initial_barrier_applied = false;
 
     should_skip_prepost_lifecycle = false;
@@ -386,7 +387,6 @@ export default class TradeStore extends BaseStore {
             resetErrorServices: action.bound,
             resetPreviousSymbol: action.bound,
             setActiveSymbols: action.bound,
-            setAllowEqual: action.bound,
             setChartStatus: action.bound,
             setContractTypes: action.bound,
             setDefaultSymbol: action.bound,
@@ -485,7 +485,7 @@ export default class TradeStore extends BaseStore {
 
     get is_symbol_in_active_symbols() {
         return this.active_symbols.some(
-            symbol_info => (symbol_info as any).symbol === this.symbol && (symbol_info as any).exchange_is_open === 1
+            symbol_info => symbol_info.symbol === this.symbol && symbol_info.exchange_is_open === 1
         );
     }
 
@@ -498,21 +498,21 @@ export default class TradeStore extends BaseStore {
     setDefaultGrowthRate() {
         if (
             this.is_accumulator &&
-            !(this.accumulator_range_list as any).includes(this.growth_rate) &&
+            !this.accumulator_range_list.includes(this.growth_rate) &&
             this.accumulator_range_list.length
         ) {
             this.growth_rate = this.accumulator_range_list[0];
         }
     }
 
-    setSkipPrePostLifecycle(should_skip: any) {
+    setSkipPrePostLifecycle(should_skip: boolean) {
         if (!!should_skip !== !!this.should_skip_prepost_lifecycle) {
             // to skip assignment if no change is made
             this.should_skip_prepost_lifecycle = should_skip;
         }
     }
 
-    setTradeStatus(status: any) {
+    setTradeStatus(status: boolean) {
         this.is_trade_enabled = status;
     }
 
@@ -602,7 +602,7 @@ export default class TradeStore extends BaseStore {
                 }
                 return;
             } else if (is_on_mf_account) {
-                (showDigitalOptionsUnavailableError as any)(showError, {
+                showDigitalOptionsUnavailableError(showError, {
                     text: localize(
                         'We’re working to have this available for you soon. If you have another account, switch to that account to continue trading. You may add a Deriv MT5 Financial.'
                     ),
@@ -708,10 +708,6 @@ export default class TradeStore extends BaseStore {
 
     setPreviousSymbol(symbol: string) {
         if (this.previous_symbol !== symbol) this.previous_symbol = symbol;
-    }
-
-    setAllowEqual(is_equal: any) {
-        this.is_equal = is_equal;
     }
 
     setIsTradeParamsExpanded(value: boolean) {
@@ -988,19 +984,15 @@ export default class TradeStore extends BaseStore {
     }
 
     async processNewValuesAsync(
-        obj_new_values = {},
+        obj_new_values: Partial<TradeStore> = {},
         is_changed_by_user = false,
-        obj_old_values = {},
+        obj_old_values: Partial<TradeStore> | null = {},
         should_forget_first = true
     ) {
         // To switch to rise_fall_equal contract type when allow equal is checked on first page refresh or
         // when switch back to Rise/Fall from another contract type i.e.
-        if (
-            (obj_new_values as any).contract_type &&
-            (obj_new_values as any).contract_type === 'rise_fall' &&
-            !!this.is_equal
-        ) {
-            (obj_new_values as any).contract_type = 'rise_fall_equal';
+        if (obj_new_values.contract_type && obj_new_values.contract_type === 'rise_fall' && !!this.is_equal) {
+            obj_new_values.contract_type = 'rise_fall_equal';
         }
         // when accumulator is selected, we need to change chart type to mountain and granularity to 0
         // and we need to restore previous chart type and granularity when accumulator is unselected
@@ -1179,7 +1171,7 @@ export default class TradeStore extends BaseStore {
             this.proposal_requests = requests;
             this.purchase_info = {};
             Object.keys(this.proposal_requests).forEach(type => {
-                WS.subscribeProposal((this.proposal_requests as any)[type], this.onProposalResponse);
+                WS.subscribeProposal(this.proposal_requests[type], this.onProposalResponse);
             });
         }
         this.root_store.ui.resetPurchaseStates();
@@ -1342,15 +1334,12 @@ export default class TradeStore extends BaseStore {
         }
     }
 
-    onChartBarrierChange(barrier_1: any, barrier_2: any) {
+    onChartBarrierChange(barrier_1: string, barrier_2: string) {
         this.processNewValuesAsync({ barrier_1, barrier_2 }, true);
     }
 
     onAllowEqualsChange() {
-        this.processNewValuesAsync(
-            { contract_type: parseInt(this.is_equal as any) ? 'rise_fall_equal' : 'rise_fall' },
-            true
-        );
+        this.processNewValuesAsync({ contract_type: this.is_equal ? 'rise_fall_equal' : 'rise_fall' }, true);
     }
 
     updateSymbol(underlying: string) {
@@ -1365,14 +1354,16 @@ export default class TradeStore extends BaseStore {
 
     changeDurationValidationRules() {
         if (this.expiry_type === 'endtime') {
-            (this.validation_errors as any).duration = [];
+            (this.validation_errors as TValidationErrors).duration = [];
             return;
         }
 
-        if (!(this.validation_rules as any).duration) return;
+        if (!(this.validation_rules as TValidationRules).duration) return;
 
-        const index = (this.validation_rules as any).duration.rules.findIndex((item: any) => item[0] === 'number');
-        const limits = (this.duration_min_max as any)[this.contract_expiry_type] || false;
+        const index = (this.validation_rules as TValidationRules).duration?.rules.findIndex(
+            item => item[0] === 'number'
+        );
+        const limits = this.duration_min_max[this.contract_expiry_type] || false;
 
         if (limits) {
             const duration_options = {
@@ -1380,12 +1371,13 @@ export default class TradeStore extends BaseStore {
                 max: convertDurationLimit(+limits.max, this.duration_unit),
             };
 
-            if (index > -1) {
-                (this.validation_rules as any).duration.rules[index][1] = duration_options;
+            if (Number(index) > -1) {
+                (this.validation_rules as any).duration.rules[Number(index)][1] = duration_options;
             } else {
-                (this.validation_rules as any).duration.rules.push(['number', duration_options]);
+                (this.validation_rules as TValidationRules).duration?.rules.push(['number', duration_options as any]);
             }
-            (this.validateProperty as any)('duration', this.duration);
+            //@ts-expect-error: TODO: check if TS error is gone after base-store.ts from shared package is used here instead of base-store.js
+            this.validateProperty('duration', this.duration);
         }
     }
 
@@ -1436,11 +1428,11 @@ export default class TradeStore extends BaseStore {
         return Promise.resolve();
     }
 
-    networkStatusChangeListener(is_online: any) {
+    networkStatusChangeListener(is_online: boolean) {
         this.setTradeStatus(is_online);
     }
 
-    themeChangeListener(is_dark_mode_on: any) {
+    themeChangeListener(is_dark_mode_on: boolean) {
         this.updateBarrierColor(is_dark_mode_on);
     }
 
@@ -1522,16 +1514,16 @@ export default class TradeStore extends BaseStore {
             this.root_store.notifications.toggleNotificationsModal();
         }
         if (this.prev_chart_layout) {
-            (this.prev_chart_layout as any).is_used = false;
+            this.prev_chart_layout.is_used = false;
         }
         this.resetAccumulatorData();
     }
 
-    prev_chart_layout = null;
+    prev_chart_layout: { is_used: boolean } | null = null;
 
     get chart_layout() {
         let layout = null;
-        if (this.prev_chart_layout && (this.prev_chart_layout as any).is_used === false) {
+        if (this.prev_chart_layout && this.prev_chart_layout.is_used === false) {
             layout = this.prev_chart_layout;
         }
         return layout;
