@@ -17,7 +17,6 @@ import {
     isMarketClosed,
     isMobile,
     pickDefaultSymbol,
-    removeBarrier,
     resetEndTimeOnVolatilityIndices,
     showDigitalOptionsUnavailableError,
     showMxMltUnavailableError,
@@ -44,7 +43,22 @@ import debounce from 'lodash.debounce';
 import { setLimitOrderBarriers } from './Helpers/limit-orders';
 // import { useP2PNotificationCount } from '@deriv/hooks';
 import type { TCoreStores } from '@deriv/stores/types';
-import { ActiveSymbols, BuyContractResponse, PriceProposalRequest } from '@deriv/api-types';
+import {
+    ActiveSymbols,
+    ActiveSymbolsRequest,
+    Buy,
+    BuyContractResponse,
+    History,
+    PriceProposalRequest,
+    PriceProposalResponse,
+    Proposal,
+    ServerTimeRequest,
+    TickSpotData,
+    TicksHistoryRequest,
+    TicksHistoryResponse,
+    TicksStreamResponse,
+    TradingTimesRequest,
+} from '@deriv/api-types';
 
 type TBarriers = Array<
     ChartBarrierStore & {
@@ -97,6 +111,7 @@ type TChartLayout = {
     timeUnit: string;
     volumeUnderlay: boolean;
 };
+type TChartStateChangeOption = { symbol: string | undefined; isClosed: boolean };
 type TPrevChartLayout =
     | (TChartLayout & {
           isDone?: VoidFunction;
@@ -125,20 +140,32 @@ type TContractTypesList = {
 type TDurationMinMax = {
     [key: string]: { min: number; max: number };
 };
+type TPriceProposalResponse = PriceProposalResponse & {
+    echo_req: PriceProposalRequest;
+    error?: TResponseError;
+};
 type TProposalInfo = {
     [key: string]: ReturnType<typeof getProposalInfo>;
+};
+type TResponseError = {
+    code: string;
+    message: string;
+    details?: {
+        [key: string]: unknown;
+    };
 };
 type TStakeBoundary = Record<
     string,
     {
-        min_stake?: string;
-        max_stake?: string;
+        min_stake?: number;
+        max_stake?: number;
     }
 >;
 type TTextValueStrings = {
     text: string;
     value: string;
 };
+type TTicksHistoryResponse = TicksHistoryResponse | TicksStreamResponse;
 type TToastBoxListItem = {
     component: JSX.Element | null;
     contract_types: TTextValueStrings[];
@@ -157,7 +184,7 @@ type TValidationErrors = { [key: string]: string[] };
 type TValidationRules = Partial<ReturnType<typeof getValidationRules>>;
 
 const store_name = 'trade_store';
-const g_subscribers_map = {}; // blame amin.m
+const g_subscribers_map: Partial<Record<string, ReturnType<typeof WS.subscribeTicksHistory>>> = {}; // blame amin.m
 
 export default class TradeStore extends BaseStore {
     // Control values
@@ -195,7 +222,7 @@ export default class TradeStore extends BaseStore {
     duration_unit = '';
     duration_units_list: Array<TTextValueStrings> = [];
     expiry_date: string | null = '';
-    expiry_epoch = '';
+    expiry_epoch: number | string = '';
     expiry_time: string | null = '';
     expiry_type: string | null = 'duration';
 
@@ -254,7 +281,7 @@ export default class TradeStore extends BaseStore {
     has_stop_loss = false;
     has_take_profit = false;
     has_cancellation = false;
-    commission?: number;
+    commission?: string | number;
     cancellation_price?: number;
     stop_out?: number;
     expiration?: number;
@@ -271,7 +298,6 @@ export default class TradeStore extends BaseStore {
     //Toastbox
     contract_purchase_toast_box?: TToastBoxObject;
 
-    addTickByProposal = () => null;
     debouncedProposal = debounce(this.requestProposal, 500);
     proposal_requests: Partial<Record<string, PriceProposalRequest>> = {};
     is_purchasing_contract = false;
@@ -436,7 +462,6 @@ export default class TradeStore extends BaseStore {
             setMarketStatus: action.bound,
             setMobileDigitView: action.bound,
             setPreviousSymbol: action.bound,
-            setPurchaseSpotBarrier: action.bound,
             setSkipPrePostLifecycle: action.bound,
             setStakeBoundary: action.bound,
             setStrikeChoices: action.bound,
@@ -444,7 +469,6 @@ export default class TradeStore extends BaseStore {
             show_digits_stats: computed,
             themeChangeListener: action.bound,
             updateBarrierColor: action.bound,
-            updateLimitOrderBarriers: action.bound,
             updateStore: action.bound,
             updateSymbol: action.bound,
             contract_purchase_toast_box: observable,
@@ -791,45 +815,6 @@ export default class TradeStore extends BaseStore {
         });
     }
 
-    setPurchaseSpotBarrier(is_over: any, position: any) {
-        const key = 'PURCHASE_SPOT_BARRIER';
-        if (!is_over) {
-            removeBarrier(this.root_store.portfolio.barriers, key);
-            return;
-        }
-
-        let purchase_spot_barrier = (this.root_store.portfolio.barriers as any).find(
-            (b: any) => (b as any).key === key
-        );
-        if (purchase_spot_barrier) {
-            if (purchase_spot_barrier.high !== +position.contract_info.entry_spot) {
-                purchase_spot_barrier.onChange({
-                    high: position.contract_info.entry_spot,
-                });
-            }
-        } else {
-            purchase_spot_barrier = new ChartBarrierStore(position.contract_info.entry_spot);
-            purchase_spot_barrier.key = key;
-            purchase_spot_barrier.draggable = false;
-            purchase_spot_barrier.hideOffscreenBarrier = true;
-            purchase_spot_barrier.isSingleBarrier = true;
-            purchase_spot_barrier.updateBarrierColor(this.root_store.ui.is_dark_mode_on);
-            this.barriers.push(purchase_spot_barrier);
-            this.root_store.portfolio.barriers.push(purchase_spot_barrier);
-        }
-    }
-
-    updateLimitOrderBarriers(is_over: any, position: any) {
-        const contract_info = position.contract_info;
-        const { barriers } = this;
-        setLimitOrderBarriers({
-            barriers,
-            contract_info,
-            contract_type: contract_info.contract_type,
-            is_over,
-        });
-    }
-
     clearLimitOrderBarriers() {
         this.hovered_contract_type = null;
         const { barriers } = this;
@@ -874,14 +859,14 @@ export default class TradeStore extends BaseStore {
 
     onPurchase = debounce(this.processPurchase, 300);
 
-    processPurchase(proposal_id: any, price: any, type: any) {
+    processPurchase(proposal_id: string, price: string, type: string) {
         if (!this.is_purchase_enabled) return;
         if (proposal_id) {
             this.is_purchase_enabled = false;
             this.is_purchasing_contract = true;
             const is_tick_contract = this.duration_unit === 't';
             processPurchase(proposal_id, price).then(
-                action(response => {
+                action((response: BuyContractResponse) => {
                     if (!this.is_trade_component_mounted) {
                         this.enablePurchase();
                         this.is_purchasing_contract = false;
@@ -893,7 +878,7 @@ export default class TradeStore extends BaseStore {
                         // using javascript to disable purchase-buttons manually to compensate for mobx lag
                         this.disablePurchaseButtons();
                         // invalidToken error will handle in socket-general.js
-                        if (response.error.code !== 'InvalidToken') {
+                        if ((response.error as TResponseError).code !== 'InvalidToken') {
                             this.root_store.common.setServicesError({
                                 type: response.msg_type,
                                 ...response.error,
@@ -908,12 +893,12 @@ export default class TradeStore extends BaseStore {
                             }
                         }
                     } else if (response.buy) {
-                        if ((this.proposal_info as any)[type] && (this.proposal_info as any)[type].id !== proposal_id) {
+                        if (this.proposal_info[type] && this.proposal_info[type].id !== proposal_id) {
                             throw new Error('Proposal ID does not match.');
                         }
                         const contract_data = {
-                            ...(this.proposal_requests as any)[type],
-                            ...(this.proposal_info as any)[type],
+                            ...this.proposal_requests[type],
+                            ...this.proposal_info[type],
                             buy_price: response.buy.buy_price,
                         };
                         const { contract_id, longcode, start_time } = response.buy;
@@ -922,8 +907,8 @@ export default class TradeStore extends BaseStore {
                         if (contract_id) {
                             const shortcode = response.buy.shortcode;
                             const { category, underlying } = extractInfoFromShortcode(shortcode);
-                            const is_digit_contract = isDigitContractType((category as any).toUpperCase());
-                            const contract_type = (category as any).toUpperCase();
+                            const is_digit_contract = isDigitContractType(category?.toUpperCase());
+                            const contract_type = category?.toUpperCase();
                             this.root_store.contract_trade.addContract({
                                 contract_id,
                                 start_time,
@@ -982,10 +967,10 @@ export default class TradeStore extends BaseStore {
         const el_purchase_value = document.getElementsByClassName('trade-container__price-info');
         const el_purchase_buttons = document.getElementsByClassName('btn-purchase');
         [].forEach.bind(el_purchase_buttons, el => {
-            (el as any).classList.add('btn-purchase--disabled');
+            (el as HTMLButtonElement).classList.add('btn-purchase--disabled');
         })();
         [].forEach.bind(el_purchase_value, el => {
-            (el as any).classList.add('trade-container__price-info--fade');
+            (el as HTMLDivElement).classList.add('trade-container__price-info--fade');
         })();
     };
 
@@ -1089,8 +1074,8 @@ export default class TradeStore extends BaseStore {
 
         if (Object.keys(obj_new_values).includes('symbol')) {
             this.setPreviousSymbol(this.symbol);
-            await Symbol.onChangeSymbolAsync((obj_new_values as any).symbol);
-            this.setMarketStatus(isMarketClosed(this.active_symbols, (obj_new_values as any).symbol));
+            await Symbol.onChangeSymbolAsync(obj_new_values.symbol);
+            this.setMarketStatus(isMarketClosed(this.active_symbols, obj_new_values.symbol ?? ''));
             has_only_forward_starting_contracts =
                 ContractType.getContractCategories().has_only_forward_starting_contracts;
         }
@@ -1112,8 +1097,8 @@ export default class TradeStore extends BaseStore {
             });
 
             // To prevent infinite loop when changing from advanced end_time to digit type contract
-            if ((obj_new_values as any).contract_type && this.root_store.ui.is_advanced_duration) {
-                if (isDigitTradeType((obj_new_values as any).contract_type)) {
+            if (obj_new_values.contract_type && this.root_store.ui.is_advanced_duration) {
+                if (isDigitTradeType(obj_new_values.contract_type)) {
                     this.barrier_1 = '';
                     this.barrier_2 = '';
                     this.expiry_type = 'duration';
@@ -1137,13 +1122,12 @@ export default class TradeStore extends BaseStore {
     }
 
     get is_synthetics_available() {
-        return !!this.active_symbols?.find(item => (item as any).market === 'synthetic_index');
+        return !!this.active_symbols?.find(item => item.market === 'synthetic_index');
     }
 
     get is_synthetics_trading_market_available() {
         return !!this.active_symbols?.find(
-            item =>
-                (item as any).market === 'synthetic_index' && !isMarketClosed(this.active_symbols, (item as any).symbol)
+            item => item.market === 'synthetic_index' && !isMarketClosed(this.active_symbols, item.symbol)
         );
     }
 
@@ -1151,7 +1135,7 @@ export default class TradeStore extends BaseStore {
         return isDigitTradeType(this.contract_type);
     }
 
-    setMobileDigitView(bool: any) {
+    setMobileDigitView(bool: boolean) {
         this.is_mobile_digit_view_selected = bool;
     }
 
@@ -1219,11 +1203,11 @@ export default class TradeStore extends BaseStore {
         if (length > 0) WS.forgetAll('proposal');
     }
 
-    setMarketStatus(status: any) {
+    setMarketStatus(status: boolean) {
         this.is_market_closed = status;
     }
 
-    onProposalResponse(response: any) {
+    onProposalResponse(response: TPriceProposalResponse) {
         const { contract_type } = response.echo_req;
         const prev_proposal_info = getPropertyValue(this.proposal_info, contract_type) || {};
         const obj_prev_contract_basis = getPropertyValue(prev_proposal_info, 'obj_contract_basis') || {};
@@ -1241,8 +1225,8 @@ export default class TradeStore extends BaseStore {
             [contract_type]: getProposalInfo(this, response, obj_prev_contract_basis),
         };
 
-        if (this.is_multiplier && this.proposal_info && (this.proposal_info as any).MULTUP) {
-            const { commission, cancellation, limit_order } = (this.proposal_info as any).MULTUP;
+        if (this.is_multiplier && this.proposal_info && this.proposal_info.MULTUP) {
+            const { commission, cancellation, limit_order } = this.proposal_info.MULTUP;
             // commission and cancellation.ask_price is the same for MULTUP/MULTDOWN
             if (commission) {
                 this.commission = commission;
@@ -1289,7 +1273,6 @@ export default class TradeStore extends BaseStore {
         }
 
         if (this.hovered_contract_type === contract_type) {
-            (this.addTickByProposal as any)(response);
             setLimitOrderBarriers({
                 barriers: this.root_store.portfolio.barriers,
                 contract_info: this.proposal_info[this.hovered_contract_type ?? ''],
@@ -1328,10 +1311,10 @@ export default class TradeStore extends BaseStore {
             // Sometimes the initial barrier doesn't match with current barrier choices received from API.
             // When this happens we want to populate the list of barrier choices to choose from since the value cannot be specified manually
             if (this.is_vanilla) {
-                const { barrier_choices, max_stake, min_stake } = response.error.details;
-                this.setStakeBoundary(contract_type, min_stake, max_stake);
-                this.setStrikeChoices(barrier_choices);
-                if (!(this.strike_price_choices as any).includes(this.barrier_1)) {
+                const { barrier_choices, max_stake, min_stake } = response.error.details ?? {};
+                this.setStakeBoundary(contract_type, min_stake as number, max_stake as number);
+                this.setStrikeChoices(barrier_choices as string[]);
+                if (!this.strike_price_choices.includes(this.barrier_1)) {
                     // Since on change of duration `proposal` API call is made which returns a new set of barrier values.
                     // The new list is set and the mid value is assigned
                     const index = Math.floor(this.strike_price_choices.length / 2);
@@ -1360,9 +1343,9 @@ export default class TradeStore extends BaseStore {
         } else {
             this.validateAllProperties();
             if (this.is_vanilla) {
-                const { max_stake, min_stake, barrier_choices } = response.proposal;
-                this.setStrikeChoices(barrier_choices);
-                this.setStakeBoundary(contract_type, min_stake, max_stake);
+                const { max_stake, min_stake, barrier_choices } = response.proposal as Proposal;
+                this.setStrikeChoices(barrier_choices as string[]);
+                this.setStakeBoundary(contract_type, min_stake as number, max_stake as number);
             }
         }
 
@@ -1524,7 +1507,7 @@ export default class TradeStore extends BaseStore {
         this.is_chart_loading = status;
     }
 
-    async initAccountCurrency(new_currency: any) {
+    async initAccountCurrency(new_currency: string) {
         if (this.currency === new_currency) return;
 
         await this.processNewValuesAsync({ currency: new_currency }, true, { currency: this.currency }, false);
@@ -1582,25 +1565,25 @@ export default class TradeStore extends BaseStore {
     }
 
     // ---------- WS ----------
-    wsSubscribe = (req: any, callback: any) => {
-        const passthrough_callback = (...args: any) => {
+    wsSubscribe = (req: TicksHistoryRequest, callback: (response: TTicksHistoryResponse) => void) => {
+        const passthrough_callback = (...args: [TTicksHistoryResponse]) => {
             callback(...args);
             if (this.is_accumulator) {
                 let current_spot_data = {};
                 if ('tick' in args[0]) {
-                    const { epoch, quote, symbol } = args[0].tick;
+                    const { epoch, quote, symbol } = args[0].tick as TickSpotData;
                     if (this.symbol !== symbol) return;
                     current_spot_data = {
                         current_spot: quote,
                         current_spot_time: epoch,
                     };
                 } else if ('history' in args[0]) {
-                    const { prices, times } = args[0].history;
+                    const { prices, times } = args[0].history as History;
                     const symbol = args[0].echo_req.ticks_history;
                     if (this.symbol !== symbol) return;
                     current_spot_data = {
-                        current_spot: prices[prices.length - 1],
-                        current_spot_time: times[times.length - 1],
+                        current_spot: prices?.[prices?.length - 1],
+                        current_spot_time: times?.[times?.length - 1],
                     };
                 } else {
                     return;
@@ -1611,25 +1594,25 @@ export default class TradeStore extends BaseStore {
         if (req.subscribe === 1) {
             const key = JSON.stringify(req);
             const subscriber = WS.subscribeTicksHistory(req, passthrough_callback);
-            (g_subscribers_map as any)[key] = subscriber;
+            g_subscribers_map[key] = subscriber;
         }
     };
 
-    wsForget = (req: any) => {
+    wsForget = (req: TicksHistoryRequest) => {
         const key = JSON.stringify(req);
-        if ((g_subscribers_map as any)[key]) {
-            (g_subscribers_map as any)[key].unsubscribe();
-            delete (g_subscribers_map as any)[key];
+        if (g_subscribers_map[key]) {
+            g_subscribers_map[key]?.unsubscribe();
+            delete g_subscribers_map[key];
         }
         // WS.forget('ticks_history', callback, match);
     };
 
-    wsForgetStream = (stream_id: any) => {
+    wsForgetStream = (stream_id: string) => {
         WS.forgetStream(stream_id);
     };
 
-    wsSendRequest = (req: any) => {
-        if (req.time) {
+    wsSendRequest = (req: TradingTimesRequest | ActiveSymbolsRequest | ServerTimeRequest) => {
+        if ('time' in req) {
             return ServerTime.timePromise().then(server_time => {
                 if (server_time) {
                     return {
@@ -1640,16 +1623,16 @@ export default class TradeStore extends BaseStore {
                 return WS.time();
             });
         }
-        if (req.active_symbols) {
+        if ('active_symbols' in req) {
             return WS.activeSymbols('brief');
         }
-        if (req.trading_times) {
+        if ('trading_times' in req) {
             return WS.tradingTimes(req.trading_times);
         }
         return WS.storage.send(req);
     };
 
-    chartStateChange(state: any, option: any) {
+    chartStateChange(state: string, option?: TChartStateChangeOption) {
         const market_close_prop = 'isClosed';
         switch (state) {
             case 'MARKET_STATE_CHANGE':
@@ -1661,10 +1644,6 @@ export default class TradeStore extends BaseStore {
             default:
         }
     }
-
-    refToAddTick = (ref: any) => {
-        this.addTickByProposal = ref;
-    };
 
     get has_alternative_source() {
         return this.is_multiplier && !!this.hovered_contract_type;
@@ -1682,7 +1661,7 @@ export default class TradeStore extends BaseStore {
         return this.contract_type === 'vanilla';
     }
 
-    setContractPurchaseToastbox(response: any) {
+    setContractPurchaseToastbox(response: Buy) {
         const list = getAvailableContractTypes(this.contract_types_list, unsupported_contract_types_list);
 
         return (this.contract_purchase_toast_box = {
@@ -1698,7 +1677,7 @@ export default class TradeStore extends BaseStore {
         this.contract_purchase_toast_box = undefined;
     }
 
-    async getFirstOpenMarket(markets_to_search: any) {
+    async getFirstOpenMarket(markets_to_search: string[]) {
         if (this.active_symbols?.length) {
             return findFirstOpenMarket(this.active_symbols, markets_to_search);
         }
@@ -1714,7 +1693,7 @@ export default class TradeStore extends BaseStore {
         this.strike_price_choices = strike_prices ?? [];
     }
 
-    setStakeBoundary(type: string, min_stake: string, max_stake: string) {
+    setStakeBoundary(type: string, min_stake: number, max_stake: number) {
         this.stake_boundary[type] = { min_stake, max_stake };
     }
 }
