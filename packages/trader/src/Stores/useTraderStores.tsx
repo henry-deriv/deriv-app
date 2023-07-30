@@ -1,9 +1,11 @@
 import React from 'react';
 import { useStore } from '@deriv/stores';
-import TradeStore from './Modules/Trading/trade-store';
+import TradeStore, { TValidationErrors, TValidationRules } from './Modules/Trading/trade-store';
 
 type TOverrideTradeStore = Omit<TradeStore, 'validation_errors'> & {
-    validation_errors?: { [key: string]: string[] };
+    //TODO: these types can be removed from here and trade-store after base-store is migrated to TS
+    validation_errors?: TValidationErrors;
+    validation_rules: TValidationRules;
 };
 
 const TraderStoreContext = React.createContext<TOverrideTradeStore | null>(null);

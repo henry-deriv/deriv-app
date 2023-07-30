@@ -112,6 +112,10 @@ type TChartLayout = {
     volumeUnderlay: boolean;
 };
 type TChartStateChangeOption = { symbol: string | undefined; isClosed: boolean };
+type TContractDataForGTM = PriceProposalRequest &
+    ReturnType<typeof getProposalInfo> & {
+        buy_price: number;
+    };
 type TPrevChartLayout =
     | (TChartLayout & {
           isDone?: VoidFunction;
@@ -140,19 +144,16 @@ type TContractTypesList = {
 type TDurationMinMax = {
     [key: string]: { min: number; max: number };
 };
-type TPriceProposalResponse = PriceProposalResponse & {
-    echo_req: PriceProposalRequest;
-    error?: TResponseError;
+type TResponse<Req, Res extends { [key: string]: unknown }, K extends string> = Res & {
+    echo_req: Req;
+    error?: {
+        code: string;
+        message: string;
+        details?: Res[K] & { field: string };
+    };
 };
 type TProposalInfo = {
     [key: string]: ReturnType<typeof getProposalInfo>;
-};
-type TResponseError = {
-    code: string;
-    message: string;
-    details?: {
-        [key: string]: unknown;
-    };
 };
 type TStakeBoundary = Record<
     string,
@@ -180,8 +181,18 @@ type TToastBoxObject = {
     contract_type?: string;
     list?: Array<TToastBoxListItem | undefined>;
 };
-type TValidationErrors = { [key: string]: string[] };
-type TValidationRules = Partial<ReturnType<typeof getValidationRules>>;
+export type TValidationErrors = { [key: string]: string[] };
+export type TValidationRules = Omit<Partial<ReturnType<typeof getValidationRules>>, 'duration'> & {
+    duration: {
+        rules: [
+            string,
+            {
+                min: number | null;
+                max: number | null;
+            }
+        ][];
+    };
+};
 
 const store_name = 'trade_store';
 const g_subscribers_map: Partial<Record<string, ReturnType<typeof WS.subscribeTicksHistory>>> = {}; // blame amin.m
@@ -866,7 +877,7 @@ export default class TradeStore extends BaseStore {
             this.is_purchasing_contract = true;
             const is_tick_contract = this.duration_unit === 't';
             processPurchase(proposal_id, price).then(
-                action((response: BuyContractResponse) => {
+                action((response: TResponse<Buy, BuyContractResponse, 'buy'>) => {
                     if (!this.is_trade_component_mounted) {
                         this.enablePurchase();
                         this.is_purchasing_contract = false;
@@ -878,7 +889,7 @@ export default class TradeStore extends BaseStore {
                         // using javascript to disable purchase-buttons manually to compensate for mobx lag
                         this.disablePurchaseButtons();
                         // invalidToken error will handle in socket-general.js
-                        if ((response.error as TResponseError).code !== 'InvalidToken') {
+                        if (response.error.code !== 'InvalidToken') {
                             this.root_store.common.setServicesError({
                                 type: response.msg_type,
                                 ...response.error,
@@ -896,7 +907,7 @@ export default class TradeStore extends BaseStore {
                         if (this.proposal_info[type] && this.proposal_info[type].id !== proposal_id) {
                             throw new Error('Proposal ID does not match.');
                         }
-                        const contract_data = {
+                        const contract_data: TContractDataForGTM = {
                             ...this.proposal_requests[type],
                             ...this.proposal_info[type],
                             buy_price: response.buy.buy_price,
@@ -979,11 +990,11 @@ export default class TradeStore extends BaseStore {
      * @param  {Object} new_state - new values to update the store with
      * @return {Object} returns the object having only those values that are updated
      */
-    updateStore(new_state: any) {
+    updateStore(new_state: Partial<TradeStore>) {
         Object.keys(cloneObject(new_state) || {}).forEach(key => {
             if (key === 'root_store' || ['validation_rules', 'validation_errors', 'currency'].indexOf(key) > -1) return;
-            if (JSON.stringify(this[key as keyof this]) === JSON.stringify(new_state[key])) {
-                delete new_state[key];
+            if (JSON.stringify(this[key as keyof TradeStore]) === JSON.stringify(new_state[key as keyof TradeStore])) {
+                delete new_state[key as keyof TradeStore];
             } else {
                 if (key === 'symbol') {
                     this.is_purchase_enabled = false;
@@ -994,7 +1005,7 @@ export default class TradeStore extends BaseStore {
                     new_state.start_date = parseInt(new_state.start_date);
                 }
 
-                this[key as keyof this] = new_state[key];
+                this[key as keyof this] = new_state[key as keyof TradeStore];
 
                 // validation is done in mobx intercept (base_store.js)
                 // when barrier_1 is set, it is compared with store.barrier_2 (which is not updated yet)
@@ -1139,7 +1150,7 @@ export default class TradeStore extends BaseStore {
         this.is_mobile_digit_view_selected = bool;
     }
 
-    pushPurchaseDataToGtm(contract_data: any) {
+    pushPurchaseDataToGtm(contract_data: TContractDataForGTM) {
         const data = {
             event: 'buy_contract',
             bom_ui: 'new',
@@ -1207,7 +1218,7 @@ export default class TradeStore extends BaseStore {
         this.is_market_closed = status;
     }
 
-    onProposalResponse(response: TPriceProposalResponse) {
+    onProposalResponse(response: TResponse<PriceProposalRequest, PriceProposalResponse, 'proposal'>) {
         const { contract_type } = response.echo_req;
         const prev_proposal_info = getPropertyValue(this.proposal_info, contract_type) || {};
         const obj_prev_contract_basis = getPropertyValue(prev_proposal_info, 'obj_contract_basis') || {};
@@ -1380,7 +1391,7 @@ export default class TradeStore extends BaseStore {
 
         if (!(this.validation_rules as TValidationRules).duration) return;
 
-        const index = (this.validation_rules as TValidationRules).duration?.rules.findIndex(
+        const index = (this.validation_rules as TValidationRules).duration.rules.findIndex(
             item => item[0] === 'number'
         );
         const limits = this.duration_min_max[this.contract_expiry_type] || false;
@@ -1392,9 +1403,9 @@ export default class TradeStore extends BaseStore {
             };
 
             if (Number(index) > -1) {
-                (this.validation_rules as any).duration.rules[Number(index)][1] = duration_options;
+                (this.validation_rules as TValidationRules).duration.rules[Number(index)][1] = duration_options;
             } else {
-                (this.validation_rules as TValidationRules).duration?.rules.push(['number', duration_options as any]);
+                (this.validation_rules as TValidationRules).duration.rules.push(['number', duration_options]);
             }
             //@ts-expect-error: TODO: check if TS error is gone after base-store.ts from shared package is used here instead of base-store.js
             this.validateProperty('duration', this.duration);
