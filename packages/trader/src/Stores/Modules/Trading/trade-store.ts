@@ -51,7 +51,6 @@ import {
     History,
     PriceProposalRequest,
     PriceProposalResponse,
-    Proposal,
     ServerTimeRequest,
     TickSpotData,
     TicksHistoryRequest,
@@ -993,7 +992,7 @@ export default class TradeStore extends BaseStore {
     updateStore(new_state: Partial<TradeStore>) {
         Object.keys(cloneObject(new_state) || {}).forEach(key => {
             if (key === 'root_store' || ['validation_rules', 'validation_errors', 'currency'].indexOf(key) > -1) return;
-            if (JSON.stringify(this[key as keyof TradeStore]) === JSON.stringify(new_state[key as keyof TradeStore])) {
+            if (JSON.stringify(this[key as keyof this]) === JSON.stringify(new_state[key as keyof TradeStore])) {
                 delete new_state[key as keyof TradeStore];
             } else {
                 if (key === 'symbol') {
@@ -1323,7 +1322,7 @@ export default class TradeStore extends BaseStore {
             // When this happens we want to populate the list of barrier choices to choose from since the value cannot be specified manually
             if (this.is_vanilla) {
                 const { barrier_choices, max_stake, min_stake } = response.error.details ?? {};
-                this.setStakeBoundary(contract_type, min_stake as number, max_stake as number);
+                this.setStakeBoundary(contract_type, min_stake, max_stake);
                 this.setStrikeChoices(barrier_choices as string[]);
                 if (!this.strike_price_choices.includes(this.barrier_1)) {
                     // Since on change of duration `proposal` API call is made which returns a new set of barrier values.
@@ -1354,9 +1353,9 @@ export default class TradeStore extends BaseStore {
         } else {
             this.validateAllProperties();
             if (this.is_vanilla) {
-                const { max_stake, min_stake, barrier_choices } = response.proposal as Proposal;
+                const { max_stake, min_stake, barrier_choices } = response.proposal ?? {};
                 this.setStrikeChoices(barrier_choices as string[]);
-                this.setStakeBoundary(contract_type, min_stake as number, max_stake as number);
+                this.setStakeBoundary(contract_type, min_stake, max_stake);
             }
         }
 
@@ -1704,7 +1703,7 @@ export default class TradeStore extends BaseStore {
         this.strike_price_choices = strike_prices ?? [];
     }
 
-    setStakeBoundary(type: string, min_stake: number, max_stake: number) {
+    setStakeBoundary(type: string, min_stake?: number, max_stake?: number) {
         this.stake_boundary[type] = { min_stake, max_stake };
     }
 }
