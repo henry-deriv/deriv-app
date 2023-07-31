@@ -81,9 +81,7 @@ const Amount = observer(({ is_minimized }: { is_minimized: boolean }) => {
     if (is_minimized) {
         return (
             <div className='fieldset-minimized fieldset-minimized__amount'>
-                <span className='fieldset-minimized__basis'>
-                    {(basis_list.find(o => o.value === basis) || {}).text}
-                </span>
+                <span className='fieldset-minimized__basis'>{basis_list.find(o => o.value === basis)?.text}</span>
                 &nbsp;
                 <i>
                     <span
