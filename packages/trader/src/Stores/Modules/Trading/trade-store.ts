@@ -41,7 +41,6 @@ import BaseStore from '../../base-store';
 import { ChartBarrierStore } from '../SmartChart/chart-barrier-store';
 import debounce from 'lodash.debounce';
 import { setLimitOrderBarriers } from './Helpers/limit-orders';
-// import { useP2PNotificationCount } from '@deriv/hooks';
 import type { TCoreStores } from '@deriv/stores/types';
 import {
     ActiveSymbols,
