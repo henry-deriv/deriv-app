@@ -121,19 +121,6 @@ type TPrevChartLayout =
           is_used?: boolean;
       })
     | null;
-type TContractCategoriesList = Partial<
-    Record<
-        | 'Multipliers'
-        | 'Ups & Downs'
-        | 'Highs & Lows'
-        | 'Ins & Outs'
-        | 'Look Backs'
-        | 'Digits'
-        | 'Vanillas'
-        | 'Accumulators',
-        TContractTypesList
-    >
->;
 type TContractTypesList = {
     [key: string]: {
         name: string;
@@ -216,7 +203,7 @@ export default class TradeStore extends BaseStore {
     contract_expiry_type = '';
     contract_start_type = '';
     contract_type = '';
-    contract_types_list: TContractCategoriesList = {};
+    contract_types_list: TContractTypesList = {};
     trade_types: { [key: string]: string } = {};
 
     // Amount
@@ -701,7 +688,9 @@ export default class TradeStore extends BaseStore {
             runInAction(() => {
                 const contract_categories = ContractType.getContractCategories();
                 this.processNewValuesAsync({
-                    ...contract_categories,
+                    ...(contract_categories as Pick<TradeStore, 'contract_types_list'> & {
+                        has_only_forward_starting_contracts: boolean;
+                    }),
                     ...ContractType.getContractType(contract_categories.contract_types_list, this.contract_type),
                 });
                 this.processNewValuesAsync(ContractType.getContractValues(this));
@@ -917,7 +906,7 @@ export default class TradeStore extends BaseStore {
                         if (contract_id) {
                             const shortcode = response.buy.shortcode;
                             const { category, underlying } = extractInfoFromShortcode(shortcode);
-                            const is_digit_contract = isDigitContractType(category?.toUpperCase());
+                            const is_digit_contract = isDigitContractType(category?.toUpperCase() ?? '');
                             const contract_type = category?.toUpperCase();
                             this.root_store.contract_trade.addContract({
                                 contract_id,
