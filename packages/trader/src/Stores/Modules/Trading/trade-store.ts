@@ -38,6 +38,7 @@ import { action, computed, makeObservable, observable, override, reaction, runIn
 import { createProposalRequests, getProposalErrorField, getProposalInfo } from './Helpers/proposal';
 import { BARRIER_COLORS } from '../SmartChart/Constants/barriers';
 import BaseStore from '../../base-store';
+import { TTextValueStrings } from '../../../Types/common-prop.type';
 import { ChartBarrierStore } from '../SmartChart/chart-barrier-store';
 import debounce from 'lodash.debounce';
 import { setLimitOrderBarriers } from './Helpers/limit-orders';
@@ -147,10 +148,6 @@ type TStakeBoundary = Record<
         max_stake?: number;
     }
 >;
-type TTextValueStrings = {
-    text: string;
-    value: string;
-};
 type TTicksHistoryResponse = TicksHistoryResponse | TicksStreamResponse;
 type TToastBoxListItem = {
     component: JSX.Element | null;
