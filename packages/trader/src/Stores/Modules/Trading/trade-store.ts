@@ -166,6 +166,7 @@ type TToastBoxObject = {
     contract_type?: string;
     list?: Array<TToastBoxListItem | undefined>;
 };
+type TTurbosBarriersData = Record<string, never> | { barrier: string; barrier_choices: string[] };
 export type TValidationErrors = { [key: string]: string[] };
 export type TValidationRules = Omit<Partial<ReturnType<typeof getValidationRules>>, 'duration'> & {
     duration: {
@@ -287,8 +288,8 @@ export default class TradeStore extends BaseStore {
     cancellation_range_list: Array<TTextValueStrings> = [];
 
     // Turbos trade params
-    long_barriers = {};
-    short_barriers = {};
+    long_barriers: TTurbosBarriersData = {};
+    short_barriers: TTurbosBarriersData = {};
 
     // Vanilla trade params
     vanilla_trade_type = 'VANILLALONGCALL';
@@ -652,7 +653,7 @@ export default class TradeStore extends BaseStore {
             return;
         }
 
-        if (!active_symbols || !active_symbols.length) {
+        if (!active_symbols?.length) {
             await WS.wait('get_settings');
             /*
              * This logic is related to EU country checks
@@ -800,7 +801,7 @@ export default class TradeStore extends BaseStore {
         this.setMarketStatus(isMarketClosed(this.active_symbols, this.previous_symbol));
 
         await Symbol.onChangeSymbolAsync(this.previous_symbol);
-        await this.updateSymbol(this.symbol);
+        this.updateSymbol(this.symbol);
 
         this.setChartStatus(false);
         runInAction(() => {
@@ -1558,7 +1559,7 @@ export default class TradeStore extends BaseStore {
     }
 
     get is_crypto_multiplier() {
-        return this.contract_type === 'multiplier' && /^cry/.test(this.symbol);
+        return this.contract_type === 'multiplier' && this.symbol.startsWith('cry');
     }
 
     exportLayout(layout: TChartLayout) {
@@ -1676,13 +1677,13 @@ export default class TradeStore extends BaseStore {
     setContractPurchaseToastbox(response: Buy) {
         const list = getAvailableContractTypes(this.contract_types_list, unsupported_contract_types_list);
 
-        return (this.contract_purchase_toast_box = {
+        this.contract_purchase_toast_box = {
             key: true,
             buy_price: formatMoney(this.root_store.client.currency, response.buy_price, true, 0, 0),
             contract_type: this.contract_type,
             currency: getCurrencyDisplayCode(this.root_store.client.currency),
             list,
-        });
+        };
     }
 
     clearContractPurchaseToastBox() {
